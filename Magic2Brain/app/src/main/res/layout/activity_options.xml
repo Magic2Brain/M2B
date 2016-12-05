@@ -11,11 +11,10 @@
     tools:context="m2b.magic2brain.com.MainActivity">
 
     <Button
-        android:text="Show Options"
+        android:text="Go Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        style="@style/Widget.AppCompat.Button"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button2" />
 </RelativeLayout>
