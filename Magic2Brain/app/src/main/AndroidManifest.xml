@@ -23,5 +23,5 @@
         <activity android:name="m2b.magic2brain.com.SearchActivity"></activity>
 
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
