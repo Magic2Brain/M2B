@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Magic2Brain</string>
+    <string name="options_tabItem1">Appeareance</string>
+    <string name="options_tabItem2">Caching</string>
+    <string name="options_tabItem3">About</string>
 </resources>
