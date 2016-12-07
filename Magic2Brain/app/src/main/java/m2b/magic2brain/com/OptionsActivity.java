@@ -14,6 +14,7 @@ public class OptionsActivity extends AppCompatActivity { // Same shit like in Ma
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         /*
         Button b = (Button) findViewById(R.id.button2);
         b.setOnClickListener(new View.OnClickListener() {
