@@ -3,8 +3,8 @@ package m2b.magic2brain.com;
 import android.os.Bundle;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
+import android.transition.Fade;
+import android.transition.TransitionInflater;
 import android.widget.Toast;
 
 import m2b.magic2brain.com.magic2brain.R;
@@ -12,6 +12,7 @@ import m2b.magic2brain.com.magic2brain.R;
 public class OptionsActivity extends AppCompatActivity { // Same shit like in MainActivity.class
 
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
