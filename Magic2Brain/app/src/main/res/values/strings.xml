@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Magic2Brain</string>
+    <string name="options_tabItem1">Appeareance</string>
+    <string name="options_tabItem2">Caching</string>
+    <string name="options_tabItem3">About</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

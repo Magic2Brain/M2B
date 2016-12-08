@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/tools">
+    <array name="sidebar_items">
+        <item>Search</item>
+        <item>History</item>
+        <item>Favorites</item>
+        <item>Random Quick Run</item>
+        <item>Options</item>
+    </array>
+
+    <array name="sidebar_icons">
+        <item>@drawable/common_google_signin_btn_icon_light</item>
+        <item>@drawable/common_google_signin_btn_icon_light</item>
+        <item>@drawable/common_google_signin_btn_icon_light</item>
+        <item>@drawable/common_google_signin_btn_icon_light</item>
+        <item>@drawable/common_google_signin_btn_icon_light</item>
+    </array>
+
+    <string name="drawer_open">Open Menu</string>
+    <string name="drawer_close">Close Menu</string>
+
+
+</resources>
