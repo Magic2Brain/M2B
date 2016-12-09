@@ -98,7 +98,8 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             startActivity(intent);
 
         } else if (id == R.id.nav_quick_learn) {
-            Toast.makeText(this, "Not implemented", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, QueryActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_history) {
             Intent intent = new Intent(this, LastSeenActivity.class);
