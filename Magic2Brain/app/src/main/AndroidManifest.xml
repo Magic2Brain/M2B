@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="m2b.magic2brain.com.magic2brain">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:label="@string/app_name"
             android:name="m2b.magic2brain.com.Main2Activity"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,12 +20,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="m2b.magic2brain.com.MainActivity"/>
+        <activity android:name="m2b.magic2brain.com.MainActivity" />
         <activity android:name="m2b.magic2brain.com.FavoritesActivity" />
         <activity android:name="m2b.magic2brain.com.LastSeenActivity" />
-        <activity android:name="m2b.magic2brain.com.OptionsActivity" />
         <activity android:name="m2b.magic2brain.com.QueryActivity" />
         <activity android:name="m2b.magic2brain.com.SearchActivity" />
+        <activity
+            android:name="m2b.magic2brain.com.Options2Activity"
+            android:label="@string/title_activity_options2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>

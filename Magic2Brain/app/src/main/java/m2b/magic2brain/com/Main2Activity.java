@@ -108,7 +108,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             Toast.makeText(this, "Not implemented", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_settings) {
-            Intent intent = new Intent(this, OptionsActivity.class);
+            Intent intent = new Intent(this, Options2Activity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fadeout, R.anim.fadein);
 
