@@ -1,10 +1,14 @@
 package m2b.magic2brain.com;
 
+import android.support.v7.app.ActionBar;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v4.widget.NestedScrollView;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.transition.Fade;
 import android.transition.TransitionInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import m2b.magic2brain.com.magic2brain.R;
@@ -16,6 +20,16 @@ public class OptionsActivity extends AppCompatActivity { // Same shit like in Ma
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ActionBar ab = getSupportActionBar();
+        ab.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        ActionBar.Tab t = ab.newTab();
+        t.setText("hw");
+        t.setTabListener(this);
+        ab.addTab(t);
+
+
+
         /*
         Button b = (Button) findViewById(R.id.button2);
         b.setOnClickListener(new View.OnClickListener() {
@@ -41,5 +55,16 @@ public class OptionsActivity extends AppCompatActivity { // Same shit like in Ma
                 Toast.makeText(OptionsActivity.this, "bottom", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
