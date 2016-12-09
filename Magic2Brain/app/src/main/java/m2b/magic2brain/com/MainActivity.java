@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Button b = (Button) findViewById(R.id.button); // This is how you get the Button with the ID
         b.setOnClickListener(new View.OnClickListener() { // Add a listener
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, OptionsActivity.class); // To start a new activity we create an Intent with the current object and the target class
+                Intent intent = new Intent(MainActivity.this, QueryActivity.class); // To start a new activity we create an Intent with the current object and the target class
                 startActivity(intent); // This starts the new activity
             }
         });
