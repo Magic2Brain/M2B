@@ -9,6 +9,10 @@ public class Card {
         setName(name);
     }
 
+    public Card(){
+
+    }
+
 
     public int getMultiverseid() {
         return multiverseid;

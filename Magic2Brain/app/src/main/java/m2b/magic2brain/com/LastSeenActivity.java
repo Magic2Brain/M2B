@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import org.json.JSONException;
+
+import java.io.UnsupportedEncodingException;
+
 import m2b.magic2brain.com.magic2brain.R;
 
 public class LastSeenActivity extends AppCompatActivity {
@@ -13,6 +17,17 @@ public class LastSeenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_last_seen);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        DeckAssetLoader dc = new DeckAssetLoader();
+
+        Card c[] = new Card[2064];
+        try {
+            c = dc.getDeck("LEA");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(c[1].getName());
 
     }
 
