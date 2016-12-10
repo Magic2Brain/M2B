@@ -16,10 +16,15 @@ import android.widget.RelativeLayout;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+
 import m2b.magic2brain.com.magic2brain.R;
 
 public class QueryActivity extends AppCompatActivity {
-    ImageView imgv;
+    private ImageView imgv;
+    private ArrayList<Card> set;
+    private ArrayList<Card> wrongGuessed;
+    private int indexCard;
 
     protected void onCreate(Bundle savedInstanceState) {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
@@ -27,7 +32,9 @@ public class QueryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_query);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         buildMenu();
-        showPic(410017);
+        wrongGuessed = new ArrayList<>();
+        indexCard = 0;
+
     }
 
     public void showPic(int MultiID){
@@ -55,7 +62,6 @@ public class QueryActivity extends AppCompatActivity {
         int scrHeight = getWindowManager().getDefaultDisplay().getHeight();
         RelativeLayout lyt = (RelativeLayout) findViewById(R.id.query_absolute);
         RelativeLayout.LayoutParams params;
-        int id = 1;
 
         imgv  = new ImageView(this);
         params = new RelativeLayout.LayoutParams(scrWidth, (int)(0.45*scrHeight));
