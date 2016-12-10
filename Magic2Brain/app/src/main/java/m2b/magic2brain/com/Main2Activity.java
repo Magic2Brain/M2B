@@ -36,7 +36,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Get toasted", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -110,7 +110,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             Toast.makeText(this, "Not implemented", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_settings) {
-            Intent intent = new Intent(this, OptionsActivity.class);
+            Intent intent = new Intent(this, Options2Activity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fadeout, R.anim.fadein);
 
