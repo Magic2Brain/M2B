@@ -1,8 +1,12 @@
 package m2b.magic2brain.com;
 
-public class Card {
+import java.io.Serializable;
+
+public class Card implements Serializable{
     private int multiverseid;
     private String name;
+    private String flavor;
+    private String text;
 
     public Card(int multiverseid, String name){
         setMultiverseid(multiverseid);
@@ -30,4 +34,11 @@ public class Card {
         this.name = name;
     }
 
+    public String getFlavor(){ return this.flavor; }
+
+    public void setFlavor(String flavor){ this.flavor = flavor; }
+
+    public String getText(){ return this.text; }
+
+    public void setText(String text){ this.text = text; }
 }

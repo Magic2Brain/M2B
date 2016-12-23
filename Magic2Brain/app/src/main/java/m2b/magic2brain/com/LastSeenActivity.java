@@ -1,8 +1,13 @@
 package m2b.magic2brain.com;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -22,6 +27,7 @@ public class LastSeenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_last_seen);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        final Context currentContext = this;
 
         DeckAssetLoader dc = new DeckAssetLoader();
 
@@ -34,11 +40,22 @@ public class LastSeenActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        String[] listItems = getListified(c);
+        final String[] listItems = getListified(c);
 
         ListView lv = (ListView) findViewById(R.id.mListView);
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems);
+        final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems);
         lv.setAdapter(adapter);
+
+        final Card[] finalC = c;
+        lv.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String yourData = listItems[position];
+                Intent intent = new Intent(currentContext, CardBrowserActivity.class);
+                intent.putExtra("currentCard", finalC[position]);
+                startActivity(intent);
+            }
+        });
 
     }
 

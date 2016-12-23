@@ -48,15 +48,6 @@ public class DeckAssetLoader {
         return parseJSON(jsonString);
     }
 
-    public Card[] getPackageDeck(String name) throws UnsupportedEncodingException, JSONException {
-
-        InputStream in = getClass().getResourceAsStream("decks/m2b/com/"+name+".json");
-
-        String file = getStringFromInputStream(in);
-
-        return parseJSON(file);
-    }
-
     private Card[] parseJSON(String json) throws JSONException {
         JSONObject deck = new JSONObject(json);
         JSONArray cards = deck.getJSONArray("cards");
@@ -69,41 +60,25 @@ public class DeckAssetLoader {
             String mvid_as_string = card.getString("multiverseid");
             String card_name = card.getString("name");
 
+            String card_flavor = "";
+            String card_text = "";
+
+            if(card.has("flavor")){
+                card_flavor = card.getString("flavor");
+            }
+
+            if(card.has("text")){
+                card_text = card.getString("text");
+            }
+
             c.setName(card_name);
             c.setMultiverseid(Integer.parseInt(mvid_as_string));
+            c.setText(card_text);
+            c.setFlavor(card_flavor);
 
             carray[i] = c;
         }
 
         return carray;
-    }
-
-    private String getStringFromInputStream(InputStream is) {
-
-        BufferedReader br = null;
-        StringBuilder sb = new StringBuilder();
-
-        String line;
-        try {
-
-            br = new BufferedReader(new InputStreamReader(is));
-            while ((line = br.readLine()) != null) {
-                sb.append(line);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-        return sb.toString();
-
     }
 }
