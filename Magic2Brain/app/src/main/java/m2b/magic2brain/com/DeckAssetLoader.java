@@ -10,6 +10,8 @@ import org.json.JSONObject;
 import java.io.*;
 import java.io.IOException;
 
+import m2b.magic2brain.com.magic2brain.R;
+
 /**
  * Created by roman on 10.12.2016.
  */
@@ -22,35 +24,28 @@ public class DeckAssetLoader {
 
     //TODO update json reader with more informations to read out of JSON
 
-    public Card[] getDeck(String deckname) throws JSONException {
+    private Context context;
 
-        //Find the directory for the SD Card using the API
-        //*Don't* hardcode "/sdcard"
-        File sdcard = Environment.getExternalStorageDirectory();
+    public Card[] getDeck(String deckname, Context context) throws JSONException, IOException {
 
-        //Get the text file
-        File file = new File(sdcard, deckname+".json");
+        this.context = context;
 
-        //Read text from file
-        StringBuilder text = new StringBuilder();
-
+        InputStream is = context.getAssets().open(deckname);
+        Writer writer = new StringWriter();
+        char[] buffer = new char[1024];
         try {
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            String line;
-
-            while ((line = br.readLine()) != null) {
-                text.append(line);
-                text.append('\n');
+            Reader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+            int n;
+            while ((n = reader.read(buffer)) != -1) {
+                writer.write(buffer, 0, n);
             }
-            br.close();
-        }
-        catch (IOException e) {
-            //You'll need to add proper error handling here
+        } finally {
+            is.close();
         }
 
-        String deckAsString = text.toString();
+        String jsonString = writer.toString();
 
-        return parseJSON(deckAsString);
+        return parseJSON(jsonString);
     }
 
     public Card[] getPackageDeck(String name) throws UnsupportedEncodingException, JSONException {
