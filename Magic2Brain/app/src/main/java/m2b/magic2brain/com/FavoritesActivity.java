@@ -2,7 +2,11 @@ package m2b.magic2brain.com;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.view.menu.ListMenuItemView;
+import android.support.v7.widget.ListViewCompat;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import m2b.magic2brain.com.magic2brain.R;
 
@@ -13,6 +17,9 @@ public class FavoritesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favorites);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ListView lv = (ListView) findViewById(R.id.favList);
+        //ArrayAdapter<String> = new
 
     }
 

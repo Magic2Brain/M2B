@@ -68,6 +68,7 @@ public class DeckAssetLoader {
 
             String card_flavor = "";
             String card_text = "";
+            String card_type = "";
 
             if(card.has("flavor")){
                 card_flavor = card.getString("flavor");
@@ -77,10 +78,15 @@ public class DeckAssetLoader {
                 card_text = card.getString("text");
             }
 
+            if(card.has("type")){
+                card_type = card.getString("type");
+            }
+
             c.setName(card_name);
             c.setMultiverseid(Integer.parseInt(mvid_as_string));
             c.setText(card_text);
             c.setFlavor(card_flavor);
+            c.setType(card_type);
 
             carray[i] = c;
         }

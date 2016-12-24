@@ -7,6 +7,7 @@ public class Card implements Serializable{
     private String name;
     private String flavor;
     private String text;
+    private String type;
 
     public Card(int multiverseid, String name){
         setMultiverseid(multiverseid);
@@ -41,4 +42,8 @@ public class Card implements Serializable{
     public String getText(){ return this.text; }
 
     public void setText(String text){ this.text = text; }
+
+    public String getType(){ return type; }
+
+    public void setType(String type){ this.type = type; }
 }

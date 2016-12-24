@@ -19,7 +19,7 @@ public class CardBrowserActivity extends AppCompatActivity {
 
     ImageView cImage;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
 
         //TODO implement new view & optimize for card display
         super.onCreate(savedInstanceState);
@@ -49,14 +49,30 @@ public class CardBrowserActivity extends AppCompatActivity {
         TextView flavor = (TextView) findViewById(R.id.cbaFlavor);
         flavor.setText(card.getFlavor());
 
+        TextView type = (TextView) findViewById(R.id.cbaType);
+        type.setText(card.getType());
+
         showPic(card.getMultiverseid());
 
+        final int mvid = card.getMultiverseid();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        if(Favorites.favorites_mvid.contains(mvid)){
+            fab.setImageResource(R.drawable.ic_favorite);
+        }
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                if(Favorites.favorites_mvid.contains(mvid)){
+                    Favorites.favorites_mvid.remove(Favorites.favorites_mvid.indexOf(mvid));
+                    fab.setImageResource(R.drawable.ic_favorite_border);
+                }
+                else {
+                    Favorites.favorites_mvid.add(mvid);
+                    fab.setImageResource(R.drawable.ic_favorite);
+                }
+                //onCreate(savedInstanceState);
+                Snackbar.make(view, "Added to your favorites!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
