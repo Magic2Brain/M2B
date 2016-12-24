@@ -45,10 +45,16 @@ public class DeckAssetLoader {
 
         String jsonString = writer.toString();
 
-        return parseJSON(jsonString);
+        return parseCardJSON(jsonString);
     }
 
-    private Card[] parseJSON(String json) throws JSONException {
+    public Deck[] getDeckList(){
+
+        //TODO implement decklist loader
+        return new Deck[1];
+    }
+
+    private Card[] parseCardJSON(String json) throws JSONException {
         JSONObject deck = new JSONObject(json);
         JSONArray cards = deck.getJSONArray("cards");
 

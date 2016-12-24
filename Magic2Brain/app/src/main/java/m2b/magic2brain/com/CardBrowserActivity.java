@@ -1,6 +1,7 @@
 package m2b.magic2brain.com;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,6 +20,8 @@ public class CardBrowserActivity extends AppCompatActivity {
     ImageView cImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //TODO implement new view & optimize for card display
         super.onCreate(savedInstanceState);
 
         Intent mIntent = getIntent();
@@ -33,13 +36,18 @@ public class CardBrowserActivity extends AppCompatActivity {
 
 
 
-        TextView tv = (TextView) findViewById(R.id.cbaText);
+        TextView tv = (TextView) findViewById(R.id.cbaInfo);
         String info = null;
         info += " Name: "+card.getName();
         info += "\n MVID: "+card.getMultiverseid();
-        info += "\n Flavor: "+card.getFlavor();
-        info += "\n Text: "+card.getText();
         tv.setText(info);
+
+        TextView text = (TextView) findViewById(R.id.cbaText);
+        text.setText(card.getText());
+        text.setTextColor(Color.CYAN);
+
+        TextView flavor = (TextView) findViewById(R.id.cbaFlavor);
+        flavor.setText(card.getFlavor());
 
         showPic(card.getMultiverseid());
 
@@ -57,8 +65,8 @@ public class CardBrowserActivity extends AppCompatActivity {
     private void showPic(int MultiID){
         Picasso.with(this)
                 .load("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + MultiID + "&type=card")
-                .placeholder(R.drawable.ic_timer)
-                .error(R.drawable.ic_dehaze)
+                .placeholder(R.drawable.ic_hourglass_empty)
+                .error(R.drawable.ic_error)
                 .into(cImage);
     }
 }
