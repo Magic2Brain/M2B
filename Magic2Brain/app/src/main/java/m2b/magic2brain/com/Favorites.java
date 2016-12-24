@@ -7,10 +7,10 @@ import java.util.ArrayList;
  */
 
 public class Favorites {
-    public static ArrayList<Integer> favorites_mvid;
+    public static ArrayList<Card> favorites_mvid;
 
     public static void init(){
-        favorites_mvid = new ArrayList<Integer>();
+        favorites_mvid = new ArrayList<Card>();
     }
 
 }

@@ -25,7 +25,7 @@ public class CardBrowserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         Intent mIntent = getIntent();
-        Card card = (Card) mIntent.getSerializableExtra("currentCard");
+        final Card card = (Card) mIntent.getSerializableExtra("currentCard");
 
         setContentView(R.layout.activity_card_browser);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -54,21 +54,19 @@ public class CardBrowserActivity extends AppCompatActivity {
 
         showPic(card.getMultiverseid());
 
-        final int mvid = card.getMultiverseid();
-
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        if(Favorites.favorites_mvid.contains(mvid)){
+        if(Favorites.favorites_mvid.contains(card)){
             fab.setImageResource(R.drawable.ic_favorite);
         }
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(Favorites.favorites_mvid.contains(mvid)){
-                    Favorites.favorites_mvid.remove(Favorites.favorites_mvid.indexOf(mvid));
+                if(Favorites.favorites_mvid.contains(card)){
+                    Favorites.favorites_mvid.remove(card);
                     fab.setImageResource(R.drawable.ic_favorite_border);
                 }
                 else {
-                    Favorites.favorites_mvid.add(mvid);
+                    Favorites.favorites_mvid.add(card);
                     fab.setImageResource(R.drawable.ic_favorite);
                 }
                 //onCreate(savedInstanceState);
