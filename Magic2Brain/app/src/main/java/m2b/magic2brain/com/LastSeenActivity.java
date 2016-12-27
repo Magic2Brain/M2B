@@ -21,7 +21,7 @@ import java.util.Arrays;
 import m2b.magic2brain.com.magic2brain.R;
 
 public class LastSeenActivity extends AppCompatActivity {
-
+    //TODO: Remove Padding of the list
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
