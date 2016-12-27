@@ -3,22 +3,35 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_main"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
             android:id="@+id/nav_search"
             android:icon="@drawable/ic_search"
             android:title="Search" />
         <item
-            android:id="@+id/nav_favorite"
-            android:icon="@drawable/ic_star_rate"
-            android:title="Favorites" />
-        <item
-            android:id="@+id/nav_quick_learn"
-            android:icon="@drawable/ic_timer"
-            android:title="Quick Learn" />
-        <item
-            android:id="@+id/nav_history"
-            android:icon="@drawable/ic_history"
-            android:title="Recently Learned" />
+            android:id="@+id/nav_browser"
+            android:icon="@drawable/ic_view_carousel"
+            android:title="Deck Browser" />
     </group>
+
+    <item android:title="Learn">
+        <menu>
+            <item
+                android:id="@+id/nav_quick_learn"
+                android:icon="@drawable/ic_timer"
+                android:title="Quick Learn" />
+            <item
+                android:id="@+id/nav_favorite"
+                android:icon="@drawable/ic_star_rate"
+                android:title="Favorites" />
+            <item
+                android:id="@+id/nav_history"
+                android:icon="@drawable/ic_history"
+                android:title="Recently Learned" />
+        </menu>
+    </item>
 
     <item android:title="Communicate">
         <menu>
