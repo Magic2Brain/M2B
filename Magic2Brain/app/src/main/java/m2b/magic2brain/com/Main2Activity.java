@@ -26,6 +26,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //TODO: Add image to NavigationView
         setTheme(R.style.AppTheme_NoActionBar);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
@@ -90,7 +91,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        //TODO: Add some fancy transition animations
         if (id == R.id.nav_search) {
             // Handle the camera action
             Intent intent = new Intent(this, SearchActivity.class);
