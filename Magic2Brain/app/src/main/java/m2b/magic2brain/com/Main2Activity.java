@@ -100,6 +100,10 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             Intent intent = new Intent(this, FavoritesActivity.class);
             startActivity(intent);
 
+        } else if (id == R.id.nav_browser) {
+            Intent intent = new Intent(this, BrowserActivity.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_quick_learn) {
             Intent intent = new Intent(this, QueryActivity.class);
             startActivity(intent);

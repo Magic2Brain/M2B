@@ -48,10 +48,53 @@ public class DeckAssetLoader {
         return parseCardJSON(jsonString);
     }
 
-    public Deck[] getDeckList(){
+    public Deck[] getDeckList(Context context) throws IOException, JSONException {
+
+        this.context = context;
+
+        InputStream is = context.getAssets().open("SetList.json");
+        Writer writer = new StringWriter();
+        char[] buffer = new char[1024];
+        try {
+            Reader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+            int n;
+            while ((n = reader.read(buffer)) != -1) {
+                writer.write(buffer, 0, n);
+            }
+        } finally {
+            is.close();
+        }
+
+        String jsonString = writer.toString();
+
+        Deck[] darray = parseDeckJSON(jsonString);
 
         //TODO implement decklist loader
-        return new Deck[1];
+        return darray;
+    }
+
+    private Deck[] parseDeckJSON(String json) throws JSONException {
+        JSONObject file = new JSONObject(json);
+        JSONArray decks = file.getJSONArray("");
+
+        Deck list[] = new Deck[decks.length()];
+
+        for(int i = 0; i < decks.length(); i++){
+            JSONObject card = decks.getJSONObject(i);
+            Deck c = new Deck();
+
+            String deck_name = card.getString("name");
+            String deck_code = card.getString("code");
+            String deck_releaseDate = card.getString("releaseDate");
+
+            c.setName(deck_name);
+            c.setCode(deck_code);
+            c.setReleaseDate(deck_releaseDate);
+
+            list[i] = c;
+        }
+
+        return list;
     }
 
     private Card[] parseCardJSON(String json) throws JSONException {

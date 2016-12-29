@@ -32,6 +32,10 @@
         <activity
             android:name="m2b.magic2brain.com.CardBrowserActivity"
             android:label="@string/title_activity_card_browser"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="m2b.magic2brain.com.BrowserActivity"
+            android:label="@string/title_activity_browser"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

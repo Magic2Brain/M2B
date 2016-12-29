@@ -3,6 +3,8 @@ package m2b.magic2brain.com;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.menu.ListMenuItemView;
 import android.support.v7.widget.ListViewCompat;
@@ -11,6 +13,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
+
+import com.github.clans.fab.FloatingActionMenu;
 
 import java.util.ArrayList;
 
@@ -46,6 +51,17 @@ public class FavoritesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        com.github.clans.fab.FloatingActionButton fab = new com.github.clans.fab.FloatingActionButton(this);
+        fab.setLabelText("Test");
+        fab.setImageResource(R.drawable.ic_dehaze);
+        fab.setLeft(300);
+        FloatingActionMenu fmen = new FloatingActionMenu(this);
+        fmen.addMenuButton(fab);
+        fmen.setLeft(400);
+        fmen.setTop(500);
+        RelativeLayout rl = (RelativeLayout) findViewById(R.id.activity_main);
+        rl.addView(fmen);
 
     }
 
