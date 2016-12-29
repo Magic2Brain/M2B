@@ -1,5 +1,6 @@
 package m2b.magic2brain.com;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -11,16 +12,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -42,19 +39,18 @@ public class QueryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_query);
         hiding = (Toolbar) findViewById(R.id.toolbar_query);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //buildMenu();
+        buildMenu();
         // Hide the status bar.
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // Prepare Query
-        set = new ArrayList<>(); // TODO: Load set from a Intent (or get it elsewhere)
-        set.add(new Card(410017,"Brain in a Jar"));
-        set.add(new Card(418367,"Fliegender Ersthelfer"));
-        set.add(new Card(418607,"Äther-Knotenpunkt"));
+        Intent i = getIntent();
+        Deck qur = (Deck) i.getSerializableExtra("Set");
+        set = qur.getSet();
         wrongGuessed = (ArrayList)set.clone(); //Lets assume he guessed everything wrong and remove the card of this Array when he guesses it right
         shuffleWrongs(); //Shuffle it a bit (better learn-effect)
         indexCard = 0;
-        buildEndScreen();
-        //showNextPic(); //Start the query
+        //buildEndScreen(); //Just for testing
+        showNextPic(); //Start the query
     }
 
     public void shuffleWrongs(){
@@ -64,8 +60,8 @@ public class QueryActivity extends AppCompatActivity {
     public void showPic(int MultiID){
         Picasso.with(this)
                 .load("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + MultiID + "&type=card")
-                .placeholder(R.drawable.ic_timer)
-                .error(R.drawable.ic_dehaze)
+                .placeholder(R.drawable.loading_image)
+                .error(R.drawable.image_not_found)
                 .into(imgv);
     }
 
@@ -99,7 +95,7 @@ public class QueryActivity extends AppCompatActivity {
        hideHider();
     }
 
-    public void setDone(){ //TODO: Add End-Screen
+    public void setDone(){
         buildEndScreen();
         indexCard = 0;
         shuffleWrongs();
@@ -135,6 +131,7 @@ public class QueryActivity extends AppCompatActivity {
 
         // Add EditText like Imageview
         final EditText inputtxt = new EditText(this);
+        inputtxt.setGravity(Gravity.CENTER);
         inputtxt.setHint("What is the name of this card?");
         params = new RelativeLayout.LayoutParams((int)(0.75*scrWidth), (int)(0.1*scrHeight));
         params.leftMargin = (int)(0.125*scrWidth);
@@ -160,6 +157,8 @@ public class QueryActivity extends AppCompatActivity {
 
         Button answer = new Button(this);
         answer.setText("Answer");
+        answer.setTextColor(Color.WHITE);
+        answer.getBackground().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.MULTIPLY);
         params = new RelativeLayout.LayoutParams((int)(0.25*scrWidth), (int)(0.1*scrHeight));
         params.leftMargin = (scrWidth/2)-(int)(0.25*scrWidth);
         params.topMargin = (int)(0.50*scrHeight)+(int)(0.15*scrHeight);
@@ -173,6 +172,8 @@ public class QueryActivity extends AppCompatActivity {
 
         Button skip = new Button(this);
         skip.setText("Skip");
+        skip.setTextColor(Color.WHITE);
+        skip.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
         params = new RelativeLayout.LayoutParams((int)(0.25*scrWidth), (int)(0.1*scrHeight));
         params.leftMargin = (scrWidth/2);
         params.topMargin = (int)(0.50*scrHeight)+(int)(0.15*scrHeight);
@@ -243,21 +244,22 @@ public class QueryActivity extends AppCompatActivity {
         params.topMargin = (int)(0.05*scrHeight) + (int)(0.1*scrHeight) + (int)(0.1*scrHeight); // Y-Position
         lyt.addView(total2, params); // add it to the View
 
-        Button repWrong = new Button(this);
-        repWrong.setText("Repeat wrong guessed");
-        repWrong.setTextColor(Color.WHITE);
-        repWrong.getBackground().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.MULTIPLY);
-        params = new RelativeLayout.LayoutParams((int)(0.90*scrWidth), (int)(0.1*scrHeight));
-        params.leftMargin = (int)(0.05*scrWidth);
-        params.topMargin = (int)(0.4*scrHeight) + (int)(0.1*scrHeight) + (int)(0.1*scrHeight) + (int)(0.1*scrHeight);
-        lyt.addView(repWrong, params);
-        repWrong.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                buildMenu();
-                showNextPic();
-            }
-        });
-
+        if(wrongGuessed.size() > 0) {
+            Button repWrong = new Button(this);
+            repWrong.setText("Repeat wrong guessed");
+            repWrong.setTextColor(Color.WHITE);
+            repWrong.getBackground().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.MULTIPLY);
+            params = new RelativeLayout.LayoutParams((int) (0.90 * scrWidth), (int) (0.1 * scrHeight));
+            params.leftMargin = (int) (0.05 * scrWidth);
+            params.topMargin = (int) (0.4 * scrHeight) + (int) (0.1 * scrHeight) + (int) (0.1 * scrHeight) + (int) (0.1 * scrHeight);
+            lyt.addView(repWrong, params);
+            repWrong.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {
+                    buildMenu();
+                    showNextPic();
+                }
+            });
+        }
         Button repAll = new Button(this);
         repAll.setText("Repeat all");
         repAll.setTextColor(Color.WHITE);

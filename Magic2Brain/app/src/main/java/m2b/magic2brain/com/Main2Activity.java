@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.transition.Slide;
-import android.transition.TransitionInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,7 +15,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.widget.Toast;
-
 import m2b.magic2brain.com.magic2brain.R;
 
 public class Main2Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -102,8 +99,13 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             startActivity(intent);
 
         } else if (id == R.id.nav_quick_learn) {
-            Intent intent = new Intent(this, QueryActivity.class);
-            startActivity(intent);
+            Deck d = new Deck(); // Just for testing
+            d.addCard(new Card(410017,"Brain in a Jar")); // Just for testing
+            d.addCard(new Card(418367,"Fliegender Ersthelfer")); // Just for testing
+            d.addCard(new Card(418607,"Äther-Knotenpunkt")); // Just for testing
+            Intent i = new Intent(this, QueryActivity.class);
+            i.putExtra("Set",d); // Just for testing
+            startActivity(i);
 
         } else if (id == R.id.nav_history) {
             Intent intent = new Intent(this, LastSeenActivity.class);
