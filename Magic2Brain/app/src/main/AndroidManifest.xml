@@ -23,7 +23,8 @@
         <activity android:name="m2b.magic2brain.com.MainActivity" />
         <activity android:name="m2b.magic2brain.com.FavoritesActivity" />
         <activity android:name="m2b.magic2brain.com.LastSeenActivity" />
-        <activity android:name="m2b.magic2brain.com.QueryActivity" />
+        <activity android:name="m2b.magic2brain.com.QueryActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name="m2b.magic2brain.com.SearchActivity" />
         <activity
             android:name="m2b.magic2brain.com.Options2Activity"
