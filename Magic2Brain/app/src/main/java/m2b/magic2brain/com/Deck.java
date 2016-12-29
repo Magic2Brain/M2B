@@ -24,6 +24,8 @@ public class Deck implements Serializable /* We need to do this, so we can pass 
         this.code = code;
         this.releaseDate = release_date;
         this.icon = iconUri;
+
+        set = new ArrayList<>();
     }
 
     public String getIcon() {
