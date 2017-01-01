@@ -98,6 +98,10 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             Intent intent = new Intent(this, FavoritesActivity.class);
             startActivity(intent);
 
+        } else if (id == R.id.nav_browser) {
+            Intent intent = new Intent(this, BrowserActivity.class);
+            startActivity(intent);
+
         } else if (id == R.id.nav_quick_learn) {
             Deck d = new Deck(); // Just for testing
             d.addCard(new Card(410017,"Brain in a Jar")); // Just for testing
