@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
@@ -50,7 +51,7 @@ public class QueryActivity extends AppCompatActivity {
         shuffleWrongs(); //Shuffle it a bit (better learn-effect)
         indexCard = 0;
         //buildEndScreen(); //Just for testing
-        showNextPic(); //Start the query
+        showFirstPic(); //Start the query
     }
 
     public void shuffleWrongs(){
@@ -65,21 +66,47 @@ public class QueryActivity extends AppCompatActivity {
                 .into(imgv);
     }
 
-    public void showNextPic(){
+    public void showFirstPic(){
+        showHiderInstant();
         firstGuess = true;
         showPic(wrongGuessed.get(indexCard).getMultiverseid());
         hiding.bringToFront();
     }
 
+    public void showNextPic(){
+        showHider();
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                firstGuess = true;
+                showPic(wrongGuessed.get(indexCard).getMultiverseid());
+                hiding.bringToFront();
+            }
+        }, 800);
+    }
+
     public void checkAnswer(String txt){ //TODO: Optional: Ask other things (like Mana-Cost etc.)
         if(txt.replaceAll("\\s+","").equalsIgnoreCase(wrongGuessed.get(indexCard).getName().replaceAll("\\s+",""))) {
-            showHider();
             if(firstGuess){wrongGuessed.remove(indexCard);} //if he guessed it, we remove it.
             else {indexCard++;} // else we continue with the next card
             if(indexCard == wrongGuessed.size()){ //If this true he's through the set
-                setDone();
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        setDone();
+                    }
+                }, 1000);
+
             } else {
-                showNextPic();
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        showNextPic();
+                    }
+                }, 1000);
             }
         } else {
            wrongAnswer();
@@ -88,11 +115,18 @@ public class QueryActivity extends AppCompatActivity {
 
     public void skip(){
         wrongAnswer();
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                checkAnswer(wrongGuessed.get(indexCard).getName());
+            }
+        }, 1000);
     }
 
     public void wrongAnswer(){
         firstGuess = false;
-       hideHider();
+        hideHider();
     }
 
     public void setDone(){
@@ -107,7 +141,12 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void showHider(){
-        hiding.animate().alpha(1).setDuration(100).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
+        hiding.animate().alpha(1).setDuration(1000).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
+            public void run() {hiding.animate().alpha(1).setDuration(100).setInterpolator(new AccelerateInterpolator()).start();}}).start();
+    }
+
+    public void showHiderInstant(){
+        hiding.animate().alpha(1).setDuration(10).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
             public void run() {hiding.animate().alpha(1).setDuration(100).setInterpolator(new AccelerateInterpolator()).start();}}).start();
     }
 
@@ -118,13 +157,13 @@ public class QueryActivity extends AppCompatActivity {
         lyt.removeAllViews(); //Clear the Board
         RelativeLayout.LayoutParams params;
 
-        params = new RelativeLayout.LayoutParams((int)(0.5*scrWidth),(int)(0.025*scrHeight));
-        params.leftMargin = (scrWidth/2 - (int)(0.5*scrWidth)/2); // X-Position
+        params = new RelativeLayout.LayoutParams((int)(0.55*scrWidth),(int)(0.03*scrHeight));
+        params.leftMargin = (scrWidth/2 - (int)(0.55*scrWidth)/2); // X-Position
         params.topMargin = (int)(0.07*scrHeight); // Y-Position
         lyt.addView(hiding,params);
 
         imgv  = new ImageView(this); // Create new Imageview
-        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.45*scrHeight))/*Height*/;
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.5*scrHeight))/*Height*/;
         params.leftMargin = 0; // X-Position
         params.topMargin = (int)(0.05*scrHeight); // Y-Position
         lyt.addView(imgv, params); // add it to the View
@@ -193,7 +232,7 @@ public class QueryActivity extends AppCompatActivity {
         TextView rights = new TextView(this);
         rights.setText("Right: ");
         rights.setTextSize(36);
-        rights.setTextColor(Color.GREEN);
+        rights.setTextColor(getResources().getColor(R.color.colorPrimary));
         params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.1*scrHeight))/*Height*/;
         params.leftMargin = (int)(0.1*scrHeight); // X-Position
         params.topMargin = (int)(0.05*scrHeight); // Y-Position
@@ -202,7 +241,7 @@ public class QueryActivity extends AppCompatActivity {
         TextView rights2 = new TextView(this);
         rights2.setText(""+(set.size() - wrongGuessed.size()));
         rights2.setTextSize(36);
-        rights2.setTextColor(Color.GREEN);
+        rights2.setTextColor(getResources().getColor(R.color.colorPrimary));
         params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.1*scrHeight))/*Height*/;
         params.leftMargin = (int)(0.4*scrHeight); // X-Position
         params.topMargin = (int)(0.05*scrHeight); // Y-Position
@@ -211,7 +250,7 @@ public class QueryActivity extends AppCompatActivity {
         TextView wrongs = new TextView(this);
         wrongs.setText("Wrong: ");
         wrongs.setTextSize(36);
-        wrongs.setTextColor(Color.RED);
+        wrongs.setTextColor(getResources().getColor(R.color.colorAccent));
         params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.1*scrHeight))/*Height*/;
         params.leftMargin = (int)(0.1*scrHeight); // X-Position
         params.topMargin = (int)(0.05*scrHeight) + (int)(0.1*scrHeight); // Y-Position
@@ -220,7 +259,7 @@ public class QueryActivity extends AppCompatActivity {
         TextView wrongs2 = new TextView(this);
         wrongs2.setText("" + (wrongGuessed.size()));
         wrongs2.setTextSize(36);
-        wrongs2.setTextColor(Color.RED);
+        wrongs2.setTextColor(getResources().getColor(R.color.colorAccent));
         params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.1*scrHeight))/*Height*/;
         params.leftMargin = (int)(0.4*scrHeight); // X-Position
         params.topMargin = (int)(0.05*scrHeight) + (int)(0.1*scrHeight); // Y-Position
@@ -256,7 +295,7 @@ public class QueryActivity extends AppCompatActivity {
             repWrong.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
                     buildMenu();
-                    showNextPic();
+                    showFirstPic();
                 }
             });
         }
@@ -273,7 +312,7 @@ public class QueryActivity extends AppCompatActivity {
                 wrongGuessed = (ArrayList)set.clone();
                 shuffleWrongs();
                 buildMenu();
-                showNextPic();
+                showFirstPic();
             }
         });
 
