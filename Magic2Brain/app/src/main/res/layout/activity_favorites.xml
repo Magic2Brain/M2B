@@ -7,12 +7,23 @@
     android:layout_height="match_parent"
     tools:context="m2b.magic2brain.com.MainActivity">
 
-
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/favList"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_menu_send"
+        android:id="@+id/fab_addlearn"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="23dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

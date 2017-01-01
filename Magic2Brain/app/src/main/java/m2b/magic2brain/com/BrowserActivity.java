@@ -43,32 +43,37 @@ public class BrowserActivity extends AppCompatActivity {
         DeckAssetLoader dc = new DeckAssetLoader();
         //----------------------------------------------
 
-        Card c[] = new Card[2064];
+        Deck d[] = new Deck[1];
         try {
-            c = dc.getDeck("LEA.json", this);
+            d = dc.getDeckList(this);
         } catch (JSONException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        final String[] listItems = RUtils.getListified(c);
+        String[] it = new String[d.length];
+        for (int i = 0; i < d.length; i++){
+            it[i] = d[i].getName();
+        }
+
+        final String[] listItems = it;
 
         ListView lv = (ListView) findViewById(R.id.deckbrowser_list);
         final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems);
         lv.setAdapter(adapter);
 
-        final Card[] finalC = c;
+        final Deck[] finalD = d;
 
         lv.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(currentContext, CardBrowserActivity.class);
-                intent.putExtra("currentCard", finalC[position]);
+                Intent intent = new Intent(currentContext, DeckDisplayActivity.class);
+                intent.putExtra("code", finalD[position].getCode()+".json");
+                intent.putExtra("name", finalD[position].getName());
                 startActivity(intent);
             }
         });
-
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -23,8 +23,9 @@
         <activity android:name="m2b.magic2brain.com.MainActivity" />
         <activity android:name="m2b.magic2brain.com.FavoritesActivity" />
         <activity android:name="m2b.magic2brain.com.LastSeenActivity" />
-        <activity android:name="m2b.magic2brain.com.QueryActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name="m2b.magic2brain.com.QueryActivity"
+            android:screenOrientation="portrait" />
         <activity android:name="m2b.magic2brain.com.SearchActivity" />
         <activity
             android:name="m2b.magic2brain.com.Options2Activity"
@@ -37,7 +38,8 @@
         <activity
             android:name="m2b.magic2brain.com.BrowserActivity"
             android:label="@string/title_activity_browser"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="m2b.magic2brain.com.DeckDisplayActivity"></activity>
     </application>
 
 </manifest>

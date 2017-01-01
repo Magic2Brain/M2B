@@ -74,13 +74,12 @@ public class DeckAssetLoader {
     }
 
     private Deck[] parseDeckJSON(String json) throws JSONException {
-        JSONObject file = new JSONObject(json);
-        JSONArray decks = file.getJSONArray("");
+        JSONArray file = new JSONArray(json);
 
-        Deck list[] = new Deck[decks.length()];
+        Deck list[] = new Deck[file.length()];
 
-        for(int i = 0; i < decks.length(); i++){
-            JSONObject card = decks.getJSONObject(i);
+        for(int i = 0; i < file.length(); i++){
+            JSONObject card = file.getJSONObject(i);
             Deck c = new Deck();
 
             String deck_name = card.getString("name");

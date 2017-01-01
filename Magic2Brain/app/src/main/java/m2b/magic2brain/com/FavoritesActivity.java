@@ -15,8 +15,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import com.github.clans.fab.FloatingActionMenu;
-
 import java.util.ArrayList;
 
 import m2b.magic2brain.com.magic2brain.R;
@@ -52,16 +50,18 @@ public class FavoritesActivity extends AppCompatActivity {
             }
         });
 
-        com.github.clans.fab.FloatingActionButton fab = new com.github.clans.fab.FloatingActionButton(this);
-        fab.setLabelText("Test");
-        fab.setImageResource(R.drawable.ic_dehaze);
-        fab.setLeft(300);
-        FloatingActionMenu fmen = new FloatingActionMenu(this);
-        fmen.addMenuButton(fab);
-        fmen.setLeft(400);
-        fmen.setTop(500);
-        RelativeLayout rl = (RelativeLayout) findViewById(R.id.activity_main);
-        rl.addView(fmen);
+
+        FloatingActionButton fam = (FloatingActionButton) findViewById(R.id.fab_addlearn);
+        fam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(currentContext, QueryActivity.class);
+                Deck d = new Deck();
+                d.setSet(alist_favs);
+                intent.putExtra("Set", d);
+                startActivity(intent);
+            }
+        });
 
     }
 

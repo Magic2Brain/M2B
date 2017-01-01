@@ -1,6 +1,7 @@
 package m2b.magic2brain.com;
 
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -82,5 +83,9 @@ public class Deck implements Serializable /* We need to do this, so we can pass 
 
     public ArrayList<Card> getSet(){
         return set;
+    }
+
+    public void setSet(ArrayList<Card> al){
+        set = al;
     }
 }
