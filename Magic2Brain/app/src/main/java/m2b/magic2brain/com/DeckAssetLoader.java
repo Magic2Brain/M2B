@@ -111,6 +111,7 @@ public class DeckAssetLoader {
             String card_flavor = "";
             String card_text = "";
             String card_type = "";
+            String card_cost = "";
 
             if(card.has("flavor")){
                 card_flavor = card.getString("flavor");
@@ -123,12 +124,16 @@ public class DeckAssetLoader {
             if(card.has("type")){
                 card_type = card.getString("type");
             }
+            if(card.has("manaCost")){
+                card_cost = card.getString("manaCost");
+            }
 
             c.setName(card_name);
             c.setMultiverseid(Integer.parseInt(mvid_as_string));
             c.setText(card_text);
             c.setFlavor(card_flavor);
             c.setType(card_type);
+            c.setManaCost(card_cost);
 
             carray[i] = c;
         }

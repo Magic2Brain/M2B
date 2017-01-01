@@ -30,9 +30,6 @@ public class DeckDisplayActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String deckcode = intent.getStringExtra("code");
         String name = intent.getStringExtra("name");
-        Toolbar tool = (Toolbar) findViewById(R.id.)
-        tool.setTitle(name);
-        setSupportActionBar(tool);
         //----------------------------------------------
 
 

@@ -15,6 +15,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.widget.Toast;
+
+import org.json.JSONException;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import m2b.magic2brain.com.magic2brain.R;
 
 public class Main2Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -104,9 +111,19 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
 
         } else if (id == R.id.nav_quick_learn) {
             Deck d = new Deck(); // Just for testing
-            d.addCard(new Card(410017,"Brain in a Jar")); // Just for testing
+            DeckAssetLoader dc = new DeckAssetLoader();
+            Card[] c = new Card[1];
+            try {
+                c = dc.getDeck("C16"+".json", this);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            d.setSet(new ArrayList<Card>(Arrays.asList(c)));
+            /*d.addCard(new Card(410017,"Brain in a Jar")); // Just for testing
             d.addCard(new Card(418367,"Fliegender Ersthelfer")); // Just for testing
-            d.addCard(new Card(418607,"Äther-Knotenpunkt")); // Just for testing
+            d.addCard(new Card(418607,"Äther-Knotenpunkt")); // Just for testing*/
             Intent i = new Intent(this, QueryActivity.class);
             i.putExtra("Set",d); // Just for testing
             startActivity(i);
