@@ -1,17 +1,23 @@
 package m2b.magic2brain.com;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayout;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+
+import java.util.Arrays;
 
 import m2b.magic2brain.com.magic2brain.R;
 
@@ -43,7 +49,7 @@ public class CardBrowserActivity extends AppCompatActivity {
         tv.setText(info);
 
         TextView text = (TextView) findViewById(R.id.cbaText);
-        text.setText(card.getText());
+        text.setText(card.getText() + card.getManaCost());
         text.setTextColor(Color.CYAN);
 
         TextView flavor = (TextView) findViewById(R.id.cbaFlavor);
@@ -51,6 +57,9 @@ public class CardBrowserActivity extends AppCompatActivity {
 
         TextView type = (TextView) findViewById(R.id.cbaType);
         type.setText(card.getType());
+
+        LinearLayout ll = (LinearLayout) findViewById(R.id.cba_mcost_layout);
+        setManaCost(card.getManaCost(), this, ll);
 
         showPic(card.getMultiverseid());
 
@@ -64,16 +73,58 @@ public class CardBrowserActivity extends AppCompatActivity {
                 if(Favorites.favorites_mvid.contains(card)){
                     Favorites.favorites_mvid.remove(card);
                     fab.setImageResource(R.drawable.ic_favorite_border);
+                    Snackbar.make(view, "Removed from your favorites!", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
                 }
                 else {
                     Favorites.favorites_mvid.add(card);
                     fab.setImageResource(R.drawable.ic_favorite);
+                    Snackbar.make(view, "Added to your favorites!", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
                 }
                 //onCreate(savedInstanceState);
-                Snackbar.make(view, "Added to your favorites!", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
             }
         });
+    }
+
+    private void setManaCost(String manatext, Context context, LinearLayout layout){
+        manatext = manatext.replaceAll("\\{", "");
+        manatext = manatext.replaceAll("\\}", "");
+        String[] items = manatext.split("");
+        items = Arrays.copyOfRange(items, 1, items.length);
+
+        for(int i = 0; i< items.length; i++){
+            ImageView imgv = new ImageView(this);
+            int resid = 0;
+            if(items[i].equals("B")){
+                resid = R.drawable.b;
+            }
+            else if (items[i].equals("C")){
+                resid = R.drawable.c;
+            }
+            else if (items[i].equals("G")){
+                resid = R.drawable.g;
+            }
+            else if (items[i].equals("R")){
+                resid = R.drawable.r;
+            }
+            else if (items[i].equals("U")){
+                resid = R.drawable.u;
+            }
+            else if (items[i].equals("W")){
+                resid = R.drawable.w;
+            }
+            else{
+                resid = R.drawable.ic_error;
+            }
+            imgv.setBackgroundResource(resid);
+            layout.addView(imgv);
+            android.view.ViewGroup.LayoutParams layoutParams = imgv.getLayoutParams();
+            layoutParams.width = 80;
+            layoutParams.height = 80;
+            imgv.setLayoutParams(layoutParams);
+        }
     }
 
     private void showPic(int MultiID){

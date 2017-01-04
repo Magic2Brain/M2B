@@ -55,11 +55,16 @@ public class FavoritesActivity extends AppCompatActivity {
         fam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(currentContext, QueryActivity.class);
-                Deck d = new Deck();
-                d.setSet(alist_favs);
-                intent.putExtra("Set", d);
-                startActivity(intent);
+                if(alist_favs.size() > 0) {
+                    Intent intent = new Intent(currentContext, QueryActivity.class);
+                    Deck d = new Deck();
+                    d.setSet(alist_favs);
+                    intent.putExtra("Set", d);
+                    startActivity(intent);
+                }
+                else{
+                    Snackbar.make(view, "You have no favorites to learn!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                }
             }
         });
 
