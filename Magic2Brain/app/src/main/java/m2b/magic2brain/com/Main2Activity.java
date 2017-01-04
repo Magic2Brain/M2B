@@ -1,7 +1,9 @@
 package m2b.magic2brain.com;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -16,9 +18,14 @@ import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import org.json.JSONException;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -26,7 +33,8 @@ import m2b.magic2brain.com.magic2brain.R;
 
 public class Main2Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    Animation fadein;
+    public static final String FAVS_SAVEFILE = "FavoritesSavefile";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +64,34 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         navigationView.setNavigationItemSelectedListener(this);
 
         Favorites.init();
+
+        // Restore preferences
+        SharedPreferences appSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
+        Gson gson = new Gson();
+        String json = appSharedPrefs.getString("favobj", "");
+        Type type = new TypeToken<ArrayList<Card>>(){}.getType();
+        ArrayList<Card> favs= gson.fromJson(json, type);
+        if(favs == null){
+            Favorites.init();
+        }
+        else{
+            Favorites.favorites_mvid = favs;
+        }
+
+    }
+
+    protected void onStop(){
+        super.onStop();
+
+        // We need an Editor object to make preference changes.
+        // All objects are from android.context.Context
+        ArrayList<Card> mStudentObject= Favorites.favorites_mvid;
+        SharedPreferences appSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
+        SharedPreferences.Editor prefsEditor = appSharedPrefs.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(mStudentObject);
+        prefsEditor.putString("favobj", json);
+        prefsEditor.commit();
     }
 
     @Override
