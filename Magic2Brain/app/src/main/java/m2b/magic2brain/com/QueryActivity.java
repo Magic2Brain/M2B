@@ -13,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,7 +28,8 @@ import java.util.Random;
 import m2b.magic2brain.com.magic2brain.R;
 //TODO: Add alternative query-mode (All vs. Sets of eg. 7)
 public class QueryActivity extends AppCompatActivity {
-    private ImageView imgv; // The image gets stored here
+    private ImageView imgv; // The image of the card gets stored here
+    private ImageView imgCorr; // Is over the image. It's to indicate if the answer was correct or not
     private Toolbar hiding; // This is a bar that hides a certain area
     private ArrayList<Card> set; //This Arraylist holds all Cards that need to query. It won't be edited (after loading it)
     private ArrayList<Card> wrongGuessed;
@@ -74,6 +77,7 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void showNextPic(){
+        skipped = false;
         showHider();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -98,12 +102,16 @@ public class QueryActivity extends AppCompatActivity {
                         setDone();
                     }
                 }, 1000);
-
             } else {
+                if(!skipped){
+                    imgCorr.setImageResource(R.drawable.correct_answer);
+                    showImgCorr();
+                }
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        if(!skipped){hideImgCorr();}
                         showNextPic();
                     }
                 }, 1000);
@@ -112,8 +120,9 @@ public class QueryActivity extends AppCompatActivity {
            wrongAnswer();
         }
     }
-
+    private boolean skipped = false;
     public void skip(){
+        skipped = true;
         wrongAnswer();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -126,7 +135,16 @@ public class QueryActivity extends AppCompatActivity {
 
     public void wrongAnswer(){
         firstGuess = false;
+        imgCorr.setImageResource(R.drawable.wrong_answer);
+        showImgCorr();
         hideHider();
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                hideImgCorr();
+            }
+        }, 1000);
     }
 
     public void setDone(){
@@ -135,19 +153,29 @@ public class QueryActivity extends AppCompatActivity {
         shuffleWrongs();
     }
 
-    public void hideHider(){
+    public void hideHider(){ // Shows the name of the card fadingly
         hiding.animate().alpha(0).setDuration(1000).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
             public void run() {hiding.animate().alpha(0).setDuration(1000).setInterpolator(new AccelerateInterpolator()).start();}}).start();
     }
 
-    public void showHider(){
+    public void showHider(){ // Hides the name of the card fadingly
         hiding.animate().alpha(1).setDuration(1000).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
             public void run() {hiding.animate().alpha(1).setDuration(100).setInterpolator(new AccelerateInterpolator()).start();}}).start();
     }
 
-    public void showHiderInstant(){
+    public void showHiderInstant(){ // Hides the name of the card instantly
         hiding.animate().alpha(1).setDuration(10).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
             public void run() {hiding.animate().alpha(1).setDuration(100).setInterpolator(new AccelerateInterpolator()).start();}}).start();
+    }
+
+    public void hideImgCorr(){
+        Animation myFadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fadeout);
+        imgCorr.startAnimation(myFadeInAnimation); //Set animation to your ImageView
+    }
+
+    public void showImgCorr(){
+        Animation myFadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fadein);
+        imgCorr.startAnimation(myFadeInAnimation); //Set animation to your ImageView
     }
 
     public void buildMenu(){
@@ -167,6 +195,13 @@ public class QueryActivity extends AppCompatActivity {
         params.leftMargin = 0; // X-Position
         params.topMargin = (int)(0.05*scrHeight); // Y-Position
         lyt.addView(imgv, params); // add it to the View
+
+        imgCorr = new ImageView(this); // Create new Imageview
+        hideImgCorr();
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.5*scrHeight))/*Height*/;
+        params.leftMargin = 0; // X-Position
+        params.topMargin = (int)(0.05*scrHeight); // Y-Position
+        lyt.addView(imgCorr, params); // add it to the View
 
         // Add EditText like Imageview
         final EditText inputtxt = new EditText(this);
