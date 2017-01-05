@@ -60,6 +60,7 @@ public class QueryActivity extends AppCompatActivity {
         Intent i = getIntent();
         Deck qur = (Deck) i.getSerializableExtra("Set");
         deckName = qur.getName();
+        if(deckName == null){deckName="DEFAULT";}
         set = qur.getSet();
         if(!loadProgress()) { //First we try to load the progress. If this fails, we simply start over
             wrongGuessed = (ArrayList) set.clone(); //Lets assume he guessed everything wrong and remove the card of this Array when he guesses it right
@@ -67,7 +68,6 @@ public class QueryActivity extends AppCompatActivity {
             indexCard = 0;
         }
         showFirstPic(); //Start the query
-        Log.i("Query onCreate()","Name of Deck: "+ deckName);
     }
 
     protected void onPause(){
@@ -82,11 +82,9 @@ public class QueryActivity extends AppCompatActivity {
         Type type = new TypeToken<ArrayList<Card>>(){}.getType();
         ArrayList<Card> aL = gson.fromJson(json, type);
         int loadedIndex = sharedPrefs.getInt("query_index_"+deckName,-1);
-
         if(aL == null){return false;}
         wrongGuessed = aL;
         indexCard = loadedIndex;
-
         return true;
     }
 
