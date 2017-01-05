@@ -28,10 +28,6 @@
             android:screenOrientation="portrait" />
         <activity android:name="m2b.magic2brain.com.SearchActivity" />
         <activity
-            android:name="m2b.magic2brain.com.Options2Activity"
-            android:label="@string/title_activity_options2"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name="m2b.magic2brain.com.CardBrowserActivity"
             android:label="@string/title_activity_card_browser"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -39,7 +35,11 @@
             android:name="m2b.magic2brain.com.BrowserActivity"
             android:label="@string/title_activity_browser"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="m2b.magic2brain.com.DeckDisplayActivity"></activity>
+        <activity android:name="m2b.magic2brain.com.DeckDisplayActivity" />
+        <activity
+            android:name="m2b.magic2brain.com.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name="m2b.magic2brain.com.SearchHandlerActivity"></activity>
     </application>
 
 </manifest>

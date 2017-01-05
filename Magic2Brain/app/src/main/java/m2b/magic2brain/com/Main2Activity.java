@@ -157,9 +157,6 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
                 e.printStackTrace();
             }
             d.setSet(new ArrayList<Card>(Arrays.asList(c)));
-            /*d.addCard(new Card(410017,"Brain in a Jar")); // Just for testing
-            d.addCard(new Card(418367,"Fliegender Ersthelfer")); // Just for testing
-            d.addCard(new Card(418607,"Äther-Knotenpunkt")); // Just for testing*/
             Intent i = new Intent(this, QueryActivity.class);
             i.putExtra("Set",d); // Just for testing
             startActivity(i);
@@ -172,7 +169,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             Toast.makeText(this, "Not implemented", Toast.LENGTH_SHORT).show();
 
         } else if (id == R.id.nav_settings) {
-            Intent intent = new Intent(this, Options2Activity.class);
+            Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fadeout, R.anim.fadein);
 

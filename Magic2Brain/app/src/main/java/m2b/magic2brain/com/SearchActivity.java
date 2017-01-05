@@ -1,8 +1,13 @@
 package m2b.magic2brain.com;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 import m2b.magic2brain.com.magic2brain.R;
 
@@ -13,6 +18,28 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        final Context context = this;
+
+        Button cards = (Button) findViewById(R.id.c_search_cards);
+        Button decks = (Button) findViewById(R.id.c_search_decks);
+
+        cards.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, SearchHandlerActivity.class);
+                intent.putExtra("cardsearch", true);
+                startActivity(intent);
+            }
+        });
+
+        decks.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, SearchHandlerActivity.class);
+                intent.putExtra("cardsearch", false);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
