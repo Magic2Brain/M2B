@@ -150,13 +150,12 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             DeckAssetLoader dc = new DeckAssetLoader();
             Card[] c = new Card[1];
             try {
-                c = dc.getDeck("C16"+".json", this);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
+                c = dc.getDeck("C16.json", this);
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             d.setSet(new ArrayList<Card>(Arrays.asList(c)));
+            d.setName("Commander 2016");
             Intent i = new Intent(this, QueryActivity.class);
             i.putExtra("Set",d); // Just for testing
             startActivity(i);

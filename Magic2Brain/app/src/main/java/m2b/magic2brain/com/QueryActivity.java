@@ -1,37 +1,50 @@
 package m2b.magic2brain.com;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.squareup.picasso.Picasso;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 import m2b.magic2brain.com.magic2brain.R;
 //TODO: Add alternative query-mode (All vs. Sets of eg. 7)
 public class QueryActivity extends AppCompatActivity {
-    private ImageView imgv; // The image gets stored here
+    private ImageView imgv; // The image of the card gets stored here
+    private ImageView imgCorr; // Is over the image. It's to indicate if the answer was correct or not
     private Toolbar hiding; // This is a bar that hides a certain area
     private ArrayList<Card> set; //This Arraylist holds all Cards that need to query. It won't be edited (after loading it)
     private ArrayList<Card> wrongGuessed;
     private int indexCard; // Actually not needed (because we remove cards from WrongGuessed) but may be useful in later edits
     private boolean firstGuess; //This is to check if he guessed it at first try. If so we remove the card from the Arraylist. Else it stays there.
+    private String deckName; //Name of the deck. Only for saving/loading purpose
 
     protected void onCreate(Bundle savedInstanceState) {
         // Build UI
@@ -46,12 +59,49 @@ public class QueryActivity extends AppCompatActivity {
         // Prepare Query
         Intent i = getIntent();
         Deck qur = (Deck) i.getSerializableExtra("Set");
+        deckName = qur.getName();
+        if(deckName == null){deckName="DEFAULT";}
         set = qur.getSet();
-        wrongGuessed = (ArrayList)set.clone(); //Lets assume he guessed everything wrong and remove the card of this Array when he guesses it right
-        shuffleWrongs(); //Shuffle it a bit (better learn-effect)
-        indexCard = 0;
-        //buildEndScreen(); //Just for testing
+        if(!loadProgress()) { //First we try to load the progress. If this fails, we simply start over
+            wrongGuessed = (ArrayList) set.clone(); //Lets assume he guessed everything wrong and remove the card of this Array when he guesses it right
+            shuffleWrongs(); //Shuffle it a bit (better learn-effect)
+            indexCard = 0;
+        }
         showFirstPic(); //Start the query
+    }
+
+    protected void onPause(){
+        super.onPause();
+        saveProgress();
+    }
+
+    public boolean loadProgress(){
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        Gson gson = new Gson();
+        String json = sharedPrefs.getString("query_list_"+deckName,null);
+        Type type = new TypeToken<ArrayList<Card>>(){}.getType();
+        ArrayList<Card> aL = gson.fromJson(json, type);
+        int loadedIndex = sharedPrefs.getInt("query_index_"+deckName,-1);
+        if(aL == null){return false;}
+        wrongGuessed = aL;
+        indexCard = loadedIndex;
+        return true;
+    }
+
+    public void saveProgress(){
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(wrongGuessed);
+        editor.putString("query_list_"+deckName, json);
+        editor.putInt("query_index_"+deckName,indexCard);
+        editor.commit();
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.query, menu);
+        return true;
     }
 
     public void shuffleWrongs(){
@@ -74,6 +124,7 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void showNextPic(){
+        skipped = false;
         showHider();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -98,12 +149,16 @@ public class QueryActivity extends AppCompatActivity {
                         setDone();
                     }
                 }, 1000);
-
             } else {
+                if(!skipped){
+                    imgCorr.setImageResource(R.drawable.correct_answer);
+                    showImgCorr();
+                }
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
+                        if(!skipped){hideImgCorr();}
                         showNextPic();
                     }
                 }, 1000);
@@ -112,8 +167,9 @@ public class QueryActivity extends AppCompatActivity {
            wrongAnswer();
         }
     }
-
+    private boolean skipped = false;
     public void skip(){
+        skipped = true;
         wrongAnswer();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -126,7 +182,16 @@ public class QueryActivity extends AppCompatActivity {
 
     public void wrongAnswer(){
         firstGuess = false;
+        imgCorr.setImageResource(R.drawable.wrong_answer);
+        showImgCorr();
         hideHider();
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                hideImgCorr();
+            }
+        }, 1000);
     }
 
     public void setDone(){
@@ -135,19 +200,29 @@ public class QueryActivity extends AppCompatActivity {
         shuffleWrongs();
     }
 
-    public void hideHider(){
+    public void hideHider(){ // Shows the name of the card fadingly
         hiding.animate().alpha(0).setDuration(1000).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
             public void run() {hiding.animate().alpha(0).setDuration(1000).setInterpolator(new AccelerateInterpolator()).start();}}).start();
     }
 
-    public void showHider(){
+    public void showHider(){ // Hides the name of the card fadingly
         hiding.animate().alpha(1).setDuration(1000).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
             public void run() {hiding.animate().alpha(1).setDuration(100).setInterpolator(new AccelerateInterpolator()).start();}}).start();
     }
 
-    public void showHiderInstant(){
+    public void showHiderInstant(){ // Hides the name of the card instantly
         hiding.animate().alpha(1).setDuration(10).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
             public void run() {hiding.animate().alpha(1).setDuration(100).setInterpolator(new AccelerateInterpolator()).start();}}).start();
+    }
+
+    public void hideImgCorr(){
+        Animation myFadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fadeout);
+        imgCorr.startAnimation(myFadeInAnimation); //Set animation to your ImageView
+    }
+
+    public void showImgCorr(){
+        Animation myFadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fadein);
+        imgCorr.startAnimation(myFadeInAnimation); //Set animation to your ImageView
     }
 
     public void buildMenu(){
@@ -167,6 +242,13 @@ public class QueryActivity extends AppCompatActivity {
         params.leftMargin = 0; // X-Position
         params.topMargin = (int)(0.05*scrHeight); // Y-Position
         lyt.addView(imgv, params); // add it to the View
+
+        imgCorr = new ImageView(this); // Create new Imageview
+        hideImgCorr();
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.5*scrHeight))/*Height*/;
+        params.leftMargin = 0; // X-Position
+        params.topMargin = (int)(0.05*scrHeight); // Y-Position
+        lyt.addView(imgCorr, params); // add it to the View
 
         // Add EditText like Imageview
         final EditText inputtxt = new EditText(this);
@@ -309,19 +391,27 @@ public class QueryActivity extends AppCompatActivity {
         lyt.addView(repAll, params);
         repAll.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                wrongGuessed = (ArrayList)set.clone();
-                shuffleWrongs();
-                buildMenu();
-                showFirstPic();
+             restartAll();
             }
         });
 
     }
 
+    public void restartAll(){
+        wrongGuessed = (ArrayList)set.clone();
+        shuffleWrongs();
+        buildMenu();
+        showFirstPic();
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == android.R.id.home) {
-            onBackPressed();
+        switch(id){
+            case android.R.id.home:
+                onBackPressed();
+                break;
+            case R.id.restart_all:
+                restartAll();
         }
         return true;
     }
