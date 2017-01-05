@@ -19,7 +19,9 @@
         android:layout_alignParentEnd="true"
         android:layout_weight="0.51"
         android:contentDescription="Button"
-        android:text="Search Decks" />
+        android:text="Search Decks"
+        android:drawableLeft="@drawable/sheets_filled_50"
+        style="?android:attr/borderlessButtonStyle" />
 
     <Button
         android:text="Search Cards"
@@ -30,6 +32,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/c_search_decks"
-        android:layout_weight="0.54" />
+        android:layout_weight="0.54"
+        android:drawableLeft="@drawable/paper_filled_50"
+        style="?android:attr/borderlessButtonStyle"
+        android:elevation="0dp" />
 
 </LinearLayout>
