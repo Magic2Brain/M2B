@@ -80,6 +80,9 @@
     {
       "artist": "Dermot Power",
       "cmc": 7,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -168,19 +171,19 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "Whether or not the ability triggers depends on if the Avatar has the ability while in the graveyard. If it doesn’t (thanks to Yixlid Jailer, for instance), then the ability won’t trigger. It doesn’t matter whether the Avatar had the ability in its previous zone (it will trigger even if it had been on the battlefield with Humility)."
+          "text": "Whether or not the ability triggers depends on if the Avatar has the ability while in the graveyard. If it doesn't (thanks to Yixlid Jailer, for instance), then the ability won't trigger. It doesn't matter whether the Avatar had the ability in its previous zone (it will trigger even if it had been on the battlefield with Humility)."
         },
         {
           "date": "2012-07-01",
-          "text": "Serra Avatar’s power and toughness are constantly updated as your life total changes."
+          "text": "Serra Avatar's power and toughness are constantly updated as your life total changes."
         },
         {
           "date": "2012-07-01",
-          "text": "The ability that defines Serra Avatar’s power and toughness works in all zones, not just the battlefield."
+          "text": "The ability that defines Serra Avatar's power and toughness works in all zones, not just the battlefield."
         },
         {
           "date": "2012-07-01",
-          "text": "If Serra Avatar is no longer in your graveyard when its triggered ability resolves, you won’t shuffle your library."
+          "text": "If Serra Avatar is no longer in your graveyard when its triggered ability resolves, you won't shuffle your library."
         }
       ],
       "source": "Junior Super Series prize.",
@@ -197,6 +200,9 @@
     {
       "artist": "Melissa A. Benson",
       "cmc": 2,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -295,6 +301,9 @@
     {
       "artist": "Mark Poole",
       "cmc": 2,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -371,6 +380,9 @@
     {
       "artist": "Rebecca Guay",
       "cmc": 1,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -481,27 +493,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -550,6 +546,9 @@
     {
       "artist": "Christopher Rush",
       "cmc": 2,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -642,6 +641,9 @@
     {
       "artist": "Terese Nielsen",
       "cmc": 1,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -768,6 +770,9 @@
     {
       "artist": "Sam Wood",
       "cmc": 6,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -850,6 +855,9 @@
     {
       "artist": "Justin Sweet",
       "cmc": 2,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -932,6 +940,9 @@
     {
       "artist": "Tom Wänerstrand",
       "cmc": 3,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -1025,11 +1036,11 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Can’t target itself because you choose the target before you tap him. At that time he is not yet a legal target."
+          "text": "Can't target itself because you choose the target before you tap him. At that time he is not yet a legal target."
         },
         {
           "date": "2004-10-04",
-          "text": "If the creature is no longer tapped when the Assassin’s ability resolves, then the ability is countered."
+          "text": "If the creature is no longer tapped when the Assassin's ability resolves, then the ability is countered."
         }
       ],
       "source": "Junior Super Series prize.",
@@ -1047,6 +1058,9 @@
     {
       "artist": "Carl Critchlow",
       "cmc": 2,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -1119,7 +1133,8 @@
         "CMD",
         "C13",
         "CNS",
-        "C15"
+        "C15",
+        "C16"
       ],
       "rarity": "Special",
       "releaseDate": "2006",
@@ -1138,6 +1153,9 @@
     {
       "artist": "Ron Spencer",
       "cmc": 5,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -1245,6 +1263,9 @@
     {
       "artist": "Dany Orizio",
       "cmc": 2,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -1439,6 +1460,9 @@
     {
       "artist": "Raymond Swanland",
       "cmc": 3,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -1533,6 +1557,9 @@
     {
       "artist": "Matt Cavotta",
       "cmc": 3,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -1588,10 +1615,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Invasion Block",
           "legality": "Legal"
         },
@@ -1601,18 +1624,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1659,6 +1670,9 @@
     {
       "artist": "Wayne Reynolds",
       "cmc": 3,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -1933,11 +1947,11 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Can’t target itself because you choose the target before you tap him. At that time he is not yet a legal target."
+          "text": "Can't target itself because you choose the target before you tap him. At that time he is not yet a legal target."
         },
         {
           "date": "2004-10-04",
-          "text": "If the creature is no longer tapped when the Assassin’s ability resolves, then the ability is countered."
+          "text": "If the creature is no longer tapped when the Assassin's ability resolves, then the ability is countered."
         }
       ],
       "source": "Junior Super Series prize.",
@@ -2027,7 +2041,8 @@
         "CMD",
         "C13",
         "CNS",
-        "C15"
+        "C15",
+        "C16"
       ],
       "rarity": "Special",
       "releaseDate": "2006",
@@ -2496,10 +2511,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Invasion Block",
           "legality": "Legal"
         },
@@ -2509,18 +2520,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2639,7 +2638,8 @@
         "CMD",
         "C13",
         "CNS",
-        "C15"
+        "C15",
+        "C16"
       ],
       "rarity": "Special",
       "releaseDate": "2006",
@@ -3108,10 +3108,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Invasion Block",
           "legality": "Legal"
         },
@@ -3121,18 +3117,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {

@@ -6,6 +6,8 @@
   "releaseDate": "2012-08-31",
   "border": "black",
   "type": "from the vault",
+  "mkm_name": "From the Vault: Realms",
+  "mkm_id": 1397,
   "cards": [
     {
       "artist": "Colin MacNeil",
@@ -19,15 +21,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -39,6 +33,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "1",
       "multiverseid": 288994,
       "name": "Ancient Tomb",
       "number": "1",
@@ -68,10 +63,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -84,22 +75,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "2",
       "multiverseid": 291507,
       "name": "Boseiju, Who Shelters All",
       "number": "2",
@@ -143,10 +123,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -155,22 +131,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "3",
       "multiverseid": 288995,
       "name": "Cephalid Coliseum",
       "number": "3",
@@ -198,10 +163,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -210,19 +171,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -230,6 +179,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "4",
       "multiverseid": 287341,
       "name": "Desert",
       "number": "4",
@@ -274,10 +224,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -286,19 +232,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -306,6 +240,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "5",
       "multiverseid": 282542,
       "name": "Dryad Arbor",
       "number": "5",
@@ -362,10 +297,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -378,22 +309,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "6",
       "multiverseid": 282541,
       "name": "Forbidden Orchard",
       "number": "6",
@@ -402,10 +322,11 @@
       "printings": [
         "CHK",
         "V12",
-        "EXP"
+        "EXP",
+        "C16"
       ],
       "rarity": "Mythic Rare",
-      "text": "{T}: Add one mana of any color to your mana pool.\nWhenever you tap Forbidden Orchard for mana, target opponent puts a 1/1 colorless Spirit creature token onto the battlefield.",
+      "text": "{T}: Add one mana of any color to your mana pool.\nWhenever you tap Forbidden Orchard for mana, target opponent creates a 1/1 colorless Spirit creature token.",
       "type": "Land",
       "types": [
         "Land"
@@ -422,10 +343,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Ice Age Block",
           "legality": "Legal"
         },
@@ -434,22 +351,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "7",
       "multiverseid": 288996,
       "name": "Glacial Chasm",
       "number": "7",
@@ -489,10 +395,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -501,19 +403,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -521,6 +411,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "8",
       "multiverseid": 287335,
       "name": "Grove of the Burnwillows",
       "number": "8",
@@ -561,6 +452,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "9",
       "multiverseid": 287336,
       "name": "High Market",
       "number": "9",
@@ -597,6 +489,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "10",
       "multiverseid": 287329,
       "name": "Maze of Ith",
       "number": "10",
@@ -617,11 +510,11 @@
         },
         {
           "date": "2016-06-08",
-          "text": "The creature isn’t removed from combat; it just has its damage prevented. It’s still an attacking creature until the combat phase is complete."
+          "text": "The creature isn't removed from combat; it just has its damage prevented. It's still an attacking creature until the combat phase is complete."
         },
         {
           "date": "2016-06-08",
-          "text": "You can activate Maze of Ith’s ability targeting an attacking creature you control during the combat damage step or the end of combat step. It’ll be untapped and the damage it had already dealt won’t be undone."
+          "text": "You can activate Maze of Ith's ability targeting an attacking creature you control during the combat damage step or the end of combat step. It'll be untapped and the damage it had already dealt won't be undone."
         }
       ],
       "text": "{T}: Untap target attacking creature. Prevent all combat damage that would be dealt to and dealt by that creature this turn.",
@@ -646,10 +539,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -662,22 +551,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "11",
       "multiverseid": 287334,
       "name": "Murmuring Bosk",
       "number": "11",
@@ -685,7 +563,8 @@
       "originalType": "Land — Forest",
       "printings": [
         "MOR",
-        "V12"
+        "V12",
+        "C16"
       ],
       "rarity": "Mythic Rare",
       "rulings": [
@@ -730,6 +609,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "12",
       "multiverseid": 288997,
       "name": "Shivan Gorge",
       "number": "12",
@@ -783,6 +663,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "13",
       "multiverseid": 287330,
       "name": "Urborg, Tomb of Yawgmoth",
       "number": "13",
@@ -797,19 +678,19 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "If Urborg, Tomb of Yawgmoth and either Blood Moon or Magus of the Moon are on the battlefield, all nonbasic lands will be Mountains, not Swamps. Urborg, Tomb of Yawgmoth will be a Mountain as well. It will have “{T}: Add {R} to your mana pool” and no other abilities."
+          "text": "If Urborg, Tomb of Yawgmoth and either Blood Moon or Magus of the Moon are on the battlefield, all nonbasic lands will be Mountains, not Swamps. Urborg, Tomb of Yawgmoth will be a Mountain as well. It will have \"{R} to your mana pool\" and no other abilities."
         },
         {
           "date": "2014-07-18",
-          "text": "Urborg, Tomb of Yawgmoth isn’t a Swamp while it’s not on the battlefield."
+          "text": "Urborg, Tomb of Yawgmoth isn't a Swamp while it's not on the battlefield."
         },
         {
           "date": "2014-07-18",
-          "text": "Urborg’s ability causes each land on the battlefield to have the land type Swamp. Each land thus has the ability “{T}: Add {B} to your mana pool.” Nothing else changes about those lands, including their names, other subtypes, other abilities, and whether they’re legendary or basic."
+          "text": "Urborg's ability causes each land on the battlefield to have the land type Swamp. Each land thus has the ability \"{B} to your mana pool.\" Nothing else changes about those lands, including their names, other subtypes, other abilities, and whether they're legendary or basic."
         },
         {
           "date": "2014-07-18",
-          "text": "If Urborg loses its abilities (for example, if it becomes a creature and then Turn to Frog targets it), all lands on the battlefield, including Urborg, will still be Swamps, but Urborg won’t have the ability “Each land is a Swamp in addition to its other land types.” Urborg also won’t be able to tap to produce {B}, but other lands (including those that enter the battlefield later in the turn) will. The way continuous effects work, Urborg’s type-changing ability is applied before the effect that removes both the type-changing ability and its own mana ability."
+          "text": "If Urborg loses its abilities (for example, if it becomes a creature and then Turn to Frog targets it), all lands on the battlefield, including Urborg, will still be Swamps, but Urborg won't have the ability \"Each land is a Swamp in addition to its other land types.\" Urborg also won't be able to tap to produce {B}, but other lands (including those that enter the battlefield later in the turn) will. The way continuous effects work, Urborg's type-changing ability is applied before the effect that removes both the type-changing ability and its own mana ability."
         }
       ],
       "supertypes": [
@@ -822,7 +703,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "flavor": "It is everywhere you've ever been.",
       "id": "820a202b31e2d9c1ced2df72e61bb39308e1886b",
       "imageName": "vesuva",
@@ -830,10 +711,6 @@
       "legalities": [
         {
           "format": "Commander",
-          "legality": "Legal"
-        },
-        {
-          "format": "Freeform",
           "legality": "Legal"
         },
         {
@@ -845,19 +722,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -865,6 +730,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "14",
       "multiverseid": 287332,
       "name": "Vesuva",
       "number": "14",
@@ -909,10 +775,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -925,22 +787,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "15",
       "multiverseid": 287338,
       "name": "Windbrisk Heights",
       "number": "15",
@@ -949,7 +800,8 @@
       "printings": [
         "LRW",
         "V12",
-        "MD1"
+        "MD1",
+        "C16"
       ],
       "rarity": "Mythic Rare",
       "rulings": [

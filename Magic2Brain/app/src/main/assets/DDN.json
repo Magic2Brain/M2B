@@ -5,6 +5,11 @@
   "releaseDate": "2014-09-05",
   "border": "black",
   "type": "duel deck",
+  "translations": {
+    "jp": "Duel Decks: Speed vs. Cunning"
+  },
+  "mkm_name": "Duel Decks: Speed vs. Cunning",
+  "mkm_id": 1496,
   "cards": [
     {
       "artist": "Ryan Alexander Lee",
@@ -52,6 +57,7 @@
         }
       ],
       "manaCost": "{2}{R}{W}{B}",
+      "mciNumber": "1",
       "multiverseid": 386380,
       "name": "Zurgo Helmsmasher",
       "number": "1",
@@ -71,15 +77,15 @@
         },
         {
           "date": "2014-09-20",
-          "text": "If, during your declare attackers step, Zurgo is tapped or is affected by a spell or ability that says it can’t attack, then it doesn’t attack. If there’s a cost associated with having Zurgo attack, you aren’t forced to pay that cost, so it doesn’t have to attack in that case either."
+          "text": "If, during your declare attackers step, Zurgo is tapped or is affected by a spell or ability that says it can't attack, then it doesn't attack. If there's a cost associated with having Zurgo attack, you aren't forced to pay that cost, so it doesn't have to attack in that case either."
         },
         {
           "date": "2014-09-20",
-          "text": "If Zurgo enters the battlefield before the combat phase, it will attack that turn if able. If it enters the battlefield after combat, it won’t attack that turn and will usually be available to block on the following turn."
+          "text": "If Zurgo enters the battlefield before the combat phase, it will attack that turn if able. If it enters the battlefield after combat, it won't attack that turn and will usually be available to block on the following turn."
         },
         {
           "date": "2014-09-20",
-          "text": "Each time a creature dies, check whether Zurgo had dealt any damage to it at any time during that turn. If so, Zurgo’s ability will trigger. It doesn’t matter who controlled the creature or whose graveyard it went to."
+          "text": "Each time a creature dies, check whether Zurgo had dealt any damage to it at any time during that turn. If so, Zurgo's ability will trigger. It doesn't matter who controlled the creature or whose graveyard it went to."
         }
       ],
       "subtypes": [
@@ -122,10 +128,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -134,19 +136,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -155,6 +145,7 @@
         }
       ],
       "manaCost": "{R}",
+      "mciNumber": "2",
       "multiverseid": 386319,
       "name": "Frenzied Goblin",
       "number": "2",
@@ -205,10 +196,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -221,23 +208,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{W}",
+      "mciNumber": "3",
       "multiverseid": 386331,
       "name": "Infantry Veteran",
       "number": "3",
@@ -298,10 +274,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -310,19 +282,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -331,6 +291,7 @@
         }
       ],
       "manaCost": "{1}{W}",
+      "mciNumber": "4",
       "multiverseid": 386341,
       "name": "Leonin Snarecaster",
       "number": "4",
@@ -379,10 +340,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -391,19 +348,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -412,6 +357,7 @@
         }
       ],
       "manaCost": "{1}{B}",
+      "mciNumber": "5",
       "multiverseid": 386309,
       "name": "Dregscape Zombie",
       "number": "5",
@@ -485,10 +431,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -497,19 +439,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -518,6 +448,7 @@
         }
       ],
       "manaCost": "{B}{R}",
+      "mciNumber": "6",
       "multiverseid": 386324,
       "name": "Goblin Deathraiders",
       "number": "6",
@@ -566,10 +497,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -578,19 +505,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -599,6 +514,7 @@
         }
       ],
       "manaCost": "{2}{R}",
+      "mciNumber": "7",
       "multiverseid": 386327,
       "name": "Hellraiser Goblin",
       "number": "7",
@@ -673,15 +589,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{2}{B}",
+      "mciNumber": "8",
       "multiverseid": 386318,
       "name": "Fleshbag Marauder",
       "number": "8",
@@ -701,11 +614,11 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "When the ability resolves, you may sacrifice Fleshbag Marauder itself. If you control no other creatures, you’ll have to sacrifice Fleshbag Marauder."
+          "text": "When the ability resolves, you may sacrifice Fleshbag Marauder itself. If you control no other creatures, you'll have to sacrifice Fleshbag Marauder."
         },
         {
           "date": "2015-06-22",
-          "text": "As Fleshbag Marauder’s ability resolves, first you choose a creature to sacrifice, then each other player in turn order chooses a creature to sacrifice, then all those creatures are sacrificed simultaneously."
+          "text": "As Fleshbag Marauder's ability resolves, first you choose a creature to sacrifice, then each other player in turn order chooses a creature to sacrifice, then all those creatures are sacrificed simultaneously."
         }
       ],
       "subtypes": [
@@ -720,7 +633,7 @@
       ]
     },
     {
-      "artist": "Greg & Tim Hildebrandt",
+      "artist": "Greg &amp; Tim Hildebrandt",
       "cmc": 3,
       "colorIdentity": [
         "R"
@@ -758,6 +671,7 @@
         }
       ],
       "manaCost": "{1}{R}{R}",
+      "mciNumber": "9",
       "multiverseid": 386325,
       "name": "Goblin Warchief",
       "number": "9",
@@ -809,10 +723,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -821,19 +731,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -842,6 +740,7 @@
         }
       ],
       "manaCost": "{1}{R}{R}",
+      "mciNumber": "10",
       "multiverseid": 386326,
       "name": "Hell's Thunder",
       "number": "10",
@@ -912,10 +811,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -924,19 +819,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -945,6 +828,7 @@
         }
       ],
       "manaCost": "{1}{B}{R}",
+      "mciNumber": "11",
       "multiverseid": 386337,
       "name": "Kathari Bomber",
       "number": "11",
@@ -966,7 +850,7 @@
         "Bird",
         "Shaman"
       ],
-      "text": "Flying\nWhen Kathari Bomber deals combat damage to a player, put two 1/1 red Goblin creature tokens onto the battlefield and sacrifice Kathari Bomber.\nUnearth {3}{B}{R} ({3}{B}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
+      "text": "Flying\nWhen Kathari Bomber deals combat damage to a player, create two 1/1 red Goblin creature tokens and sacrifice Kathari Bomber.\nUnearth {3}{B}{R} ({3}{B}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
       "toughness": "2",
       "type": "Creature — Bird Shaman",
       "types": [
@@ -1000,10 +884,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1012,19 +892,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1033,6 +901,7 @@
         }
       ],
       "manaCost": "{1}{B}{R}",
+      "mciNumber": "12",
       "multiverseid": 386364,
       "name": "Shambling Remains",
       "number": "12",
@@ -1099,6 +968,7 @@
         }
       ],
       "manaCost": "{3}{R}",
+      "mciNumber": "13",
       "multiverseid": 386346,
       "name": "Mardu Heart-Piercer",
       "number": "13",
@@ -1113,11 +983,11 @@
       "rulings": [
         {
           "date": "2014-09-20",
-          "text": "Raid abilities care only that you attacked with a creature. It doesn’t matter how many creatures you attacked with, or which opponent or planeswalker controlled by an opponent those creatures attacked."
+          "text": "Raid abilities care only that you attacked with a creature. It doesn't matter how many creatures you attacked with, or which opponent or planeswalker controlled by an opponent those creatures attacked."
         },
         {
           "date": "2014-09-20",
-          "text": "Raid abilities evaluate the entire turn to see if you attacked with a creature. That creature doesn’t have to still be on the battlefield. Similarly, the player or planeswalker it attacked doesn’t have to still be in the game or on the battlefield, respectively."
+          "text": "Raid abilities evaluate the entire turn to see if you attacked with a creature. That creature doesn't have to still be on the battlefield. Similarly, the player or planeswalker it attacked doesn't have to still be in the game or on the battlefield, respectively."
         }
       ],
       "subtypes": [
@@ -1166,6 +1036,7 @@
         }
       ],
       "manaCost": "{2}{R}{R}",
+      "mciNumber": "14",
       "multiverseid": 386305,
       "name": "Beetleback Chief",
       "number": "14",
@@ -1184,7 +1055,7 @@
         "Goblin",
         "Warrior"
       ],
-      "text": "When Beetleback Chief enters the battlefield, put two 1/1 red Goblin creature tokens onto the battlefield.",
+      "text": "When Beetleback Chief enters the battlefield, create two 1/1 red Goblin creature tokens.",
       "toughness": "2",
       "type": "Creature — Goblin Warrior",
       "types": [
@@ -1217,10 +1088,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1229,23 +1096,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{2}{R}{R}",
+      "mciNumber": "15",
       "multiverseid": 386339,
       "name": "Krenko, Mob Boss",
       "number": "15",
@@ -1270,7 +1126,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{T}: Put X 1/1 red Goblin creature tokens onto the battlefield, where X is the number of Goblins you control.",
+      "text": "{T}: Create X 1/1 red Goblin creature tokens, where X is the number of Goblins you control.",
       "toughness": "3",
       "type": "Legendary Creature — Goblin Warrior",
       "types": [
@@ -1303,10 +1159,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1315,23 +1167,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{2}{R}{R}",
+      "mciNumber": "16",
       "multiverseid": 386354,
       "name": "Ogre Battledriver",
       "number": "16",
@@ -1400,6 +1241,7 @@
         }
       ],
       "manaCost": "{1}{R}{R}{W}",
+      "mciNumber": "17",
       "multiverseid": 386316,
       "name": "Flame-Kin Zealot",
       "number": "17",
@@ -1415,7 +1257,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "All creatures under your control when Flame-Kin Zealot’s triggered ability resolves are affected, including Flame-Kin Zealot itself. Ones that come under your control or become creatures later in the turn are not."
+          "text": "All creatures under your control when Flame-Kin Zealot's triggered ability resolves are affected, including Flame-Kin Zealot itself. Ones that come under your control or become creatures later in the turn are not."
         }
       ],
       "subtypes": [
@@ -1454,10 +1296,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1466,19 +1304,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1487,6 +1313,7 @@
         }
       ],
       "manaCost": "{4}{R}",
+      "mciNumber": "18",
       "multiverseid": 386363,
       "name": "Scourge Devil",
       "number": "18",
@@ -1557,10 +1384,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -1573,23 +1396,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{5}{R}",
+      "mciNumber": "19",
       "multiverseid": 386355,
       "name": "Oni of Wild Places",
       "number": "19",
@@ -1652,6 +1464,7 @@
         }
       ],
       "manaCost": "{R}",
+      "mciNumber": "20",
       "multiverseid": 386361,
       "name": "Reckless Abandon",
       "number": "20",
@@ -1704,10 +1517,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1720,19 +1529,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1741,6 +1538,7 @@
         }
       ],
       "manaCost": "{R}",
+      "mciNumber": "21",
       "multiverseid": 386365,
       "name": "Shock",
       "number": "21",
@@ -1824,6 +1622,7 @@
         }
       ],
       "manaCost": "{B}",
+      "mciNumber": "22",
       "multiverseid": 386306,
       "name": "Bone Splinters",
       "number": "22",
@@ -1840,7 +1639,7 @@
       "rulings": [
         {
           "date": "2008-10-01",
-          "text": "You could choose to target the creature you’re going to sacrifice to pay for Bone Splinters. First you choose the target (at which time it’s still on the battlefield), then you pay the costs (at which time you sacrifice it). The spell will be countered."
+          "text": "You could choose to target the creature you're going to sacrifice to pay for Bone Splinters. First you choose the target (at which time it's still on the battlefield), then you pay the costs (at which time you sacrifice it). The spell will be countered."
         },
         {
           "date": "2013-04-15",
@@ -1883,10 +1682,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1895,19 +1690,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Scars of Mirrodin Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1916,6 +1699,7 @@
         }
       ],
       "manaCost": "{1}{R}",
+      "mciNumber": "23",
       "multiverseid": 386301,
       "name": "Arc Trail",
       "number": "23",
@@ -1972,6 +1756,7 @@
         }
       ],
       "manaCost": "{1}{R}",
+      "mciNumber": "24",
       "multiverseid": 386323,
       "name": "Goblin Bombardment",
       "number": "24",
@@ -2017,10 +1802,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2029,23 +1810,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{1}{R}",
+      "mciNumber": "25",
       "multiverseid": 386340,
       "name": "Krenko's Command",
       "number": "25",
@@ -2056,7 +1826,7 @@
         "DDN"
       ],
       "rarity": "Common",
-      "text": "Put two 1/1 red Goblin creature tokens onto the battlefield.",
+      "text": "Create two 1/1 red Goblin creature tokens.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2104,15 +1874,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{2}{R}",
+      "mciNumber": "26",
       "multiverseid": 386299,
       "name": "Act of Treason",
       "number": "26",
@@ -2133,15 +1900,15 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Act of Treason can target any creature, even one that’s untapped or one you already control."
+          "text": "Act of Treason can target any creature, even one that's untapped or one you already control."
         },
         {
           "date": "2010-08-15",
-          "text": "Gaining control of a creature doesn’t cause you to gain control of any Auras or Equipment attached to it."
+          "text": "Gaining control of a creature doesn't cause you to gain control of any Auras or Equipment attached to it."
         },
         {
           "date": "2013-07-01",
-          "text": "If you control a legendary creature and gain control of another legendary creature with the same name, you’ll choose one to remain on the battlefield and put the other into its owner’s graveyard."
+          "text": "If you control a legendary creature and gain control of another legendary creature with the same name, you'll choose one to remain on the battlefield and put the other into its owner's graveyard."
         }
       ],
       "text": "Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn. (It can attack and {T} this turn.)",
@@ -2176,10 +1943,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2188,19 +1951,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2209,6 +1960,7 @@
         }
       ],
       "manaCost": "{2}{W}",
+      "mciNumber": "27",
       "multiverseid": 386308,
       "name": "Dauntless Onslaught",
       "number": "27",
@@ -2252,10 +2004,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2264,19 +2012,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2285,6 +2021,7 @@
         }
       ],
       "manaCost": "{1}{R}{R}",
+      "mciNumber": "28",
       "multiverseid": 386356,
       "name": "Orcish Cannonade",
       "number": "28",
@@ -2345,6 +2082,7 @@
         }
       ],
       "manaCost": "{5}{R}",
+      "mciNumber": "29",
       "multiverseid": 386315,
       "name": "Fiery Fall",
       "number": "29",
@@ -2363,7 +2101,7 @@
       "rulings": [
         {
           "date": "2009-02-01",
-          "text": "Unlike the normal cycling ability, basic landcycling doesn’t allow you to draw a card. Instead, it lets you search your library for a basic land card. You don’t choose the type of basic land card you’ll find until you’re performing the search. After you choose a basic land card in your library, you reveal it, put it into your hand, then shuffle your library."
+          "text": "Unlike the normal cycling ability, basic landcycling doesn't allow you to draw a card. Instead, it lets you search your library for a basic land card. You don't choose the type of basic land card you'll find until you're performing the search. After you choose a basic land card in your library, you reveal it, put it into your hand, then shuffle your library."
         },
         {
           "date": "2009-02-01",
@@ -2409,10 +2147,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Ice Age Block",
           "legality": "Legal"
         },
@@ -2425,23 +2159,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{5}{R}{R}",
+      "mciNumber": "30",
       "multiverseid": 386320,
       "name": "Fury of the Horde",
       "number": "30",
@@ -2523,6 +2246,7 @@
         }
       ],
       "manaCost": "{X}{R}",
+      "mciNumber": "31",
       "multiverseid": 386304,
       "name": "Banefire",
       "number": "31",
@@ -2542,11 +2266,11 @@
         },
         {
           "date": "2009-02-01",
-          "text": "Banefire can be targeted by spells that try to counter it (such as Countersquall) regardless of what the value of X is. If X is 5 or more, those spells will still resolve, but the part of their effect that would counter Banefire won’t do anything. Any other effects those spells have will work as normal."
+          "text": "Banefire can be targeted by spells that try to counter it (such as Countersquall) regardless of what the value of X is. If X is 5 or more, those spells will still resolve, but the part of their effect that would counter Banefire won't do anything. Any other effects those spells have will work as normal."
         },
         {
           "date": "2009-02-01",
-          "text": "Banefire’s ability won’t prevent it from being countered by the game rules if its target has become an illegal target."
+          "text": "Banefire's ability won't prevent it from being countered by the game rules if its target has become an illegal target."
         }
       ],
       "text": "Banefire deals X damage to target creature or player.\nIf X is 5 or more, Banefire can't be countered by spells or abilities and the damage can't be prevented.",
@@ -2606,6 +2330,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "32",
       "multiverseid": 386311,
       "name": "Evolving Wilds",
       "number": "32",
@@ -2631,7 +2356,8 @@
         "DDP",
         "BFZ",
         "C15",
-        "CN2"
+        "CN2",
+        "C16"
       ],
       "rarity": "Common",
       "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
@@ -2661,27 +2387,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2693,6 +2403,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "33",
       "multiverseid": 386321,
       "name": "Ghitu Encampment",
       "number": "33",
@@ -2761,6 +2472,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "34",
       "multiverseid": 386353,
       "name": "Nomad Outpost",
       "number": "34",
@@ -2768,7 +2480,8 @@
       "originalType": "Land",
       "printings": [
         "DDN",
-        "KTK"
+        "KTK",
+        "C16"
       ],
       "rarity": "Uncommon",
       "text": "Nomad Outpost enters the battlefield tapped.\n{T}: Add {R}, {W}, or {B} to your mana pool.",
@@ -3026,7 +2739,8 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3294,7 +3008,8 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3562,7 +3277,8 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -3827,7 +3543,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4090,7 +3807,8 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4352,7 +4070,8 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4614,7 +4333,8 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -4675,6 +4395,7 @@
         }
       ],
       "manaCost": "{3}{U}{U}{U}",
+      "mciNumber": "42",
       "multiverseid": 386302,
       "name": "Arcanis the Omnipotent",
       "number": "42",
@@ -4691,7 +4412,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Arcanis’s last ability can only be activated while it’s on the battlefield."
+          "text": "Arcanis's last ability can only be activated while it's on the battlefield."
         }
       ],
       "subtypes": [
@@ -4733,10 +4454,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -4745,19 +4462,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4766,6 +4471,7 @@
         }
       ],
       "manaCost": "{U}",
+      "mciNumber": "43",
       "multiverseid": 386312,
       "name": "Faerie Impostor",
       "number": "43",
@@ -4820,10 +4526,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -4832,19 +4534,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4853,6 +4543,7 @@
         }
       ],
       "manaCost": "{1}{U}",
+      "mciNumber": "44",
       "multiverseid": 386307,
       "name": "Coral Trickster",
       "number": "44",
@@ -4917,6 +4608,7 @@
         }
       ],
       "manaCost": "{1}{U}",
+      "mciNumber": "45",
       "multiverseid": 386314,
       "name": "Fathom Seer",
       "number": "45",
@@ -4983,6 +4675,7 @@
         }
       ],
       "manaCost": "{1}{U}",
+      "mciNumber": "46",
       "multiverseid": 386336,
       "name": "Jeskai Elder",
       "number": "46",
@@ -4997,7 +4690,7 @@
       "rulings": [
         {
           "date": "2014-09-20",
-          "text": "Any spell you cast that doesn’t have the type creature will cause prowess to trigger. If a spell has multiple types, and one of those types is creature (such as an artifact creature), casting it won’t cause prowess to trigger. Playing a land also won’t cause prowess to trigger."
+          "text": "Any spell you cast that doesn't have the type creature will cause prowess to trigger. If a spell has multiple types, and one of those types is creature (such as an artifact creature), casting it won't cause prowess to trigger. Playing a land also won't cause prowess to trigger."
         },
         {
           "date": "2014-09-20",
@@ -5005,7 +4698,7 @@
         },
         {
           "date": "2014-09-20",
-          "text": "Once it triggers, prowess isn’t connected to the spell that caused it to trigger. If that spell is countered, prowess will still resolve."
+          "text": "Once it triggers, prowess isn't connected to the spell that caused it to trigger. If that spell is countered, prowess will still resolve."
         }
       ],
       "subtypes": [
@@ -5065,6 +4758,7 @@
         }
       ],
       "manaCost": "{1}{U}",
+      "mciNumber": "47",
       "multiverseid": 386379,
       "name": "Willbender",
       "number": "47",
@@ -5128,10 +4822,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5140,19 +4830,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5161,6 +4839,7 @@
         }
       ],
       "manaCost": "{1}{R}",
+      "mciNumber": "48",
       "multiverseid": 386366,
       "name": "Sparkmage Apprentice",
       "number": "48",
@@ -5210,27 +4889,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5243,6 +4906,7 @@
         }
       ],
       "manaCost": "{1}{W}",
+      "mciNumber": "49",
       "multiverseid": 386344,
       "name": "Lone Missionary",
       "number": "49",
@@ -5308,6 +4972,7 @@
         }
       ],
       "manaCost": "{1}{W}",
+      "mciNumber": "50",
       "multiverseid": 386347,
       "name": "Master Decoy",
       "number": "50",
@@ -5359,10 +5024,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5371,23 +5032,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{2}{U}",
+      "mciNumber": "51",
       "multiverseid": 386310,
       "name": "Echo Tracer",
       "number": "51",
@@ -5459,6 +5109,7 @@
         }
       ],
       "manaCost": "{2}{W}",
+      "mciNumber": "52",
       "multiverseid": 386338,
       "name": "Kor Hookmaster",
       "number": "52",
@@ -5475,11 +5126,11 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "You may target any creature an opponent controls. If it’s already tapped, it just won’t untap during its controller’s next untap step."
+          "text": "You may target any creature an opponent controls. If it's already tapped, it just won't untap during its controller's next untap step."
         },
         {
           "date": "2016-06-08",
-          "text": "If the creature isn’t tapped during its controller’s next untap step (perhaps because it was untapped by a spell), this ability has no effect. It won’t apply at a later time."
+          "text": "If the creature isn't tapped during its controller's next untap step (perhaps because it was untapped by a spell), this ability has no effect. It won't apply at a later time."
         }
       ],
       "subtypes": [
@@ -5518,10 +5169,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5530,19 +5177,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5551,6 +5186,7 @@
         }
       ],
       "manaCost": "{2}{W}",
+      "mciNumber": "53",
       "multiverseid": 386370,
       "name": "Stonecloaker",
       "number": "53",
@@ -5569,12 +5205,12 @@
           "text": "Both triggered abilities trigger when Stonecloaker enters the battlefield. They can be put on the stack in either order."
         },
         {
-          "date": "2007-02-01",
-          "text": "You may return this creature itself to its owner's hand. If you control no other creatures, you must return it."
+          "date": "2016-06-08",
+          "text": "You may return this creature itself to its owner's hand as its triggered ability resolves. If you don't control enough other creatures, you must return it."
         },
         {
-          "date": "2007-02-01",
-          "text": "The ability doesn't target what you return. You don't choose what to return until the ability resolves. No one can respond to the choice."
+          "date": "2016-06-08",
+          "text": "The ability doesn't target any creature. You don't choose what to return until the ability resolves. Once the ability has started to resolve, no one can respond to the choice."
         }
       ],
       "subtypes": [
@@ -5612,10 +5248,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5624,19 +5256,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5645,6 +5265,7 @@
         }
       ],
       "manaCost": "{2}{U}{U}",
+      "mciNumber": "54",
       "multiverseid": 386300,
       "name": "Aquamorph Entity",
       "number": "54",
@@ -5708,10 +5329,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5720,19 +5337,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5741,6 +5346,7 @@
         }
       ],
       "manaCost": "{2}{W}{U}",
+      "mciNumber": "55",
       "multiverseid": 386329,
       "name": "Hussar Patrol",
       "number": "55",
@@ -5793,10 +5399,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Invasion Block",
           "legality": "Legal"
         },
@@ -5809,19 +5411,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5830,6 +5420,7 @@
         }
       ],
       "manaCost": "{1}{R}{W}{U}",
+      "mciNumber": "56",
       "multiverseid": 386342,
       "name": "Lightning Angel",
       "number": "56",
@@ -5879,10 +5470,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5891,23 +5478,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{4}{U}",
+      "mciNumber": "57",
       "multiverseid": 386313,
       "name": "Faerie Invaders",
       "number": "57",
@@ -5972,6 +5548,7 @@
         }
       ],
       "manaCost": "{4}{U}{U}",
+      "mciNumber": "58",
       "multiverseid": 386376,
       "name": "Thousand Winds",
       "number": "58",
@@ -5987,7 +5564,7 @@
       "rulings": [
         {
           "date": "2014-09-20",
-          "text": "It doesn’t matter if Thousand Winds is tapped or untapped (or even on the battlefield) when its last ability resolves. Tapped creatures except Thousand Winds will be returned to their owners’ hands."
+          "text": "It doesn't matter if Thousand Winds is tapped or untapped (or even on the battlefield) when its last ability resolves. Tapped creatures except Thousand Winds will be returned to their owners' hands."
         },
         {
           "date": "2014-09-20",
@@ -5999,27 +5576,27 @@
         },
         {
           "date": "2014-09-20",
-          "text": "When the spell resolves, it enters the battlefield as a 2/2 creature with no name, mana cost, creature types, or abilities. It’s colorless and has a converted mana cost of 0. Other effects that apply to the creature can still grant it any of these characteristics."
+          "text": "When the spell resolves, it enters the battlefield as a 2/2 creature with no name, mana cost, creature types, or abilities. It's colorless and has a converted mana cost of 0. Other effects that apply to the creature can still grant it any of these characteristics."
         },
         {
           "date": "2014-09-20",
-          "text": "Any time you have priority, you may turn the face-down creature face up by revealing what its morph cost is and paying that cost. This is a special action. It doesn’t use the stack and can’t be responded to. Only a face-down permanent can be turned face up this way; a face-down spell cannot."
+          "text": "Any time you have priority, you may turn the face-down creature face up by revealing what its morph cost is and paying that cost. This is a special action. It doesn't use the stack and can't be responded to. Only a face-down permanent can be turned face up this way; a face-down spell cannot."
         },
         {
           "date": "2014-09-20",
-          "text": "Because the permanent is on the battlefield both before and after it’s turned face up, turning a permanent face up doesn’t cause any enters-the-battlefield abilities to trigger."
+          "text": "Because the permanent is on the battlefield both before and after it's turned face up, turning a permanent face up doesn't cause any enters-the-battlefield abilities to trigger."
         },
         {
           "date": "2014-09-20",
-          "text": "A permanent that turns face up or face down changes characteristics but is otherwise the same permanent. Spells and abilities that were targeting that permanent, as well as Auras and Equipment that were attached to the permanent, aren’t affected."
+          "text": "A permanent that turns face up or face down changes characteristics but is otherwise the same permanent. Spells and abilities that were targeting that permanent, as well as Auras and Equipment that were attached to the permanent, aren't affected."
         },
         {
           "date": "2014-09-20",
-          "text": "At any time, you can look at a face-down spell or permanent you control. You can’t look at face-down spells or permanents you don’t control unless an effect instructs you to do so."
+          "text": "At any time, you can look at a face-down spell or permanent you control. You can't look at face-down spells or permanents you don't control unless an effect instructs you to do so."
         },
         {
           "date": "2014-09-20",
-          "text": "You must ensure that your face-down spells and permanents can easily be differentiated from each other. You’re not allowed to mix up the cards that represent them on the battlefield in order to confuse other players. The order they entered the battlefield should remain clear. Common methods for doing this include using markers or dice, or simply placing them in order on the battlefield."
+          "text": "You must ensure that your face-down spells and permanents can easily be differentiated from each other. You're not allowed to mix up the cards that represent them on the battlefield in order to confuse other players. The order they entered the battlefield should remain clear. Common methods for doing this include using markers or dice, or simply placing them in order on the battlefield."
         },
         {
           "date": "2014-09-20",
@@ -6074,6 +5651,7 @@
         }
       ],
       "manaCost": "{5}{U}{U}",
+      "mciNumber": "59",
       "multiverseid": 386367,
       "name": "Sphinx of Uthuun",
       "number": "59",
@@ -6095,7 +5673,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "A pile can have no cards in it. In this case, you’ll choose whether to put all the revealed cards into your hand or into your graveyard."
+          "text": "A pile can have no cards in it. In this case, you'll choose whether to put all the revealed cards into your hand or into your graveyard."
         },
         {
           "date": "2011-09-22",
@@ -6103,7 +5681,7 @@
         },
         {
           "date": "2011-09-22",
-          "text": "In multiplayer games, you choose an opponent to separate the cards when the ability resolves. This doesn’t target that opponent. Because the cards are revealed, all players may see the cards and offer opinions."
+          "text": "In multiplayer games, you choose an opponent to separate the cards when the ability resolves. This doesn't target that opponent. Because the cards are revealed, all players may see the cards and offer opinions."
         }
       ],
       "subtypes": [
@@ -6163,6 +5741,7 @@
         }
       ],
       "manaCost": "{U}",
+      "mciNumber": "60",
       "multiverseid": 386317,
       "name": "Fleeting Distraction",
       "number": "60",
@@ -6178,11 +5757,11 @@
       "rulings": [
         {
           "date": "2010-06-15",
-          "text": "If the targeted creature is an illegal target by the time Fleeting Distraction resolves, the spell is countered. You won’t draw a card."
+          "text": "If the targeted creature is an illegal target by the time Fleeting Distraction resolves, the spell is countered. You won't draw a card."
         },
         {
           "date": "2012-05-01",
-          "text": "If the targeted creature is an illegal target when Fleeting Distraction tries to resolve, it will be countered and none of its effects will happen. You won’t draw a card."
+          "text": "If the targeted creature is an illegal target when Fleeting Distraction tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
         }
       ],
       "text": "Target creature gets -1/-0 until end of turn.\nDraw a card.",
@@ -6216,10 +5795,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -6228,23 +5803,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{W}",
+      "mciNumber": "61",
       "multiverseid": 386368,
       "name": "Stave Off",
       "number": "61",
@@ -6294,10 +5858,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -6306,19 +5866,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6327,6 +5875,7 @@
         }
       ],
       "manaCost": "{W}",
+      "mciNumber": "62",
       "multiverseid": 386374,
       "name": "Swift Justice",
       "number": "62",
@@ -6369,10 +5918,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -6381,23 +5926,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{1}{U}",
+      "mciNumber": "63",
       "multiverseid": 386330,
       "name": "Impulse",
       "number": "63",
@@ -6470,6 +6004,7 @@
         }
       ],
       "manaCost": "{1}{U}",
+      "mciNumber": "64",
       "multiverseid": 386345,
       "name": "Mana Leak",
       "number": "64",
@@ -6523,10 +6058,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -6535,19 +6066,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6556,6 +6075,7 @@
         }
       ],
       "manaCost": "{R}{W}",
+      "mciNumber": "65",
       "multiverseid": 386343,
       "name": "Lightning Helix",
       "number": "65",
@@ -6608,10 +6128,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -6624,23 +6140,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
       "manaCost": "{1}{W}{W}",
+      "mciNumber": "66",
       "multiverseid": 386328,
       "name": "Hold the Line",
       "number": "66",
@@ -6683,27 +6188,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6716,6 +6205,7 @@
         }
       ],
       "manaCost": "{3}{R}",
+      "mciNumber": "67",
       "multiverseid": 386332,
       "name": "Inferno Trap",
       "number": "67",
@@ -6730,7 +6220,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "You may ignore a Trap’s alternative cost condition and simply cast it for its normal mana cost. This is true even if its alternative cost condition has been met."
+          "text": "You may ignore a Trap's alternative cost condition and simply cast it for its normal mana cost. This is true even if its alternative cost condition has been met."
         },
         {
           "date": "2009-10-01",
@@ -6811,6 +6301,7 @@
         }
       ],
       "manaCost": "{2}{U}{R}",
+      "mciNumber": "68",
       "multiverseid": 386369,
       "name": "Steam Augury",
       "number": "68",
@@ -6825,7 +6316,7 @@
       "rulings": [
         {
           "date": "2013-09-15",
-          "text": "Steam Augury doesn’t target any opponent. In a multiplayer game, you choose the opponent as the spell resolves."
+          "text": "Steam Augury doesn't target any opponent. In a multiplayer game, you choose the opponent as the spell resolves."
         },
         {
           "date": "2013-09-15",
@@ -6880,6 +6371,7 @@
         }
       ],
       "manaCost": "{3}{U}{U}",
+      "mciNumber": "69",
       "multiverseid": 386377,
       "name": "Traumatic Visions",
       "number": "69",
@@ -6895,7 +6387,7 @@
       "rulings": [
         {
           "date": "2009-02-01",
-          "text": "Unlike the normal cycling ability, basic landcycling doesn’t allow you to draw a card. Instead, it lets you search your library for a basic land card. You don’t choose the type of basic land card you’ll find until you’re performing the search. After you choose a basic land card in your library, you reveal it, put it into your hand, then shuffle your library."
+          "text": "Unlike the normal cycling ability, basic landcycling doesn't allow you to draw a card. Instead, it lets you search your library for a basic land card. You don't choose the type of basic land card you'll find until you're performing the search. After you choose a basic land card in your library, you reveal it, put it into your hand, then shuffle your library."
         },
         {
           "date": "2009-02-01",
@@ -6917,7 +6409,7 @@
       ]
     },
     {
-      "artist": "Zoltan Boros & Gabor Szikszai",
+      "artist": "Zoltan Boros &amp; Gabor Szikszai",
       "cmc": 5,
       "colorIdentity": [
         "U"
@@ -6941,27 +6433,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6974,6 +6450,7 @@
         }
       ],
       "manaCost": "{3}{U}{U}",
+      "mciNumber": "70",
       "multiverseid": 386378,
       "name": "Whiplash Trap",
       "number": "70",
@@ -6988,7 +6465,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "You may ignore a Trap’s alternative cost condition and simply cast it for its normal mana cost. This is true even if its alternative cost condition has been met."
+          "text": "You may ignore a Trap's alternative cost condition and simply cast it for its normal mana cost. This is true even if its alternative cost condition has been met."
         },
         {
           "date": "2009-10-01",
@@ -7041,27 +6518,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -7074,6 +6535,7 @@
         }
       ],
       "manaCost": "{3}{W}{W}",
+      "mciNumber": "71",
       "multiverseid": 386303,
       "name": "Arrow Volley Trap",
       "number": "71",
@@ -7087,7 +6549,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "You may ignore a Trap’s alternative cost condition and simply cast it for its normal mana cost. This is true even if its alternative cost condition has been met."
+          "text": "You may ignore a Trap's alternative cost condition and simply cast it for its normal mana cost. This is true even if its alternative cost condition has been met."
         },
         {
           "date": "2009-10-01",
@@ -7154,6 +6616,7 @@
         }
       ],
       "manaCost": "{X}{U}",
+      "mciNumber": "72",
       "multiverseid": 386362,
       "name": "Repeal",
       "number": "72",
@@ -7212,6 +6675,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "73",
       "multiverseid": 386352,
       "name": "Mystic Monastery",
       "number": "73",
@@ -7219,7 +6683,8 @@
       "originalType": "Land",
       "printings": [
         "DDN",
-        "KTK"
+        "KTK",
+        "C16"
       ],
       "rarity": "Uncommon",
       "text": "Mystic Monastery enters the battlefield tapped.\n{T}: Add {U}, {R}, or {W} to your mana pool.",
@@ -7263,6 +6728,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "74",
       "multiverseid": 386375,
       "name": "Terramorphic Expanse",
       "number": "74",
@@ -7284,7 +6750,8 @@
         "C13",
         "DDN",
         "C14",
-        "C15"
+        "C15",
+        "C16"
       ],
       "rarity": "Common",
       "text": "{T}, Sacrifice Terramorphic Expanse: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
@@ -7531,7 +6998,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7787,7 +7255,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8043,7 +7512,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8310,7 +7780,8 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8575,7 +8046,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -8840,7 +8312,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9105,7 +8578,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -9136,20 +8610,6 @@
       "id": "da5610c34eb227735450013461467e7dbca036b6",
       "imageName": "goblin",
       "layout": "token",
-      "legalities": [
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        }
-      ],
       "multiverseid": 386322,
       "name": "Goblin",
       "number": "82",

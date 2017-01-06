@@ -4,7 +4,7 @@
   "magicCardsInfoCode": "exp",
   "releaseDate": "2015-10-02",
   "border": "black",
-  "type": "promo",
+  "type": "masterpiece",
   "mkm_name": "Zendikar Expeditions",
   "mkm_id": 1669,
   "cards": [
@@ -27,10 +27,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -39,23 +35,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -70,6 +50,7 @@
       "originalText": "Prairie Stream enters the battlefield tapped unless you control two or more basic lands.",
       "originalType": "Land — Plains Island",
       "printings": [
+        "pPRE",
         "BFZ",
         "EXP"
       ],
@@ -77,11 +58,11 @@
       "rulings": [
         {
           "date": "2015-08-25",
-          "text": "Even though these lands have basic land types, they are not basic lands because “basic” doesn’t appear on their type line. Notably, controlling two or more of them won’t allow others to enter the battlefield untapped."
+          "text": "Even though these lands have basic land types, they are not basic lands because \"basic\" doesn't appear on their type line. Notably, controlling two or more of them won't allow others to enter the battlefield untapped."
         },
         {
           "date": "2015-08-25",
-          "text": "However, because these cards have basic land types, effects that specify a basic land type without also specifying that the land be basic can affect them. For example, a spell or ability that reads “Destroy target Forest” can target Canopy Vista, while one that reads “Destroy target basic Forest” cannot."
+          "text": "However, because these cards have basic land types, effects that specify a basic land type without also specifying that the land be basic can affect them. For example, a spell or ability that reads \"Destroy target Forest\" can target Canopy Vista, while one that reads \"Destroy target basic Forest\" cannot."
         },
         {
           "date": "2015-08-25",
@@ -117,10 +98,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -129,23 +106,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -160,6 +121,7 @@
       "originalText": "Sunken Hollow enters the battlefield tapped unless you control two or more basic lands.",
       "originalType": "Land — Island Swamp",
       "printings": [
+        "pPRE",
         "BFZ",
         "EXP"
       ],
@@ -167,11 +129,11 @@
       "rulings": [
         {
           "date": "2015-08-25",
-          "text": "Even though these lands have basic land types, they are not basic lands because “basic” doesn’t appear on their type line. Notably, controlling two or more of them won’t allow others to enter the battlefield untapped."
+          "text": "Even though these lands have basic land types, they are not basic lands because \"basic\" doesn't appear on their type line. Notably, controlling two or more of them won't allow others to enter the battlefield untapped."
         },
         {
           "date": "2015-08-25",
-          "text": "However, because these cards have basic land types, effects that specify a basic land type without also specifying that the land be basic can affect them. For example, a spell or ability that reads “Destroy target Forest” can target Canopy Vista, while one that reads “Destroy target basic Forest” cannot."
+          "text": "However, because these cards have basic land types, effects that specify a basic land type without also specifying that the land be basic can affect them. For example, a spell or ability that reads \"Destroy target Forest\" can target Canopy Vista, while one that reads \"Destroy target basic Forest\" cannot."
         },
         {
           "date": "2015-08-25",
@@ -207,10 +169,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -219,23 +177,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -250,6 +192,7 @@
       "originalText": "Smoldering Marsh enters the battlefield tapped unless you control two or more basic lands.",
       "originalType": "Land — Swamp Mountain",
       "printings": [
+        "pPRE",
         "BFZ",
         "EXP"
       ],
@@ -257,11 +200,11 @@
       "rulings": [
         {
           "date": "2015-08-25",
-          "text": "Even though these lands have basic land types, they are not basic lands because “basic” doesn’t appear on their type line. Notably, controlling two or more of them won’t allow others to enter the battlefield untapped."
+          "text": "Even though these lands have basic land types, they are not basic lands because \"basic\" doesn't appear on their type line. Notably, controlling two or more of them won't allow others to enter the battlefield untapped."
         },
         {
           "date": "2015-08-25",
-          "text": "However, because these cards have basic land types, effects that specify a basic land type without also specifying that the land be basic can affect them. For example, a spell or ability that reads “Destroy target Forest” can target Canopy Vista, while one that reads “Destroy target basic Forest” cannot."
+          "text": "However, because these cards have basic land types, effects that specify a basic land type without also specifying that the land be basic can affect them. For example, a spell or ability that reads \"Destroy target Forest\" can target Canopy Vista, while one that reads \"Destroy target basic Forest\" cannot."
         },
         {
           "date": "2015-08-25",
@@ -297,10 +240,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -309,23 +248,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -340,6 +263,7 @@
       "originalText": "Cinder Glade enters the battlefield tapped unless you control two or more basic lands.",
       "originalType": "Land — Mountain Forest",
       "printings": [
+        "pPRE",
         "BFZ",
         "EXP"
       ],
@@ -347,11 +271,11 @@
       "rulings": [
         {
           "date": "2015-08-25",
-          "text": "Even though these lands have basic land types, they are not basic lands because “basic” doesn’t appear on their type line. Notably, controlling two or more of them won’t allow others to enter the battlefield untapped."
+          "text": "Even though these lands have basic land types, they are not basic lands because \"basic\" doesn't appear on their type line. Notably, controlling two or more of them won't allow others to enter the battlefield untapped."
         },
         {
           "date": "2015-08-25",
-          "text": "However, because these cards have basic land types, effects that specify a basic land type without also specifying that the land be basic can affect them. For example, a spell or ability that reads “Destroy target Forest” can target Canopy Vista, while one that reads “Destroy target basic Forest” cannot."
+          "text": "However, because these cards have basic land types, effects that specify a basic land type without also specifying that the land be basic can affect them. For example, a spell or ability that reads \"Destroy target Forest\" can target Canopy Vista, while one that reads \"Destroy target basic Forest\" cannot."
         },
         {
           "date": "2015-08-25",
@@ -387,10 +311,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -399,23 +319,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Standard",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -430,6 +334,7 @@
       "originalText": "Canopy Vista enters the battlefield tapped unless you control two or more basic lands.",
       "originalType": "Land — Forest Plains",
       "printings": [
+        "pPRE",
         "BFZ",
         "EXP"
       ],
@@ -437,11 +342,11 @@
       "rulings": [
         {
           "date": "2015-08-25",
-          "text": "Even though these lands have basic land types, they are not basic lands because “basic” doesn’t appear on their type line. Notably, controlling two or more of them won’t allow others to enter the battlefield untapped."
+          "text": "Even though these lands have basic land types, they are not basic lands because \"basic\" doesn't appear on their type line. Notably, controlling two or more of them won't allow others to enter the battlefield untapped."
         },
         {
           "date": "2015-08-25",
-          "text": "However, because these cards have basic land types, effects that specify a basic land type without also specifying that the land be basic can affect them. For example, a spell or ability that reads “Destroy target Forest” can target Canopy Vista, while one that reads “Destroy target basic Forest” cannot."
+          "text": "However, because these cards have basic land types, effects that specify a basic land type without also specifying that the land be basic can affect them. For example, a spell or ability that reads \"Destroy target Forest\" can target Canopy Vista, while one that reads \"Destroy target basic Forest\" cannot."
         },
         {
           "date": "2015-08-25",
@@ -473,10 +378,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -485,23 +386,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
           "legality": "Legal"
         },
         {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -524,15 +413,15 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "Has basic land types, but isn’t a basic land. Things that affect basic lands don’t affect it. For example, you can’t find it with Civic Wayfinder."
+          "text": "Has basic land types, but isn't a basic land. Things that affect basic lands don't affect it. For example, you can't find it with Civic Wayfinder."
         },
         {
           "date": "2005-10-01",
-          "text": "If another effect (such as Loxodon Gatekeeper’s ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
+          "text": "If another effect (such as Loxodon Gatekeeper's ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
         },
         {
           "date": "2005-10-01",
-          "text": "If multiple permanents with “as enters the battlefield” effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you’re at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
+          "text": "If multiple permanents with \"as enters the battlefield\" effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you're at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
         }
       ],
       "subtypes": [
@@ -560,10 +449,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -572,23 +457,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
           "legality": "Legal"
         },
         {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -611,15 +484,15 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "Has basic land types, but isn’t a basic land. Things that affect basic lands don’t affect it. For example, you can’t find it with Civic Wayfinder."
+          "text": "Has basic land types, but isn't a basic land. Things that affect basic lands don't affect it. For example, you can't find it with Civic Wayfinder."
         },
         {
           "date": "2005-10-01",
-          "text": "If another effect (such as Loxodon Gatekeeper’s ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
+          "text": "If another effect (such as Loxodon Gatekeeper's ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
         },
         {
           "date": "2005-10-01",
-          "text": "If multiple permanents with “as enters the battlefield” effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you’re at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
+          "text": "If multiple permanents with \"as enters the battlefield\" effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you're at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
         }
       ],
       "subtypes": [
@@ -647,10 +520,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -659,23 +528,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
           "legality": "Legal"
         },
         {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -698,15 +555,15 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "Has basic land types, but isn’t a basic land. Things that affect basic lands don’t affect it. For example, you can’t find it with Civic Wayfinder."
+          "text": "Has basic land types, but isn't a basic land. Things that affect basic lands don't affect it. For example, you can't find it with Civic Wayfinder."
         },
         {
           "date": "2005-10-01",
-          "text": "If another effect (such as Loxodon Gatekeeper’s ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
+          "text": "If another effect (such as Loxodon Gatekeeper's ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
         },
         {
           "date": "2005-10-01",
-          "text": "If multiple permanents with “as enters the battlefield” effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you’re at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
+          "text": "If multiple permanents with \"as enters the battlefield\" effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you're at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
         }
       ],
       "subtypes": [
@@ -734,10 +591,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -746,23 +599,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
           "legality": "Legal"
         },
         {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -785,15 +626,15 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "Has basic land types, but isn’t a basic land. Things that affect basic lands don’t affect it. For example, you can’t find it with Civic Wayfinder."
+          "text": "Has basic land types, but isn't a basic land. Things that affect basic lands don't affect it. For example, you can't find it with Civic Wayfinder."
         },
         {
           "date": "2005-10-01",
-          "text": "If another effect (such as Loxodon Gatekeeper’s ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
+          "text": "If another effect (such as Loxodon Gatekeeper's ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
         },
         {
           "date": "2005-10-01",
-          "text": "If multiple permanents with “as enters the battlefield” effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you’re at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
+          "text": "If multiple permanents with \"as enters the battlefield\" effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you're at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
         }
       ],
       "subtypes": [
@@ -821,10 +662,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -833,23 +670,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
           "legality": "Legal"
         },
         {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -872,15 +697,15 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "Has basic land types, but isn’t a basic land. Things that affect basic lands don’t affect it. For example, you can’t find it with Civic Wayfinder."
+          "text": "Has basic land types, but isn't a basic land. Things that affect basic lands don't affect it. For example, you can't find it with Civic Wayfinder."
         },
         {
           "date": "2005-10-01",
-          "text": "If another effect (such as Loxodon Gatekeeper’s ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
+          "text": "If another effect (such as Loxodon Gatekeeper's ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
         },
         {
           "date": "2005-10-01",
-          "text": "If multiple permanents with “as enters the battlefield” effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you’re at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
+          "text": "If multiple permanents with \"as enters the battlefield\" effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you're at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
         }
       ],
       "subtypes": [
@@ -908,10 +733,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -920,23 +741,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
           "legality": "Legal"
         },
         {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -959,15 +768,15 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "Has basic land types, but isn’t a basic land. Things that affect basic lands don’t affect it. For example, you can’t find it with Civic Wayfinder."
+          "text": "Has basic land types, but isn't a basic land. Things that affect basic lands don't affect it. For example, you can't find it with Civic Wayfinder."
         },
         {
           "date": "2005-10-01",
-          "text": "If another effect (such as Loxodon Gatekeeper’s ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
+          "text": "If another effect (such as Loxodon Gatekeeper's ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
         },
         {
           "date": "2005-10-01",
-          "text": "If multiple permanents with “as enters the battlefield” effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you’re at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
+          "text": "If multiple permanents with \"as enters the battlefield\" effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you're at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
         }
       ],
       "subtypes": [
@@ -995,10 +804,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1007,23 +812,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
           "legality": "Legal"
         },
         {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1046,15 +839,15 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "Has basic land types, but isn’t a basic land. Things that affect basic lands don’t affect it. For example, you can’t find it with Civic Wayfinder."
+          "text": "Has basic land types, but isn't a basic land. Things that affect basic lands don't affect it. For example, you can't find it with Civic Wayfinder."
         },
         {
           "date": "2005-10-01",
-          "text": "If another effect (such as Loxodon Gatekeeper’s ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
+          "text": "If another effect (such as Loxodon Gatekeeper's ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
         },
         {
           "date": "2005-10-01",
-          "text": "If multiple permanents with “as enters the battlefield” effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you’re at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
+          "text": "If multiple permanents with \"as enters the battlefield\" effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you're at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
         }
       ],
       "subtypes": [
@@ -1082,10 +875,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1094,23 +883,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
           "legality": "Legal"
         },
         {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1133,15 +910,15 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "Has basic land types, but isn’t a basic land. Things that affect basic lands don’t affect it. For example, you can’t find it with Civic Wayfinder."
+          "text": "Has basic land types, but isn't a basic land. Things that affect basic lands don't affect it. For example, you can't find it with Civic Wayfinder."
         },
         {
           "date": "2005-10-01",
-          "text": "If another effect (such as Loxodon Gatekeeper’s ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
+          "text": "If another effect (such as Loxodon Gatekeeper's ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
         },
         {
           "date": "2005-10-01",
-          "text": "If multiple permanents with “as enters the battlefield” effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you’re at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
+          "text": "If multiple permanents with \"as enters the battlefield\" effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you're at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
         }
       ],
       "subtypes": [
@@ -1169,10 +946,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1181,23 +954,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
           "legality": "Legal"
         },
         {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1220,15 +981,15 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "Has basic land types, but isn’t a basic land. Things that affect basic lands don’t affect it. For example, you can’t find it with Civic Wayfinder."
+          "text": "Has basic land types, but isn't a basic land. Things that affect basic lands don't affect it. For example, you can't find it with Civic Wayfinder."
         },
         {
           "date": "2005-10-01",
-          "text": "If another effect (such as Loxodon Gatekeeper’s ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
+          "text": "If another effect (such as Loxodon Gatekeeper's ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
         },
         {
           "date": "2005-10-01",
-          "text": "If multiple permanents with “as enters the battlefield” effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you’re at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
+          "text": "If multiple permanents with \"as enters the battlefield\" effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you're at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
         }
       ],
       "subtypes": [
@@ -1256,10 +1017,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1268,23 +1025,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
           "legality": "Legal"
         },
         {
           "format": "Return to Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1307,15 +1052,15 @@
       "rulings": [
         {
           "date": "2005-10-01",
-          "text": "Has basic land types, but isn’t a basic land. Things that affect basic lands don’t affect it. For example, you can’t find it with Civic Wayfinder."
+          "text": "Has basic land types, but isn't a basic land. Things that affect basic lands don't affect it. For example, you can't find it with Civic Wayfinder."
         },
         {
           "date": "2005-10-01",
-          "text": "If another effect (such as Loxodon Gatekeeper’s ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
+          "text": "If another effect (such as Loxodon Gatekeeper's ability) tells you to put lands onto the battlefield tapped, it enters the battlefield tapped whether you pay 2 life or not."
         },
         {
           "date": "2005-10-01",
-          "text": "If multiple permanents with “as enters the battlefield” effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you’re at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
+          "text": "If multiple permanents with \"as enters the battlefield\" effects are entering the battlefield at the same time, process those effects one at a time, then put the permanents onto the battlefield all at once. For example, if you're at 3 life and an effect puts two of these onto the battlefield, you can pay 2 life for only one of them, not both."
         }
       ],
       "subtypes": [
@@ -1339,10 +1084,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -1356,22 +1097,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -1409,10 +1134,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -1426,22 +1147,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -1479,10 +1184,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -1496,22 +1197,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -1549,10 +1234,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -1566,22 +1247,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -1619,10 +1284,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -1636,22 +1297,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -1689,27 +1334,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1749,27 +1378,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1809,27 +1422,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1869,27 +1466,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1929,27 +1510,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1993,10 +1558,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2009,22 +1570,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "26",
       "multiverseid": 409557,
       "name": "Mystic Gate",
       "number": "26",
@@ -2056,10 +1606,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2072,22 +1618,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "27",
       "multiverseid": 409558,
       "name": "Sunken Ruins",
       "number": "27",
@@ -2119,10 +1654,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2135,19 +1666,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2155,6 +1674,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "28",
       "multiverseid": 409559,
       "name": "Graven Cairns",
       "number": "28",
@@ -2169,7 +1689,7 @@
       "rulings": [
         {
           "date": "2007-05-01",
-          "text": "{(b/r)}, {T}” is the same as saying “{B}, {T} or {R}, {T}."
+          "text": "{T}."
         }
       ],
       "text": "{T}: Add {C} to your mana pool.\n{B/R}, {T}: Add {B}{B}, {B}{R}, or {R}{R} to your mana pool.",
@@ -2193,10 +1713,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2209,22 +1725,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "29",
       "multiverseid": 409560,
       "name": "Fire-Lit Thicket",
       "number": "29",
@@ -2256,10 +1761,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2272,22 +1773,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "30",
       "multiverseid": 409561,
       "name": "Wooded Bastion",
       "number": "30",
@@ -2319,10 +1809,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2335,22 +1821,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "31",
       "multiverseid": 409562,
       "name": "Fetid Heath",
       "number": "31",
@@ -2382,10 +1857,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2398,22 +1869,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "32",
       "multiverseid": 409563,
       "name": "Cascade Bluffs",
       "number": "32",
@@ -2445,10 +1905,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2461,22 +1917,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "33",
       "multiverseid": 409564,
       "name": "Twilight Mire",
       "number": "33",
@@ -2508,10 +1953,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2524,22 +1965,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "34",
       "multiverseid": 409565,
       "name": "Rugged Prairie",
       "number": "34",
@@ -2571,10 +2001,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2587,22 +2013,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "35",
       "multiverseid": 409566,
       "name": "Flooded Grove",
       "number": "35",
@@ -2630,15 +2045,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
           "legality": "Legal"
         },
         {
@@ -2650,6 +2057,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "36",
       "multiverseid": 409567,
       "name": "Ancient Tomb",
       "number": "36",
@@ -2691,6 +2099,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "37",
       "multiverseid": 409568,
       "name": "Dust Bowl",
       "number": "37",
@@ -2718,28 +2127,12 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
+          "legality": "Banned"
         },
         {
           "format": "Vintage",
@@ -2750,6 +2143,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "38",
       "multiverseid": 409569,
       "name": "Eye of Ugin",
       "number": "38",
@@ -2764,11 +2158,11 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "Eye of Ugin doesn’t have a mana ability."
+          "text": "Eye of Ugin doesn't have a mana ability."
         },
         {
           "date": "2010-03-01",
-          "text": "Eye of Ugin’s second ability lets you find any colorless creature card in your deck, such as an artifact creature card that has no colored mana symbols in its mana cost, or a creature card that’s become colorless due to Mycosynth Lattice."
+          "text": "Eye of Ugin's second ability lets you find any colorless creature card in your deck, such as an artifact creature card that has no colored mana symbols in its mana cost, or a creature card that's become colorless due to Mycosynth Lattice."
         },
         {
           "date": "2013-04-15",
@@ -2795,10 +2189,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Kamigawa Block",
           "legality": "Legal"
         },
@@ -2811,22 +2201,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
       ],
+      "mciNumber": "39",
       "multiverseid": 409570,
       "name": "Forbidden Orchard",
       "number": "39",
@@ -2835,10 +2214,11 @@
       "printings": [
         "CHK",
         "V12",
-        "EXP"
+        "EXP",
+        "C16"
       ],
       "rarity": "Mythic Rare",
-      "text": "{T}: Add one mana of any color to your mana pool.\nWhenever you tap Forbidden Orchard for mana, target opponent puts a 1/1 colorless Spirit creature token onto the battlefield.",
+      "text": "{T}: Add one mana of any color to your mana pool.\nWhenever you tap Forbidden Orchard for mana, target opponent creates a 1/1 colorless Spirit creature token.",
       "type": "Land",
       "types": [
         "Land"
@@ -2859,10 +2239,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2871,19 +2247,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Time Spiral Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2891,6 +2255,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "40",
       "multiverseid": 409571,
       "name": "Horizon Canopy",
       "number": "40",
@@ -2933,6 +2298,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "41",
       "multiverseid": 409572,
       "name": "Kor Haven",
       "number": "41",
@@ -2963,10 +2329,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2975,19 +2337,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2995,6 +2345,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "42",
       "multiverseid": 409573,
       "name": "Mana Confluence",
       "number": "42",
@@ -3022,23 +2373,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Banned"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Banned"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Banned"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Banned"
         },
         {
@@ -3046,6 +2381,7 @@
           "legality": "Restricted"
         }
       ],
+      "mciNumber": "43",
       "multiverseid": 409574,
       "name": "Strip Mine",
       "number": "43",
@@ -3078,27 +2414,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3110,6 +2430,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "44",
       "multiverseid": 409575,
       "name": "Tectonic Edge",
       "number": "44",
@@ -3125,11 +2446,11 @@
       "rulings": [
         {
           "date": "2010-03-01",
-          "text": "Tectonic Edge’s second ability checks how many lands an opponent controls only at the time you activate the ability."
+          "text": "Tectonic Edge's second ability checks how many lands an opponent controls only at the time you activate the ability."
         },
         {
           "date": "2010-03-01",
-          "text": "Assuming you can activate Tectonic Edge’s second ability, you can target any nonbasic land with it (not just one controlled by an opponent that controls four or more lands)."
+          "text": "Assuming you can activate Tectonic Edge's second ability, you can target any nonbasic land with it (not just one controlled by an opponent that controls four or more lands)."
         }
       ],
       "text": "{T}: Add {C} to your mana pool.\n{1}, {T}, Sacrifice Tectonic Edge: Destroy target nonbasic land. Activate this ability only if an opponent controls four or more lands.",
@@ -3161,6 +2482,7 @@
           "legality": "Legal"
         }
       ],
+      "mciNumber": "45",
       "multiverseid": 409576,
       "name": "Wasteland",
       "number": "45",

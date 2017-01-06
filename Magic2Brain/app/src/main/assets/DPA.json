@@ -186,10 +186,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -199,18 +195,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -358,6 +342,7 @@
         "KTK"
       ],
       "rarity": "Common",
+      "starter": true,
       "text": "Counter target spell.",
       "type": "Instant",
       "types": [
@@ -430,10 +415,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -443,18 +424,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -549,10 +518,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -562,18 +527,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -685,10 +638,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -698,18 +647,6 @@
         },
         {
           "format": "Odyssey Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -939,7 +876,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "A “creature spell” is any spell with the type Creature, even if it has other types such as Artifact or Enchantment. Older cards of type Summon are also Creature spells."
+          "text": "A \"creature spell\" is any spell with the type creature, even if it has other types such as artifact or enchantment. Older cards of type summon are also creature spells."
         }
       ],
       "text": "Counter target creature spell.",
@@ -1014,10 +951,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1026,19 +959,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1057,7 +978,8 @@
         "8ED",
         "9ED",
         "10E",
-        "DPA"
+        "DPA",
+        "C16"
       ],
       "rarity": "Rare",
       "text": "Return all creatures to their owners' hands.",
@@ -1140,10 +1062,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -1173,6 +1091,7 @@
         "ORI"
       ],
       "rarity": "Rare",
+      "starter": true,
       "subtypes": [
         "Djinn"
       ],
@@ -1272,7 +1191,7 @@
       "rulings": [
         {
           "date": "2010-08-15",
-          "text": "Gaining control of a creature doesn’t cause you gain control of any Auras or Equipment attached to it."
+          "text": "Gaining control of a creature doesn't cause you gain control of any Auras or Equipment attached to it."
         }
       ],
       "subtypes": [
@@ -1345,10 +1264,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1358,18 +1273,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1507,7 +1410,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "A “creature spell” is any spell with the type creature, even if it has other types such as artifact or enchantment. Older cards of type summon are also creature spells."
+          "text": "A \"creature spell\" is any spell with the type creature, even if it has other types such as artifact or enchantment. Older cards of type summon are also creature spells."
         }
       ],
       "text": "Counter target noncreature spell.",
@@ -1685,10 +1588,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -1697,19 +1596,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1810,27 +1697,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2135,10 +2006,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2148,18 +2015,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2300,7 +2155,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If the targeted creature or player is an illegal target by the time Consume Spirit would resolve, the entire spell is countered. You won’t gain any life."
+          "text": "If the targeted creature or player is an illegal target by the time Consume Spirit would resolve, the entire spell is countered. You won't gain any life."
         }
       ],
       "text": "Spend only black mana on X.\nConsume Spirit deals X damage to target creature or player and you gain X life.",
@@ -2375,10 +2230,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2388,18 +2239,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2742,7 +2581,7 @@
       "rulings": [
         {
           "date": "2012-07-01",
-          "text": "If the target creature or player is an illegal target when Essence Drain tries to resolve, it will be countered and none of its effects will happen. You won’t gain 3 life."
+          "text": "If the target creature or player is an illegal target when Essence Drain tries to resolve, it will be countered and none of its effects will happen. You won't gain 3 life."
         }
       ],
       "text": "Essence Drain deals 3 damage to target creature or player and you gain 3 life.",
@@ -2915,10 +2754,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2927,19 +2762,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3084,6 +2907,7 @@
         "KLD"
       ],
       "rarity": "Common",
+      "starter": true,
       "text": "Target player discards two cards.",
       "type": "Sorcery",
       "types": [
@@ -3151,10 +2975,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -3164,18 +2984,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3266,10 +3074,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -3279,18 +3083,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3660,17 +3452,18 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "If Sengir Vampire deals nonlethal damage to a creature and then a different effect or damage source causes that creature to be put into a graveyard later in the turn, Sengir Vampire’s ability will trigger and it will get a +1/+1 counter."
+          "text": "If Sengir Vampire deals nonlethal damage to a creature and then a different effect or damage source causes that creature to be put into a graveyard later in the turn, Sengir Vampire's ability will trigger and it will get a +1/+1 counter."
         },
         {
           "date": "2011-09-22",
-          "text": "Each time a creature is put into a graveyard from the battlefield, check whether Sengir Vampire had dealt any damage to it at any time during that turn. If so, Sengir Vampire’s ability will trigger. It doesn’t matter who controlled the creature or whose graveyard it was put into."
+          "text": "Each time a creature is put into a graveyard from the battlefield, check whether Sengir Vampire had dealt any damage to it at any time during that turn. If so, Sengir Vampire's ability will trigger. It doesn't matter who controlled the creature or whose graveyard it was put into."
         },
         {
           "date": "2011-09-22",
-          "text": "If Sengir Vampire and a creature it dealt damage to are both put into a graveyard at the same time, Sengir Vampire’s ability will trigger, but it will do nothing when it resolves."
+          "text": "If Sengir Vampire and a creature it dealt damage to are both put into a graveyard at the same time, Sengir Vampire's ability will trigger, but it will do nothing when it resolves."
         }
       ],
+      "starter": true,
       "subtypes": [
         "Vampire"
       ],
@@ -3747,10 +3540,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -3760,18 +3549,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3979,27 +3756,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4223,10 +3984,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -4251,15 +4008,15 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Act of Treason can target any creature, even one that’s untapped or one you already control."
+          "text": "Act of Treason can target any creature, even one that's untapped or one you already control."
         },
         {
           "date": "2010-08-15",
-          "text": "Gaining control of a creature doesn’t cause you to gain control of any Auras or Equipment attached to it."
+          "text": "Gaining control of a creature doesn't cause you to gain control of any Auras or Equipment attached to it."
         },
         {
           "date": "2013-07-01",
-          "text": "If you control a legendary creature and gain control of another legendary creature with the same name, you’ll choose one to remain on the battlefield and put the other into its owner’s graveyard."
+          "text": "If you control a legendary creature and gain control of another legendary creature with the same name, you'll choose one to remain on the battlefield and put the other into its owner's graveyard."
         }
       ],
       "text": "Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn. (It can attack and {T} this turn.)",
@@ -4364,11 +4121,11 @@
         },
         {
           "date": "2009-02-01",
-          "text": "Banefire can be targeted by spells that try to counter it (such as Countersquall) regardless of what the value of X is. If X is 5 or more, those spells will still resolve, but the part of their effect that would counter Banefire won’t do anything. Any other effects those spells have will work as normal."
+          "text": "Banefire can be targeted by spells that try to counter it (such as Countersquall) regardless of what the value of X is. If X is 5 or more, those spells will still resolve, but the part of their effect that would counter Banefire won't do anything. Any other effects those spells have will work as normal."
         },
         {
           "date": "2009-02-01",
-          "text": "Banefire’s ability won’t prevent it from being countered by the game rules if its target has become an illegal target."
+          "text": "Banefire's ability won't prevent it from being countered by the game rules if its target has become an illegal target."
         }
       ],
       "text": "Banefire deals X damage to target creature or player.\nIf X is 5 or more, Banefire can't be countered by spells or abilities and the damage can't be prevented.",
@@ -4442,27 +4199,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4660,10 +4401,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -4673,18 +4410,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5013,10 +4738,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5025,19 +4746,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5251,10 +4960,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5264,18 +4969,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5373,27 +5066,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5544,7 +5221,7 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "Regeneration abilities that would affect that creature can still be activated; they just won’t do anything. The creature can’t be regenerated for any reason, even if an effect other than Incinerate would deal lethal damage to it or otherwise destroy it."
+          "text": "Regeneration abilities that would affect that creature can still be activated; they just won't do anything. The creature can't be regenerated for any reason, even if an effect other than Incinerate would deal lethal damage to it or otherwise destroy it."
         }
       ],
       "text": "Incinerate deals 3 damage to target creature or player. A creature dealt damage this way can't be regenerated this turn.",
@@ -5948,10 +5625,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -5961,18 +5634,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6110,6 +5771,7 @@
         "W16"
       ],
       "rarity": "Rare",
+      "starter": true,
       "subtypes": [
         "Dragon"
       ],
@@ -6191,10 +5853,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -6207,19 +5865,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6321,27 +5967,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6680,7 +6310,7 @@
       "subtypes": [
         "Wurm"
       ],
-      "text": "Trample (If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)",
+      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)",
       "toughness": "7",
       "type": "Creature — Wurm",
       "types": [
@@ -6753,10 +6383,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -6766,18 +6392,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6885,10 +6499,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Invasion Block",
           "legality": "Legal"
         },
@@ -6898,18 +6508,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -7068,7 +6666,7 @@
       "subtypes": [
         "Elf"
       ],
-      "text": "Put a 1/1 green Elf Warrior creature token onto the battlefield for each Elf you control.",
+      "text": "Create a 1/1 green Elf Warrior creature token for each Elf you control.",
       "type": "Tribal Sorcery — Elf",
       "types": [
         "Tribal",
@@ -7145,10 +6743,6 @@
         },
         {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -7729,27 +7323,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -7882,7 +7460,7 @@
           "text": "Howl of the Night Pack counts any land you control with the subtype Forest, not just ones named Forest."
         }
       ],
-      "text": "Put a 2/2 green Wolf creature token onto the battlefield for each Forest you control.",
+      "text": "Create a 2/2 green Wolf creature token for each Forest you control.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -8048,7 +7626,7 @@
         "Elf",
         "Warrior"
       ],
-      "text": "Other Elf creatures you control get +1/+1.\n{G}, {T}: Put a 1/1 green Elf Warrior creature token onto the battlefield.",
+      "text": "Other Elf creatures you control get +1/+1.\n{G}, {T}: Create a 1/1 green Elf Warrior creature token.",
       "toughness": "2",
       "type": "Creature — Elf Warrior",
       "types": [
@@ -8120,10 +7698,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -8133,18 +7707,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -8227,14 +7789,14 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Lys Alana Huntmaster’s ability will resolve before the Elf spell that caused it to trigger."
+          "text": "Lys Alana Huntmaster's ability will resolve before the Elf spell that caused it to trigger."
         }
       ],
       "subtypes": [
         "Elf",
         "Warrior"
       ],
-      "text": "Whenever you cast an Elf spell, you may put a 1/1 green Elf Warrior creature token onto the battlefield.",
+      "text": "Whenever you cast an Elf spell, you may create a 1/1 green Elf Warrior creature token.",
       "toughness": "3",
       "type": "Creature — Elf Warrior",
       "types": [
@@ -8341,7 +7903,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Trample (If this creature would assign enough damage to its blockers to destroy them, you may have it assign the rest of its damage to defending player or planeswalker.)\nMolimo, Maro-Sorcerer's power and toughness are each equal to the number of lands you control.",
+      "text": "Trample (This creature can deal excess combat damage to defending player or planeswalker while attacking.)\nMolimo, Maro-Sorcerer's power and toughness are each equal to the number of lands you control.",
       "toughness": "*",
       "type": "Legendary Creature — Elemental",
       "types": [
@@ -8553,10 +8115,6 @@
         },
         {
           "format": "Shards of Alara Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -8794,7 +8352,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Overrun affects only creatures you control at the time it resolves. It won’t affect creatures that come under your control later in the turn."
+          "text": "Overrun affects only creatures you control at the time it resolves. It won't affect creatures that come under your control later in the turn."
         }
       ],
       "text": "Creatures you control get +3/+3 and gain trample until end of turn.",
@@ -8905,7 +8463,8 @@
         "M12",
         "TPR",
         "MM2",
-        "C15"
+        "C15",
+        "C16"
       ],
       "rarity": "Common",
       "rulings": [
@@ -8915,7 +8474,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
       "text": "Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library.",
@@ -8942,10 +8501,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -8955,18 +8510,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -9069,10 +8612,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -9082,18 +8621,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -9388,10 +8915,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -9401,18 +8924,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -9761,7 +9272,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Verdant Force’s controller gets the tokens. That is the controller at the beginning of upkeep."
+          "text": "Verdant Force's controller gets the tokens. That is the controller at the beginning of upkeep."
         },
         {
           "date": "2005-08-01",
@@ -9775,7 +9286,7 @@
       "subtypes": [
         "Elemental"
       ],
-      "text": "At the beginning of each upkeep, put a 1/1 green Saproling creature token onto the battlefield.",
+      "text": "At the beginning of each upkeep, create a 1/1 green Saproling creature token.",
       "toughness": "7",
       "type": "Creature — Elemental",
       "types": [
@@ -9847,10 +9358,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -9860,18 +9367,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -9905,7 +9400,7 @@
         },
         {
           "date": "2007-10-01",
-          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it won't get shuffled into its owner's library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
+          "text": "If the Incarnation is removed from the graveyard after the ability triggers but before it resolves, it will remain in its new zone when its owner shuffles his or her library. Similarly, if a replacement effect has the Incarnation move to a different zone instead of being put into the graveyard, the ability won't trigger at all."
         }
       ],
       "subtypes": [
@@ -10140,7 +9635,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "Sharing multiple creature types doesn’t give an additional bonus. Coat of Arms counts creatures, not creature types."
+          "text": "Sharing multiple creature types doesn't give an additional bonus. Coat of Arms counts creatures, not creature types."
         }
       ],
       "text": "Each creature gets +1/+1 for each other creature on the battlefield that shares at least one creature type with it. (For example, if two Goblin Warriors and a Goblin Shaman are on the battlefield, each gets +2/+2.)",
@@ -10244,7 +9739,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If a player casts a black spell, Demon’s Horn’s ability triggers and is put on the stack on top of that spell. Demon’s Horn’s ability will resolve (causing you to gain 1 life) before the spell does."
+          "text": "If a player casts a black spell, Demon's Horn's ability triggers and is put on the stack on top of that spell. Demon's Horn's ability will resolve (causing you to gain 1 life) before the spell does."
         }
       ],
       "text": "Whenever a player casts a black spell, you may gain 1 life.",
@@ -10347,7 +9842,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If a player casts a red spell, Dragon’s Claw’s ability triggers and is put on the stack on top of that spell. Dragon’s Claw’s ability will resolve (causing you to gain 1 life) before the spell does."
+          "text": "If a player casts a red spell, Dragon's Claw's ability triggers and is put on the stack on top of that spell. Dragon's Claw's ability will resolve (causing you to gain 1 life) before the spell does."
         }
       ],
       "text": "Whenever a player casts a red spell, you may gain 1 life.",
@@ -10449,7 +9944,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If a player casts a blue spell, Kraken’s Eye’s ability triggers and is put on the stack on top of that spell. Kraken’s Eye’s ability will resolve (causing you to gain 1 life) before the spell does."
+          "text": "If a player casts a blue spell, Kraken's Eye's ability triggers and is put on the stack on top of that spell. Kraken's Eye's ability will resolve (causing you to gain 1 life) before the spell does."
         }
       ],
       "text": "Whenever a player casts a blue spell, you may gain 1 life.",
@@ -10546,7 +10041,8 @@
         "DPA",
         "DDG",
         "C14",
-        "C15"
+        "C15",
+        "C16"
       ],
       "rarity": "Rare",
       "subtypes": [
@@ -10667,27 +10163,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -10814,7 +10294,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "If a player casts a green spell, Wurm’s Tooth’s ability triggers and is put on the stack on top of that spell. Wurm’s Tooth’s ability will resolve (causing you to gain 1 life) before the spell does."
+          "text": "If a player casts a green spell, Wurm's Tooth's ability triggers and is put on the stack on top of that spell. Wurm's Tooth's ability will resolve (causing you to gain 1 life) before the spell does."
         }
       ],
       "text": "Whenever a player casts a green spell, you may gain 1 life.",
@@ -11170,7 +10650,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -11531,7 +11012,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -11892,7 +11374,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -12253,7 +11736,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -12620,7 +12104,8 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -12987,7 +12472,8 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -13354,7 +12840,8 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -13721,7 +13208,8 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -14088,7 +13576,8 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -14455,7 +13944,8 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -14822,7 +14312,8 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -15189,7 +14680,8 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -15554,7 +15046,8 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -15919,7 +15412,8 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -16284,7 +15778,8 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -16649,7 +16144,8 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [

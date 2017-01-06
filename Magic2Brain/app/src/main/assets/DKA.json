@@ -799,7 +799,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "Lifelink (Damage dealt by this creature also causes you to gain that much life.)\nWhen Elgaud Inquisitor dies, put a 1/1 white Spirit creature token with flying onto the battlefield.",
+      "text": "Lifelink (Damage dealt by this creature also causes you to gain that much life.)\nWhen Elgaud Inquisitor dies, create a 1/1 white Spirit creature token with flying.",
       "toughness": "2",
       "type": "Creature — Human Cleric",
       "types": [
@@ -1039,7 +1039,7 @@
         "DDQ"
       ],
       "rarity": "Common",
-      "text": "Put two 1/1 white Human creature tokens onto the battlefield.\nFateful hour — If you have 5 or less life, put five of those tokens onto the battlefield instead.",
+      "text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1274,15 +1274,15 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "Removing an attacking creature from combat doesn’t untap that creature."
+          "text": "Removing an attacking creature from combat doesn't untap that creature."
         },
         {
           "date": "2011-01-22",
-          "text": "Removing a blocking creature from combat doesn’t cause the creature it was blocking to become unblocked. If no other creatures are blocking that attacking creature, it won’t assign combat damage (unless it has trample)."
+          "text": "Removing a blocking creature from combat doesn't cause the creature it was blocking to become unblocked. If no other creatures are blocking that attacking creature, it won't assign combat damage (unless it has trample)."
         },
         {
           "date": "2011-01-22",
-          "text": "If there are multiple combat phases in a turn, a creature that’s been removed from combat can still attack or block in future combat steps that turn."
+          "text": "If there are multiple combat phases in a turn, a creature that's been removed from combat can still attack or block in future combat phases that turn."
         }
       ],
       "subtypes": [
@@ -1393,7 +1393,7 @@
         "DDQ"
       ],
       "rarity": "Rare",
-      "text": "Put five 1/1 white Human creature tokens onto the battlefield. If Increasing Devotion was cast from a graveyard, put ten of those tokens onto the battlefield instead.\nFlashback {7}{W}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Create five 1/1 white Human creature tokens. If Increasing Devotion was cast from a graveyard, create ten of those tokens instead.\nFlashback {7}{W}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -1517,7 +1517,7 @@
         "MD1"
       ],
       "rarity": "Uncommon",
-      "text": "Put two 1/1 white Spirit creature tokens with flying onto the battlefield.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2391,7 +2391,7 @@
       "subtypes": [
         "Angel"
       ],
-      "text": "Flying\nWhenever another non-Spirit creature you control dies, put a 1/1 white Spirit creature token with flying onto the battlefield.",
+      "text": "Flying\nWhenever another non-Spirit creature you control dies, create a 1/1 white Spirit creature token with flying.",
       "toughness": "5",
       "type": "Creature — Angel",
       "types": [
@@ -3288,7 +3288,7 @@
         "Human",
         "Cleric"
       ],
-      "text": "{T}: Put a 1/1 white Human creature token onto the battlefield.\nFateful hour — As long as you have 5 or less life, other creatures you control get +2/+2.",
+      "text": "{T}: Create a 1/1 white Human creature token.\nFateful hour — As long as you have 5 or less life, other creatures you control get +2/+2.",
       "toughness": "2",
       "type": "Creature — Human Cleric",
       "types": [
@@ -3745,10 +3745,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -3768,11 +3764,11 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "If the creature spell is an illegal target (because it’s left the stack, for example) when Bone to Ash tries to resolve, Bone to Ash will be countered and none of its effects will happen. You won’t draw a card."
+          "text": "If the creature spell is an illegal target (because it's left the stack, for example) when Bone to Ash tries to resolve, Bone to Ash will be countered and none of its effects will happen. You won't draw a card."
         },
         {
           "date": "2011-01-22",
-          "text": "A creature spell that can’t be countered by spells and abilities is a legal target for Bone to Ash. The creature spell won’t be countered when Bone to Ash resolves, but you’ll still draw a card."
+          "text": "A creature spell that can't be countered by spells and abilities is a legal target for Bone to Ash. The creature spell won't be countered when Bone to Ash resolves, but you'll still draw a card."
         }
       ],
       "text": "Counter target creature spell.\nDraw a card.",
@@ -4662,11 +4658,11 @@
         },
         {
           "date": "2011-01-22",
-          "text": "If you gain control of the creature that’s being prevented from untapping, that creature won’t untap during your untap step for as long as you control Dungeon Geists."
+          "text": "If you gain control of the creature that's being prevented from untapping, that creature won't untap during your untap step for as long as you control Dungeon Geists."
         },
         {
           "date": "2013-04-15",
-          "text": "The ability can target a tapped creature. If the targeted creature is already tapped when it resolves, that creature just remains tapped and doesn’t untap during its controller’s next untap step."
+          "text": "The ability can target a tapped creature. If the targeted creature is already tapped when it resolves, that creature just remains tapped and doesn't untap during its controller's next untap step."
         }
       ],
       "subtypes": [
@@ -4875,10 +4871,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Innistrad Block",
           "legality": "Legal"
         },
@@ -4891,19 +4883,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Theros Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5033,7 +5013,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "Although players may respond to the activated ability, they can’t respond to the paying of its costs. The creature card will already be exiled by the time any player could respond."
+          "text": "Although players may respond to the activated ability, they can't respond to the paying of its costs. The creature card will already be exiled by the time any player could respond."
         },
         {
           "date": "2011-01-22",
@@ -5044,7 +5024,7 @@
         "Human",
         "Wizard"
       ],
-      "text": "{2}{U}, {T}, Exile a creature card from your graveyard: Put a 2/2 black Zombie creature token onto the battlefield, then put a +1/+1 counter on each Zombie creature you control.",
+      "text": "{2}{U}, {T}, Exile a creature card from your graveyard: Create a 2/2 black Zombie creature token, then put a +1/+1 counter on each Zombie creature you control.",
       "toughness": "2",
       "type": "Creature — Human Wizard",
       "types": [
@@ -5404,7 +5384,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "Mystic Retrieval can’t target itself. It’s on the stack when you choose its target."
+          "text": "Mystic Retrieval can't target itself. It's on the stack when you choose its target."
         }
       ],
       "text": "Return target instant or sorcery card from your graveyard to your hand.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
@@ -5750,7 +5730,15 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "When Relentless Skaabs returns to the battlefield because of its undying ability, it’s not being cast. You won’t exile a creature card from your graveyard."
+          "text": "When Relentless Skaabs returns to the battlefield because of its undying ability, it's not being cast. You won't exile a creature card from your graveyard."
+        },
+        {
+          "date": "2013-04-15",
+          "text": "You must exile exactly one creature card from your graveyard to cast this spell; you cannot cast it without exiling a creature card, and you cannot exile additional creature cards."
+        },
+        {
+          "date": "2013-04-15",
+          "text": "Players can only respond once this spell has been cast and all its costs have been paid. No one can try to otherwise remove the creature card you exiled in order to prevent you from casting this spell."
         }
       ],
       "subtypes": [
@@ -5970,10 +5958,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Standard",
           "legality": "Legal"
         },
         {
@@ -6723,10 +6707,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Innistrad Block",
           "legality": "Legal"
         },
@@ -6736,18 +6716,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -6866,10 +6834,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -6891,7 +6855,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "If there’s only one card in your library when Tower Geist enters the battlefield, you’ll look at that card and put it into your hand."
+          "text": "If there's only one card in your library when Tower Geist enters the battlefield, you'll look at that card and put it into your hand."
         }
       ],
       "subtypes": [
@@ -8034,7 +7998,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "Farbog Boneflinger’s ability is mandatory. If it’s the only creature on the battlefield, you must choose it as the target and give it -2/-2 until end of turn."
+          "text": "Farbog Boneflinger's ability is mandatory. If it's the only creature on the battlefield, you must choose it as the target and give it -2/-2 until end of turn."
         }
       ],
       "subtypes": [
@@ -8418,11 +8382,11 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "Gravecrawler’s ability doesn’t change when you could cast it."
+          "text": "Gravecrawler's ability doesn't change when you could cast it."
         },
         {
           "date": "2011-01-22",
-          "text": "Once you’ve cast Gravecrawler and it’s on the stack, it doesn’t matter if you lose control of the other Zombie."
+          "text": "Once you've cast Gravecrawler and it's on the stack, it doesn't matter if you lose control of the other Zombie."
         }
       ],
       "subtypes": [
@@ -8522,10 +8486,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -8549,15 +8509,15 @@
         },
         {
           "date": "2011-01-22",
-          "text": "You can cast Gravepurge with zero targets. If you do, you’ll draw a card as the spell resolves."
+          "text": "You can cast Gravepurge with zero targets. If you do, you'll draw a card as the spell resolves."
         },
         {
           "date": "2011-01-22",
-          "text": "If you cast Gravepurge with at least one target and all of those targets become illegal, the spell will be countered and you won’t get to draw a card."
+          "text": "If you cast Gravepurge with at least one target and all of those targets become illegal, the spell will be countered and you won't get to draw a card."
         },
         {
           "date": "2015-02-25",
-          "text": "You can cast Gravepurge with no targets. If you do, you’ll just draw a card. However, if you cast it with at least one target and all of those targets become illegal, the spell will be countered and you won’t draw a card."
+          "text": "You can cast Gravepurge with no targets. If you do, you'll just draw a card. However, if you cast it with at least one target and all of those targets become illegal, the spell will be countered and you won't draw a card."
         }
       ],
       "text": "Put any number of target creature cards from your graveyard on top of your library.\nDraw a card.",
@@ -9564,7 +9524,7 @@
         "DKA"
       ],
       "rarity": "Common",
-      "text": "Put a 2/2 black Zombie creature token onto the battlefield.\nFlashback {4}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "text": "Create a 2/2 black Zombie creature token.\nFlashback {4}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -10419,7 +10379,7 @@
         "Human",
         "Shaman"
       ],
-      "text": "Morbid — When Wakedancer enters the battlefield, if a creature died this turn, put a 2/2 black Zombie creature token onto the battlefield.",
+      "text": "Morbid — When Wakedancer enters the battlefield, if a creature died this turn, create a 2/2 black Zombie creature token.",
       "toughness": "2",
       "type": "Creature — Human Shaman",
       "types": [
@@ -11958,10 +11918,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Innistrad Block",
           "legality": "Legal"
         },
@@ -11974,19 +11930,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -12138,7 +12082,7 @@
       "rulings": [
         {
           "date": "2014-07-18",
-          "text": "Forge Devil’s ability is mandatory. If it’s the only creature on the battlefield, you’ll have to choose it as the target and have it deal 1 damage to itself and 1 damage to you."
+          "text": "Forge Devil's ability is mandatory. If it's the only creature on the battlefield, you'll have to choose it as the target and have it deal 1 damage to itself and 1 damage to you."
         }
       ],
       "subtypes": [
@@ -12222,10 +12166,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Innistrad Block",
           "legality": "Legal"
         },
@@ -12235,18 +12175,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -15343,7 +15271,7 @@
           "text": "Check the sacrificed creature's toughness as it last existed on the battlefield to determine how many Wolves you put onto the battlefield."
         }
       ],
-      "text": "At the beginning of your end step, you may sacrifice a nontoken creature. If you do, put X 2/2 green Wolf creature tokens onto the battlefield, where X is the sacrificed creature's toughness.",
+      "text": "At the beginning of your end step, you may sacrifice a nontoken creature. If you do, create X 2/2 green Wolf creature tokens, where X is the sacrificed creature's toughness.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -15916,10 +15844,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Innistrad Block",
           "legality": "Legal"
         },
@@ -15929,18 +15853,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -19048,7 +18960,7 @@
         "Human",
         "Werewolf"
       ],
-      "text": "Whenever this creature enters the battlefield or transforms into Huntmaster of the Fells, put a 2/2 green Wolf creature token onto the battlefield and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Huntmaster of the Fells.",
+      "text": "Whenever this creature enters the battlefield or transforms into Huntmaster of the Fells, create a 2/2 green Wolf creature token and you gain 2 life.\nAt the beginning of each upkeep, if no spells were cast last turn, transform Huntmaster of the Fells.",
       "toughness": "2",
       "type": "Creature — Human Werewolf",
       "types": [
@@ -19431,11 +19343,11 @@
         },
         {
           "date": "2011-01-22",
-          "text": "You can target a token creature with Sorin, Lord of Innistrad’s third ability, but it won’t return to the battlefield."
+          "text": "You can target a token creature with Sorin, Lord of Innistrad's third ability, but it won't return to the battlefield."
         },
         {
           "date": "2011-01-22",
-          "text": "If a creature with undying is destroyed by Sorin, Lord of Innistrad’s third ability, the undying ability will trigger, but the creature will already have been returned to the battlefield by Sorin. The undying ability won’t do anything when it resolves."
+          "text": "If a creature with undying is destroyed by Sorin, Lord of Innistrad's third ability, the undying ability will trigger, but the creature will already have been returned to the battlefield by Sorin. The undying ability won't do anything when it resolves."
         },
         {
           "date": "2011-01-22",
@@ -19445,7 +19357,7 @@
       "subtypes": [
         "Sorin"
       ],
-      "text": "+1: Put a 1/1 black Vampire creature token with lifelink onto the battlefield.\n−2: You get an emblem with \"Creatures you control get +1/+0.\"\n−6: Destroy up to three target creatures and/or other planeswalkers. Return each card put into a graveyard this way to the battlefield under your control.",
+      "text": "+1: Create a 1/1 black Vampire creature token with lifelink.\n−2: You get an emblem with \"Creatures you control get +1/+0.\"\n−6: Destroy up to three target creatures and/or other planeswalkers. Return each card put into a graveyard this way to the battlefield under your control.",
       "type": "Planeswalker — Sorin",
       "types": [
         "Planeswalker"
@@ -19824,7 +19736,7 @@
       "subtypes": [
         "Equipment"
       ],
-      "text": "Equipped creature gets +1/+0 and has vigilance.\nWhenever equipped creature dies, if it was a Human, put a 1/1 white Spirit creature token with flying onto the battlefield.\nEquip {2}",
+      "text": "Equipped creature gets +1/+0 and has vigilance.\nWhenever equipped creature dies, if it was a Human, create a 1/1 white Spirit creature token with flying.\nEquip {2}",
       "type": "Artifact — Equipment",
       "types": [
         "Artifact"
@@ -20808,7 +20720,7 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "Helvault’s first and third abilities are linked. Similarly, Helvault’s second and third abilities are linked. Only cards exiled as a result of Helvault’s first or second abilities will be returned to the battlefield by its third ability."
+          "text": "Helvault's first and third abilities are linked. Similarly, Helvault's second and third abilities are linked. Only cards exiled as a result of Helvault's first or second abilities will be returned to the battlefield by its third ability."
         }
       ],
       "supertypes": [
@@ -21290,7 +21202,8 @@
         "DDP",
         "BFZ",
         "C15",
-        "CN2"
+        "CN2",
+        "C16"
       ],
       "rarity": "Common",
       "text": "{T}, Sacrifice Evolving Wilds: Search your library for a basic land card and put it onto the battlefield tapped. Then shuffle your library.",
@@ -21495,11 +21408,11 @@
       "rulings": [
         {
           "date": "2011-01-22",
-          "text": "The creature card returned to your hand is chosen at random as the ability resolves. If any player responds to the ability, that player won’t yet know what card will be returned."
+          "text": "The creature card returned to your hand is chosen at random as the ability resolves. If any player responds to the ability, that player won't yet know what card will be returned."
         },
         {
           "date": "2011-01-22",
-          "text": "Because the ability doesn’t target any creature card, any creature card put into the graveyard in response to that ability may be returned to your hand."
+          "text": "Because the ability doesn't target any creature card, any creature card put into the graveyard in response to that ability may be returned to your hand."
         }
       ],
       "text": "{T}: Add {C} to your mana pool.\n{3}, {T}, Sacrifice Haunted Fengraf: Return a creature card at random from your graveyard to your hand.",

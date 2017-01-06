@@ -601,27 +601,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Mirage Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -769,7 +753,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You don’t have to pay the untap cost if it is untapped outside the upkeep phase or is untapped by an effect."
+          "text": "You don't have to pay the untap cost if it is untapped outside the upkeep phase or is untapped by an effect."
         }
       ],
       "subtypes": [
@@ -809,10 +793,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -844,6 +824,7 @@
         "ORI"
       ],
       "rarity": "Rare",
+      "starter": true,
       "subtypes": [
         "Djinn"
       ],
@@ -930,7 +911,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "When this spell resolves, you either pay X mana or let your lands become tapped. The lands that become tapped are not “tapped for mana\". If you choose to pay, you may pay the X mana using whatever mana abilities you want to use."
+          "text": "When this spell resolves, you either pay X mana or let your lands become tapped. The lands that become tapped are not \"tapped for mana\". If you choose to pay, you may pay the X mana using whatever mana abilities you want to use."
         },
         {
           "date": "2010-03-01",
@@ -962,10 +943,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -974,19 +951,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Ravnica Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1766,7 +1731,7 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "A “creature card” is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
+          "text": "A \"creature card\" is any card with the type creature, even if it has other types such as artifact, enchantment, or land. Older cards of type summon are also creature cards."
         }
       ],
       "subtypes": [
@@ -1919,17 +1884,18 @@
       "rulings": [
         {
           "date": "2007-07-15",
-          "text": "If Sengir Vampire deals nonlethal damage to a creature and then a different effect or damage source causes that creature to be put into a graveyard later in the turn, Sengir Vampire’s ability will trigger and it will get a +1/+1 counter."
+          "text": "If Sengir Vampire deals nonlethal damage to a creature and then a different effect or damage source causes that creature to be put into a graveyard later in the turn, Sengir Vampire's ability will trigger and it will get a +1/+1 counter."
         },
         {
           "date": "2011-09-22",
-          "text": "Each time a creature is put into a graveyard from the battlefield, check whether Sengir Vampire had dealt any damage to it at any time during that turn. If so, Sengir Vampire’s ability will trigger. It doesn’t matter who controlled the creature or whose graveyard it was put into."
+          "text": "Each time a creature is put into a graveyard from the battlefield, check whether Sengir Vampire had dealt any damage to it at any time during that turn. If so, Sengir Vampire's ability will trigger. It doesn't matter who controlled the creature or whose graveyard it was put into."
         },
         {
           "date": "2011-09-22",
-          "text": "If Sengir Vampire and a creature it dealt damage to are both put into a graveyard at the same time, Sengir Vampire’s ability will trigger, but it will do nothing when it resolves."
+          "text": "If Sengir Vampire and a creature it dealt damage to are both put into a graveyard at the same time, Sengir Vampire's ability will trigger, but it will do nothing when it resolves."
         }
       ],
+      "starter": true,
       "subtypes": [
         "Vampire"
       ],
@@ -2052,7 +2018,7 @@
         },
         {
           "date": "2008-04-01",
-          "text": "A “creature spell” is any spell with the type Creature, even if it has other types such as Artifact or Enchantment. Older cards of type Summon are also Creature spells."
+          "text": "A \"creature spell\" is any spell with the type Creature, even if it has other types such as Artifact or Enchantment. Older cards of type Summon are also Creature spells."
         }
       ],
       "subtypes": [
@@ -2378,7 +2344,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "There is no penalty if it can’t attack."
+          "text": "There is no penalty if it can't attack."
         }
       ],
       "subtypes": [
@@ -2463,11 +2429,11 @@
       "rulings": [
         {
           "date": "2004-12-01",
-          "text": "The additional cost is paid when you pay the rest of Fireball’s costs, even though that text appears second on the card (to make the card easier to read). The additional cost doesn’t count toward Fireball’s converted mana cost."
+          "text": "The additional cost is paid when you pay the rest of Fireball's costs, even though that text appears second on the card (to make the card easier to read). The additional cost doesn't count toward Fireball's converted mana cost."
         },
         {
           "date": "2004-12-01",
-          "text": "If, for example, X is 5 and you choose three target creatures, Fireball has a total cost of {7}{R} (even though its mana cost is just {5}{R}). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
+          "text": "If, for example, X is 5 and you choose three target creatures, Fireball has a total cost of {R}). If those creatures are all still legal targets as Fireball resolves, it deals 1 damage to each of them."
         },
         {
           "date": "2009-05-01",
@@ -2930,6 +2896,7 @@
         "W16"
       ],
       "rarity": "Rare",
+      "starter": true,
       "subtypes": [
         "Dragon"
       ],
@@ -2959,10 +2926,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -2975,19 +2938,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
           "format": "Tempest Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3071,7 +3022,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You can’t discard more than once to target more than one creature (or player) or to do multiple amounts of damage to a single creature (or player)."
+          "text": "You can't discard more than once to target more than one creature (or player) or to do multiple amounts of damage to a single creature (or player)."
         },
         {
           "date": "2004-10-04",
@@ -3543,7 +3494,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "In multiplayer games you can choose a different player’s creature each upkeep. You are forced to pick a creature that some opponent controls if there is at least one creature on the battlefield that is a legal target."
+          "text": "In multiplayer games you can choose a different player's creature each upkeep. You are forced to pick a creature that some opponent controls if there is at least one creature on the battlefield that is a legal target."
         },
         {
           "date": "2004-10-04",
@@ -3628,12 +3579,6 @@
         "EMA"
       ],
       "rarity": "Common",
-      "rulings": [
-        {
-          "date": "2009-10-01",
-          "text": "Fog has no effect on damage that’s already been dealt."
-        }
-      ],
       "text": "Prevent all combat damage that would be dealt this turn.",
       "type": "Instant",
       "types": [
@@ -3947,10 +3892,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Invasion Block",
           "legality": "Legal"
         },
@@ -3960,18 +3901,6 @@
         },
         {
           "format": "Mirage Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4067,7 +3996,8 @@
         "M12",
         "TPR",
         "MM2",
-        "C15"
+        "C15",
+        "C16"
       ],
       "rarity": "Common",
       "rulings": [
@@ -4077,7 +4007,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
       "text": "Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library.",
@@ -4105,10 +4035,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Ice Age Block",
           "legality": "Legal"
         },
@@ -4118,18 +4044,6 @@
         },
         {
           "format": "Modern",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -4632,7 +4546,7 @@
         },
         {
           "date": "2007-09-16",
-          "text": "Clockwork Beast’s last ability resolves, you can choose to put fewer than X +1/+0 counters on it."
+          "text": "Clockwork Beast's last ability resolves, you can choose to put fewer than X +1/+0 counters on it."
         }
       ],
       "subtypes": [
@@ -4702,23 +4616,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -5269,7 +5167,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5508,7 +5407,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5747,7 +5647,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -5992,7 +5893,8 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6237,7 +6139,8 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6482,7 +6385,8 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6727,7 +6631,8 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -6972,7 +6877,8 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7217,7 +7123,8 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7460,7 +7367,8 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7703,7 +7611,8 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
@@ -7946,7 +7855,8 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "subtypes": [
