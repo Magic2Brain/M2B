@@ -30,6 +30,8 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.squareup.picasso.Picasso;
 
+import org.w3c.dom.Text;
+
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -45,6 +47,8 @@ public class QueryActivity extends AppCompatActivity {
     private int indexCard; // Actually not needed (because we remove cards from WrongGuessed) but may be useful in later edits
     private boolean firstGuess; //This is to check if he guessed it at first try. If so we remove the card from the Arraylist. Else it stays there.
     private String deckName; //Name of the deck. Only for saving/loading purpose
+    private TextView score; //this will show the user the current progress
+    private boolean queryLand = true; // should we really query lands?
 
     protected void onCreate(Bundle savedInstanceState) {
         // Build UI
@@ -117,6 +121,7 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void showFirstPic(){
+        updateScore();
         showHiderInstant();
         firstGuess = true;
         showPic(wrongGuessed.get(indexCard).getMultiverseid());
@@ -124,6 +129,7 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void showNextPic(){
+        updateScore();
         skipped = false;
         showHider();
         final Handler handler = new Handler();
@@ -196,7 +202,6 @@ public class QueryActivity extends AppCompatActivity {
 
     public void setDone(){
         buildEndScreen();
-        indexCard = 0;
         shuffleWrongs();
     }
 
@@ -302,7 +307,19 @@ public class QueryActivity extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {skip();}
         });
+
+        score = new TextView(this); // Create new Textview
+        score.setGravity(Gravity.CENTER);
+        score.setTextSize(36);
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.1*scrHeight))/*Height*/;
+        params.leftMargin = 0; // X-Position
+        params.topMargin = (int)(0.78*scrHeight); // Y-Position
+        lyt.addView(score, params); // add it to the View
       }
+
+    public void updateScore(){
+        score.setText( (set.size()-wrongGuessed.size()) + " / " + indexCard +" / " + (wrongGuessed.size()-indexCard));
+    }
 
     public void buildEndScreen(){
         int scrWidth  = getWindowManager().getDefaultDisplay().getWidth();
@@ -377,6 +394,7 @@ public class QueryActivity extends AppCompatActivity {
             repWrong.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
                     buildMenu();
+                    indexCard = 0;
                     showFirstPic();
                 }
             });
@@ -398,9 +416,19 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void restartAll(){
-        wrongGuessed = (ArrayList)set.clone();
+        wrongGuessed.clear();
+        if(queryLand){
+            wrongGuessed = (ArrayList)set.clone();
+        } else {
+            for(Card c : set){
+                if(c.getType() != "Land"){
+                    wrongGuessed.add(c);
+                }
+            }
+        }
         shuffleWrongs();
         buildMenu();
+        indexCard = 0;
         showFirstPic();
     }
 
@@ -412,6 +440,12 @@ public class QueryActivity extends AppCompatActivity {
                 break;
             case R.id.restart_all:
                 restartAll();
+                break;
+            case R.id.query_lands:
+                queryLand = !queryLand;
+                item.setChecked(queryLand);
+                restartAll();
+                break;
         }
         return true;
     }
