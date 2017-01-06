@@ -6,4 +6,11 @@
         android:orderInCategory="100"
         android:title="Restart"
         app:showAsAction="never" />
+
+    <item android:id="@+id/query_lands"
+        android:orderInCategory="99"
+        android:title="Query Lands"
+        android:checkable="true"
+        android:checked="true"/>
+
 </menu>
