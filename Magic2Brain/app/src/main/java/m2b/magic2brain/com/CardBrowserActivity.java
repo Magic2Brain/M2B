@@ -34,6 +34,7 @@ public class CardBrowserActivity extends AppCompatActivity {
 
         //TODO implement new view & optimize for card display
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
 
         Intent mIntent = getIntent();
         final Card card = (Card) mIntent.getSerializableExtra("currentCard");
@@ -69,7 +70,10 @@ public class CardBrowserActivity extends AppCompatActivity {
         showPic(card.getMultiverseid());
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        if(Favorites.favorites_mvid.contains(card)){
+        if(!Favorites.favorites_mvid.contains(card)){
+            fab.setImageResource(R.drawable.ic_favorite_border);
+        }
+        else{
             fab.setImageResource(R.drawable.ic_favorite);
         }
         fab.setOnClickListener(new View.OnClickListener() {

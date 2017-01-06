@@ -25,6 +25,7 @@ public class BrowserActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         setContentView(R.layout.activity_browser);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
