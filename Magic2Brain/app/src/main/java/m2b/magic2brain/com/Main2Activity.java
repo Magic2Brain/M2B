@@ -194,7 +194,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         RelativeLayout.LayoutParams params;
 
         TextView score = new TextView(this); // Create new Textview
-        score.setText("Changelog 2.6 \n \n - Improved learning algo \n - New fancy menu \n - Fixed save bug \n - Fixed browser bug");
+        score.setText("Changelog 2.6 \n \n - Better learning algorithm \n - New fancy menu \n - Changed Splash-art \n \n - Fixed Save-bug \n - Fixed Browser-bug \n - Fixed Search-bug");
         score.setTextSize(26);
         params = new RelativeLayout.LayoutParams(scrWidth, (int)(0.8*scrHeight));
         params.leftMargin = (int)(0.03*scrWidth); // X-Position
