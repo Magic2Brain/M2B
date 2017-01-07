@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,6 +17,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.animation.Animation;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -77,7 +80,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         else{
             Favorites.favorites_mvid = favs;
         }
-
+        buildNewsFeed();
     }
 
     protected void onStop(){
@@ -183,4 +186,21 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
     private void setupWindowAnimations() {
 
     }
+
+    public void buildNewsFeed(){
+        int scrWidth  = getWindowManager().getDefaultDisplay().getWidth();
+        int scrHeight = getWindowManager().getDefaultDisplay().getHeight();
+        RelativeLayout lyt = (RelativeLayout) findViewById(R.id.main_absolute); // Get the View of the XML
+        RelativeLayout.LayoutParams params;
+
+        TextView score = new TextView(this); // Create new Textview
+        score.setText("Changelog 2.6 \n \n - Improved learning algo \n - New fancy menu \n - Fixed save bug \n - Fixed browser bug");
+        score.setTextSize(26);
+        params = new RelativeLayout.LayoutParams(scrWidth, (int)(0.8*scrHeight));
+        params.leftMargin = (int)(0.03*scrWidth); // X-Position
+        params.topMargin = (int)(0.1*scrHeight); // Y-Position
+        lyt.addView(score, params); // add it to the View
+
+    }
+
 }
