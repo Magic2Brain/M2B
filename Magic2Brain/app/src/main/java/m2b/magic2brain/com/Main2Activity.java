@@ -2,6 +2,7 @@ package m2b.magic2brain.com;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
@@ -195,6 +196,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         RelativeLayout.LayoutParams params;
 
         TextView score = new TextView(this); // Create new Textview
+        score.setTextColor(Color.BLACK);
         score.setText("Changelog 2.6 \n \n - Better learning algorithm \n - New fancy menu \n - Changed Splash-art \n \n - Fixed Save-bug \n - Fixed Browser-bug \n - Fixed Search-bug");
         score.setTextSize(26);
         params = new RelativeLayout.LayoutParams(scrWidth, (int)(0.8*scrHeight));

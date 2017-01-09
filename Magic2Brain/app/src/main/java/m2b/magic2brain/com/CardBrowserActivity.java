@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -17,9 +19,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import m2b.magic2brain.com.magic2brain.R;
@@ -46,8 +52,6 @@ public class CardBrowserActivity extends AppCompatActivity {
 
         cImage = (ImageView) findViewById(R.id.cbaImage);
 
-
-
         TextView tv = (TextView) findViewById(R.id.cbaInfo);
         String info = null;
         info += " Name: "+card.getName();
@@ -70,11 +74,10 @@ public class CardBrowserActivity extends AppCompatActivity {
         showPic(card.getMultiverseid());
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        if(!Favorites.favorites_mvid.contains(card)){
-            fab.setImageResource(R.drawable.ic_favorite_border);
-        }
-        else{
+        if(loadFav(card.getName())){
             fab.setImageResource(R.drawable.ic_favorite);
+        } else{
+            fab.setImageResource(R.drawable.ic_favorite_border);
         }
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,17 +87,33 @@ public class CardBrowserActivity extends AppCompatActivity {
                     fab.setImageResource(R.drawable.ic_favorite_border);
                     Snackbar.make(view, "Removed from your favorites!", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    saveFav(false, card.getName());
                 }
                 else {
                     Favorites.favorites_mvid.add(card);
                     fab.setImageResource(R.drawable.ic_favorite);
                     Snackbar.make(view, "Added to your favorites!", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
+                    saveFav(true,card.getName());
                 }
                 //onCreate(savedInstanceState);
 
             }
         });
+    }
+
+    public void saveFav(boolean b, String name){
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        editor.putBoolean("CardBrowser_Favs_"+name, b);
+        editor.commit();
+    }
+
+    public boolean loadFav(String name){
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        Boolean saved = sharedPrefs.getBoolean("CardBrowser_Favs_"+name,false);
+        if(saved == null){return false;}
+        return saved;
     }
 
     private void setManaCost(String manatext, Context context, LinearLayout layout){
