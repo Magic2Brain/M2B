@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayout;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -17,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
@@ -46,8 +49,6 @@ public class CardBrowserActivity extends AppCompatActivity {
 
         cImage = (ImageView) findViewById(R.id.cbaImage);
 
-
-
         TextView tv = (TextView) findViewById(R.id.cbaInfo);
         String info = null;
         info += " Name: "+card.getName();
@@ -70,7 +71,7 @@ public class CardBrowserActivity extends AppCompatActivity {
         showPic(card.getMultiverseid());
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        if(!Favorites.favorites_mvid.contains(card)){
+        if(!checkCard(card.getName())){
             fab.setImageResource(R.drawable.ic_favorite_border);
         }
         else{
@@ -79,13 +80,12 @@ public class CardBrowserActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(Favorites.favorites_mvid.contains(card)){
-                    Favorites.favorites_mvid.remove(card);
+                if(checkCard(card.getName())){
+                    removeCard(card.getName());
                     fab.setImageResource(R.drawable.ic_favorite_border);
                     Snackbar.make(view, "Removed from your favorites!", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                }
-                else {
+                }else{
                     Favorites.favorites_mvid.add(card);
                     fab.setImageResource(R.drawable.ic_favorite);
                     Snackbar.make(view, "Added to your favorites!", Snackbar.LENGTH_LONG)
@@ -95,6 +95,23 @@ public class CardBrowserActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private boolean checkCard(String name){
+        for(Card c : Favorites.favorites_mvid){
+            if(c.getName().contains(name)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void removeCard(String name){
+        for(Card c : Favorites.favorites_mvid){
+            if(c.getName().contains(name)){
+                Favorites.favorites_mvid.remove(c);
+            }
+        }
     }
 
     private void setManaCost(String manatext, Context context, LinearLayout layout){
