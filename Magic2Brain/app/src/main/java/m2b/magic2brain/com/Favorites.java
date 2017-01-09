@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by socketdown on 24.12.16.
  */
 
-public class Favorites {
+public final class Favorites {
     public static ArrayList<Card> favorites_mvid;
 
     public static void init(){

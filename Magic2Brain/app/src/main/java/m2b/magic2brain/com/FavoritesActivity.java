@@ -27,7 +27,15 @@ public class FavoritesActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         setContentView(R.layout.activity_favorites);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        buildMenu();
+    }
 
+    protected void onResume(){
+        super.onResume();
+        buildMenu();
+    }
+
+    private void buildMenu(){
         final Context currentContext = this;
 
         final ArrayList<Card> alist_favs = Favorites.favorites_mvid;
@@ -62,8 +70,7 @@ public class FavoritesActivity extends AppCompatActivity {
                     d.setSet(alist_favs);
                     intent.putExtra("Set", d);
                     startActivity(intent);
-                }
-                else{
+                }else{
                     Snackbar.make(view, "You have no favorites to learn!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 }
             }

@@ -2,10 +2,12 @@ package m2b.magic2brain.com;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -69,31 +71,29 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         Favorites.init();
 
         // Restore preferences
-        SharedPreferences appSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
+        SharedPreferences appSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         Gson gson = new Gson();
-        String json = appSharedPrefs.getString("favobj", "");
+        String json = appSharedPrefs.getString("favobj", null);
         Type type = new TypeToken<ArrayList<Card>>(){}.getType();
         ArrayList<Card> favs= gson.fromJson(json, type);
-        if(favs == null){
-            Favorites.init();
-        }
-        else{
+        Favorites.init();
+        if(favs != null){
             Favorites.favorites_mvid = favs;
-            Favorites.recast();
+        }
+        for(Card c : Favorites.favorites_mvid){
+            Log.i("Main",c.getName());
         }
         buildNewsFeed();
     }
 
-    protected void onStop(){
-        super.onStop();
-
+    protected void onPause(){
+        super.onPause();
         // We need an Editor object to make preference changes.
         // All objects are from android.context.Context
-        ArrayList<Card> mStudentObject= Favorites.favorites_mvid;
-        SharedPreferences appSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
+        SharedPreferences appSharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor prefsEditor = appSharedPrefs.edit();
         Gson gson = new Gson();
-        String json = gson.toJson(mStudentObject);
+        String json = gson.toJson(Favorites.favorites_mvid);
         prefsEditor.putString("favobj", json);
         prefsEditor.commit();
     }
@@ -195,6 +195,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         RelativeLayout.LayoutParams params;
 
         TextView score = new TextView(this); // Create new Textview
+        score.setTextColor(Color.BLACK);
         score.setText("Changelog 2.6 \n \n - Better learning algorithm \n - New fancy menu \n - Changed Splash-art \n \n - Fixed Save-bug \n - Fixed Browser-bug \n - Fixed Search-bug");
         score.setTextSize(26);
         params = new RelativeLayout.LayoutParams(scrWidth, (int)(0.8*scrHeight));
