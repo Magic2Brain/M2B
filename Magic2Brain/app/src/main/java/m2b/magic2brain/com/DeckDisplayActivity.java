@@ -1,8 +1,10 @@
 package m2b.magic2brain.com;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -34,7 +36,9 @@ public class DeckDisplayActivity extends AppCompatActivity {
         //----------------------------------------------
 
 
-        Card c[] = new Card[2064];
+        Card c[] = new Card[1];
+        c[0] = new Card("notaname", "notaflavor", "notatext", "notatype", "0");
+
         try {
             c = dc.getDeck(deckcode, this);
         } catch (JSONException e) {
@@ -43,9 +47,26 @@ public class DeckDisplayActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        final String[] listItems = RUtils.getListified(c);
-
         ListView lv = (ListView) findViewById(R.id.deckdisplay);
+
+        if(c[0].getName().equals("notaname")){
+            AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+            dlgAlert.setMessage("Sadly, this Deck was not Found");
+            dlgAlert.setTitle("Error");
+            dlgAlert.setPositiveButton("I unserstand, bill me your server costs",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            //dismiss the dialog
+                            finish();
+                        }
+                    });
+            dlgAlert.setCancelable(true);
+            dlgAlert.create().show();
+
+            lv.setVisibility(View.GONE);
+        }
+
+        final String[] listItems = RUtils.getListified(c);
         final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems);
         lv.setAdapter(adapter);
 
