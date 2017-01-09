@@ -20,12 +20,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import m2b.magic2brain.com.magic2brain.R;
@@ -74,27 +71,25 @@ public class CardBrowserActivity extends AppCompatActivity {
         showPic(card.getMultiverseid());
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        if(loadFav(card.getName())){
-            fab.setImageResource(R.drawable.ic_favorite);
-        } else{
+        if(!checkCard(card.getName())){
             fab.setImageResource(R.drawable.ic_favorite_border);
+        }
+        else{
+            fab.setImageResource(R.drawable.ic_favorite);
         }
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(Favorites.favorites_mvid.contains(card)){
-                    Favorites.favorites_mvid.remove(card);
+                if(checkCard(card.getName())){
+                    removeCard(card.getName());
                     fab.setImageResource(R.drawable.ic_favorite_border);
                     Snackbar.make(view, "Removed from your favorites!", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    saveFav(false, card.getName());
-                }
-                else {
+                }else{
                     Favorites.favorites_mvid.add(card);
                     fab.setImageResource(R.drawable.ic_favorite);
                     Snackbar.make(view, "Added to your favorites!", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
-                    saveFav(true,card.getName());
                 }
                 //onCreate(savedInstanceState);
 
@@ -102,18 +97,21 @@ public class CardBrowserActivity extends AppCompatActivity {
         });
     }
 
-    public void saveFav(boolean b, String name){
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        SharedPreferences.Editor editor = sharedPrefs.edit();
-        editor.putBoolean("CardBrowser_Favs_"+name, b);
-        editor.commit();
+    private boolean checkCard(String name){
+        for(Card c : Favorites.favorites_mvid){
+            if(c.getName().contains(name)){
+                return true;
+            }
+        }
+        return false;
     }
 
-    public boolean loadFav(String name){
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        Boolean saved = sharedPrefs.getBoolean("CardBrowser_Favs_"+name,false);
-        if(saved == null){return false;}
-        return saved;
+    private void removeCard(String name){
+        for(Card c : Favorites.favorites_mvid){
+            if(c.getName().contains(name)){
+                Favorites.favorites_mvid.remove(c);
+            }
+        }
     }
 
     private void setManaCost(String manatext, Context context, LinearLayout layout){
