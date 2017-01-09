@@ -79,6 +79,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         }
         else{
             Favorites.favorites_mvid = favs;
+            Favorites.recast();
         }
         buildNewsFeed();
     }

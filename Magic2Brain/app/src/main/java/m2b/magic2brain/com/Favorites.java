@@ -13,4 +13,11 @@ public class Favorites {
         favorites_mvid = new ArrayList<Card>();
     }
 
+    public static void recast(){
+        ArrayList<Card> temp = favorites_mvid;
+        favorites_mvid = null;
+        favorites_mvid = new ArrayList<Card>();
+        favorites_mvid.addAll(temp);
+    }
+
 }

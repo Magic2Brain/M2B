@@ -15,6 +15,9 @@
     {
       "artist": "Christopher Rush",
       "cmc": 1,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -111,6 +114,9 @@
     {
       "artist": "Stephen Daniele",
       "cmc": 3,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -255,6 +261,9 @@
     {
       "artist": "Mark Tedin",
       "cmc": 2,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -325,7 +334,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Memory Lapse has a self-replacement effect that replaces the spell going to the graveyard before any other effect can replace that event. If the spell was cast using flashback, however, flashback will change the spell’s destination from its owner’s library to exile."
+          "text": "Memory Lapse has a self-replacement effect that replaces the spell going to the graveyard before any other effect can replace that event. If the spell was cast using flashback, however, flashback will change the spell's destination from its owner's library to exile."
         }
       ],
       "source": "Judge mailing gift",
@@ -338,6 +347,9 @@
     {
       "artist": "Dom!",
       "cmc": 2,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -441,6 +453,9 @@
     {
       "artist": "Gary Leach",
       "cmc": 1,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -503,7 +518,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "The “shuffle and put the card on top” is a single action. If an effect causes the top card of the library to be face up, the second card down is not revealed."
+          "text": "The \"shuffle and put the card on top\" is a single action. If an effect causes the top card of the library to be face up, the second card down is not revealed."
         }
       ],
       "source": "Judge reward at World Championships in Brussels",
@@ -612,6 +627,9 @@
     {
       "artist": "Daren Bader",
       "cmc": 2,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -666,7 +684,8 @@
         "pJGP",
         "EXO",
         "VMA",
-        "TPR"
+        "TPR",
+        "C16"
       ],
       "rarity": "Special",
       "releaseDate": "2001-09",
@@ -677,7 +696,7 @@
         },
         {
           "date": "2009-10-01",
-          "text": "The targeted player controlling more creatures than the current player is a part of the targeting requirement. A player can’t be targeted by this ability unless it’s true, and the ability will be countered on resolution if it’s no longer true at that time."
+          "text": "The targeted player controlling more creatures than the current player is a part of the targeting requirement. A player can't be targeted by this ability unless it's true, and the ability will be countered on resolution if it's no longer true at that time."
         }
       ],
       "source": "Judge reward",
@@ -690,6 +709,9 @@
     {
       "artist": "Ron Spencer",
       "cmc": 3,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -763,6 +785,9 @@
     {
       "artist": "John Matson",
       "cmc": 4,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -837,6 +862,9 @@
     {
       "artist": "April Lee",
       "cmc": 3,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -898,7 +926,7 @@
       "rulings": [
         {
           "date": "2006-07-15",
-          "text": "Targets an opponent. You choose an opponent during announcement. If you can’t target an opponent, you can’t cast this card."
+          "text": "Targets an opponent. You choose an opponent during announcement. If you can't target an opponent, you can't cast this card."
         }
       ],
       "source": "1/3 G03",
@@ -911,6 +939,9 @@
     {
       "artist": "Daren Bader",
       "cmc": 2,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -972,15 +1003,15 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Argothian Enchantress’s last ability will resolve before the spell that caused it to trigger."
+          "text": "Argothian Enchantress's last ability will resolve before the spell that caused it to trigger."
         },
         {
           "date": "2016-06-08",
-          "text": "If the enchantment spell is countered, Argothian Enchantress’s last ability still resolves and causes you to draw a card."
+          "text": "If the enchantment spell is countered, Argothian Enchantress's last ability still resolves and causes you to draw a card."
         },
         {
           "date": "2016-06-08",
-          "text": "Enchantments put onto the battlefield without being cast won’t cause Argothian Enchantress’s last ability to trigger."
+          "text": "Enchantments put onto the battlefield without being cast won't cause Argothian Enchantress's last ability to trigger."
         }
       ],
       "source": "Judge reward at Grand Prix Brussels.",
@@ -998,6 +1029,9 @@
     {
       "artist": "Charles Gillespie",
       "cmc": 5,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -1067,7 +1101,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The creatures which are sacrificed can’t be regenerated."
+          "text": "The creatures which are sacrificed can't be regenerated."
         },
         {
           "date": "2004-10-04",
@@ -1075,7 +1109,7 @@
         },
         {
           "date": "2013-09-20",
-          "text": "“All cards he or she exiled this way” refers only to the cards exiled in the first part of the effect. If a replacement effect (such as Leyline of the Void) exiles any of the sacrificed creatures instead of putting them into the graveyard, those cards aren’t returned to the battlefield."
+          "text": "\"All cards he or she exiled this way\" refers only to the cards exiled in the first part of the effect. If a replacement effect (such as Leyline of the Void) exiles any of the sacrificed creatures instead of putting them into the graveyard, those cards aren't returned to the battlefield."
         }
       ],
       "source": "Judge reward at Pro Tour Yokohama.",
@@ -1088,6 +1122,9 @@
     {
       "artist": "John Avon",
       "cmc": 4,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -1167,6 +1204,9 @@
     {
       "artist": "Kev Walker",
       "cmc": 2,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -1236,7 +1276,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "Balance doesn’t have targets, so permanents that can’t be targeted, such as a creature with shroud or protection from white, are valid choices to be sacrificed."
+          "text": "Balance doesn't have targets, so permanents that can't be targeted, such as a creature with shroud or protection from white, are valid choices to be sacrificed."
         },
         {
           "date": "2016-06-08",
@@ -1253,6 +1293,9 @@
     {
       "artist": "Pete Venters",
       "cmc": 5,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -1332,7 +1375,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "If multiple “extra turn” effects resolve in the same turn, take them in the reverse of the order that the effects resolved."
+          "text": "If multiple \"extra turn\" effects resolve in the same turn, take them in the reverse of the order that the effects resolved."
         }
       ],
       "source": "Judge reward at Grand Prix Chicago.",
@@ -1345,6 +1388,9 @@
     {
       "artist": "John Zeleznik",
       "cmc": 3,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -1385,18 +1431,6 @@
         },
         {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -1441,6 +1475,9 @@
     {
       "artist": "Kev Walker",
       "cmc": 5,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -1510,7 +1547,7 @@
       "subtypes": [
         "Elf"
       ],
-      "text": "Echo {3}{G}{G} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Deranged Hermit enters the battlefield, put four 1/1 green Squirrel creature tokens onto the battlefield.\nSquirrel creatures get +1/+1.",
+      "text": "Echo {3}{G}{G} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen Deranged Hermit enters the battlefield, create four 1/1 green Squirrel creature tokens.\nSquirrel creatures get +1/+1.",
       "toughness": "1",
       "type": "Creature — Elf",
       "types": [
@@ -1520,6 +1557,9 @@
     {
       "artist": "Heather Hudson",
       "cmc": 2,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -1680,7 +1720,7 @@
         },
         {
           "date": "2006-09-25",
-          "text": "If the last mining counter is removed from Gemstone Mine in some way other than activating its ability (such as Chisei, Heart of Oceans), Gemstone Mine won’t be sacrificed but its ability can’t be activated."
+          "text": "If the last mining counter is removed from Gemstone Mine in some way other than activating its ability (such as Chisei, Heart of Oceans), Gemstone Mine won't be sacrificed but its ability can't be activated."
         }
       ],
       "source": "Amateur Championships prize at Origins games convention.",
@@ -1693,6 +1733,9 @@
     {
       "artist": "Dameon Willich",
       "cmc": 2,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -1821,7 +1864,8 @@
         "VMA",
         "C14",
         "C15",
-        "MPS"
+        "MPS",
+        "C16"
       ],
       "rarity": "Special",
       "releaseDate": "2005-07-10",
@@ -1897,19 +1941,19 @@
         },
         {
           "date": "2008-08-01",
-          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn’t matter how long the permanent has been a creature."
+          "text": "A noncreature permanent that turns into a creature can attack, and its {T} abilities can be activated, only if its controller has continuously controlled that permanent since the beginning of his or her most recent turn. It doesn't matter how long the permanent has been a creature."
         },
         {
           "date": "2009-10-01",
-          "text": "Activating the ability that turns it into a creature while it’s already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
+          "text": "Activating the ability that turns it into a creature while it's already a creature will override any effects that set its power and/or toughness to a specific number. However, any effect that raises or lowers power and/or toughness (such as the effect created by Giant Growth, Glorious Anthem, or a +1/+1 counter) will continue to apply."
         },
         {
           "date": "2016-06-08",
-          "text": "Once turned into a creature, Mishra’s Factory’s last ability can target itself. If it’s already blocking, this won’t remove it from combat."
+          "text": "Once turned into a creature, Mishra's Factory's last ability can target itself. If it's already blocking, this won't remove it from combat."
         },
         {
           "date": "2016-06-08",
-          "text": "If you turn Mishra’s Factory into a creature but haven’t controlled it continuously since your most recent turn began, you won’t be able to activate its first or last ability."
+          "text": "If you turn Mishra's Factory into a creature but haven't controlled it continuously since your most recent turn began, you won't be able to activate its first or last ability."
         }
       ],
       "source": "Judge reward at Pro Tour Los Angeles.",
@@ -1922,6 +1966,9 @@
     {
       "artist": "Rob Alexander",
       "cmc": 6,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -1957,27 +2004,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2100,7 +2131,7 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "The two cards are exiled as the cost of Grim Lavamancer’s ability is paid. Players can’t respond to the paying of costs by trying to move those cards to another zone."
+          "text": "The two cards are exiled as the cost of Grim Lavamancer's ability is paid. Players can't respond to the paying of costs by trying to move those cards to another zone."
         }
       ],
       "source": "Judge reward at World Championships in Yokohama.",
@@ -2201,19 +2232,19 @@
       "rulings": [
         {
           "date": "2009-05-01",
-          "text": "No one can cast spells or activate abilities between the time a card is named and the time that Meddling Mage’s ability starts to work."
+          "text": "No one can cast spells or activate abilities between the time a card is named and the time that Meddling Mage's ability starts to work."
         },
         {
           "date": "2009-05-01",
-          "text": "Spells with the chosen name that somehow happen to already be on the stack when Meddling Mage enters the battlefield are not affected by Meddling Mage’s ability."
+          "text": "Spells with the chosen name that somehow happen to already be on the stack when Meddling Mage enters the battlefield are not affected by Meddling Mage's ability."
         },
         {
           "date": "2009-05-01",
-          "text": "Although the named card can’t be cast, it can still be put onto the battlefield by a spell or ability (if it’s a permanent card)."
+          "text": "Although the named card can't be cast, it can still be put onto the battlefield by a spell or ability (if it's a permanent card)."
         },
         {
           "date": "2009-05-01",
-          "text": "You can name either half of a split card, but not both. If you do so, that half (and both halves, if the split card has fuse) can’t be cast. The other half is unaffected."
+          "text": "You can name either half of a split card, but not both. If you do so, that half (and both halves, if the split card has fuse) can't be cast. The other half is unaffected."
         },
         {
           "date": "2009-05-01",
@@ -2221,7 +2252,7 @@
         },
         {
           "date": "2009-05-01",
-          "text": "Some cards (such as Isochron Scepter, for example) let you cast a copy of a card. A copy of a card isn’t actually a card, so Meddling Mage can’t stop this."
+          "text": "Some cards (such as Isochron Scepter, for example) let you cast a copy of a card. A copy of a card isn't actually a card, so Meddling Mage can't stop this."
         },
         {
           "date": "2009-05-01",
@@ -2243,6 +2274,10 @@
     {
       "artist": "Ittoku",
       "cmc": 3,
+      "colorIdentity": [
+        "B",
+        "G"
+      ],
       "colors": [
         "Black",
         "Green"
@@ -2287,27 +2322,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Invasion Block",
           "legality": "Legal"
         },
         {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2336,6 +2355,9 @@
     {
       "artist": "Todd Lockwood",
       "cmc": 4,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -2524,6 +2546,9 @@
     {
       "artist": "Ron Spencer",
       "cmc": 3,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -2593,7 +2618,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If an effect asks you to discard a card, you can’t “discard” something that is in your graveyard. Those cards are not in your hand. Thus, Cycling abilities of cards in the graveyard can’t be activated."
+          "text": "If an effect asks you to discard a card, you can't \"discard\" something that is in your graveyard. Those cards are not in your hand. Thus, Cycling abilities of cards in the graveyard can't be activated."
         },
         {
           "date": "2004-10-04",
@@ -2601,11 +2626,11 @@
         },
         {
           "date": "2004-10-04",
-          "text": "If you play a card using Yawgmoth’s Will and something triggers only when “cast from your hand\", that something will not trigger. Such things trigger based on where the card came from."
+          "text": "If you play a card using Yawgmoth's Will and something triggers only when \"cast from your hand\", that something will not trigger. Such things trigger based on where the card came from."
         },
         {
           "date": "2004-10-04",
-          "text": "To “play a card” is to either cast a spell or to put a land onto the battlefield using the main phase special action."
+          "text": "To \"play a card\" is to either cast a spell or to put a land onto the battlefield using the main phase special action."
         },
         {
           "date": "2006-10-15",
@@ -2622,6 +2647,10 @@
     {
       "artist": "Mark Zug",
       "cmc": 3,
+      "colorIdentity": [
+        "W",
+        "B"
+      ],
       "colors": [
         "White",
         "Black"
@@ -2691,6 +2720,9 @@
     {
       "artist": "Alan Pollack",
       "cmc": 4,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -2733,27 +2765,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -2777,7 +2793,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "The two X's in the mana cost mean that you pay 2 mana (above the {2}{W}{W} base cost) for each token you want to create."
+          "text": "The two X's in the mana cost mean that you pay 2 mana (above the {W} base cost) for each token you want to create."
         },
         {
           "date": "2004-10-04",
@@ -2801,7 +2817,7 @@
         }
       ],
       "source": "5/5 G07",
-      "text": "Put X 4/4 white Angel creature tokens with flying onto the battlefield.\nCycling {2}{W} ({2}{W}, Discard this card: Draw a card.)\nWhen you cycle Decree of Justice, you may pay {X}. If you do, put X 1/1 white Soldier creature tokens onto the battlefield.",
+      "text": "Create X 4/4 white Angel creature tokens with flying.\nCycling {2}{W} ({2}{W}, Discard this card: Draw a card.)\nWhen you cycle Decree of Justice, you may pay {X}. If you do, create X 1/1 white Soldier creature tokens.",
       "type": "Sorcery",
       "types": [
         "Sorcery"
@@ -2906,6 +2922,9 @@
     {
       "artist": "Anthony Francisco",
       "cmc": 6,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -2975,15 +2994,15 @@
         },
         {
           "date": "2013-06-07",
-          "text": "The copies are put directly onto the stack. They aren’t cast and won’t be counted by other spells with storm cast later in the turn."
+          "text": "The copies are put directly onto the stack. They aren't cast and won't be counted by other spells with storm cast later in the turn."
         },
         {
           "date": "2013-06-07",
-          "text": "Spells cast from zones other than a player’s hand and spells that were countered are counted by the storm ability."
+          "text": "Spells cast from zones other than a player's hand and spells that were countered are counted by the storm ability."
         },
         {
           "date": "2013-06-07",
-          "text": "A copy of a spell can be countered like any other spell, but it must be countered individually. Countering a spell with storm won’t affect the copies."
+          "text": "A copy of a spell can be countered like any other spell, but it must be countered individually. Countering a spell with storm won't affect the copies."
         },
         {
           "date": "2013-06-07",
@@ -3000,6 +3019,9 @@
     {
       "artist": "Daarken",
       "cmc": 2,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -3060,7 +3082,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "You don’t reveal the card to your opponent."
+          "text": "You don't reveal the card to your opponent."
         },
         {
           "date": "2004-10-04",
@@ -3077,6 +3099,9 @@
     {
       "artist": "Dave Kendall",
       "cmc": 2,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -3143,10 +3168,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Standard",
-          "legality": "Legal"
-        },
-        {
           "format": "Vintage",
           "legality": "Legal"
         }
@@ -3157,6 +3178,7 @@
       "number": "36",
       "power": "1",
       "printings": [
+        "pPRE",
         "pJGP",
         "ONS",
         "VMA",
@@ -3293,6 +3315,9 @@
     {
       "artist": "Mark Hyzer",
       "cmc": 1,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -3446,11 +3471,11 @@
         },
         {
           "date": "2016-06-08",
-          "text": "The creature isn’t removed from combat; it just has its damage prevented. It’s still an attacking creature until the combat phase is complete."
+          "text": "The creature isn't removed from combat; it just has its damage prevented. It's still an attacking creature until the combat phase is complete."
         },
         {
           "date": "2016-06-08",
-          "text": "You can activate Maze of Ith’s ability targeting an attacking creature you control during the combat damage step or the end of combat step. It’ll be untapped and the damage it had already dealt won’t be undone."
+          "text": "You can activate Maze of Ith's ability targeting an attacking creature you control during the combat damage step or the end of combat step. It'll be untapped and the damage it had already dealt won't be undone."
         }
       ],
       "source": "Judge reward",
@@ -3463,6 +3488,9 @@
     {
       "artist": "Eric Fortune",
       "cmc": 1,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -3505,27 +3533,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -3568,6 +3580,9 @@
     {
       "artist": "Shelly Wan",
       "cmc": 2,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -3630,7 +3645,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
       "source": "Judge reward",
@@ -3643,6 +3658,9 @@
     {
       "artist": "Ariel Olivetti",
       "cmc": 2,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -3704,7 +3722,7 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Can’t acquire the Ante cards. They are considered still “in the game” as are cards in the library and the graveyard."
+          "text": "Can't acquire the Ante cards. They are considered still \"in the game\" as are cards in the library and the graveyard."
         },
         {
           "date": "2007-05-01",
@@ -3716,15 +3734,15 @@
         },
         {
           "date": "2007-09-16",
-          "text": "Can’t acquire cards that are phased out."
+          "text": "Can't acquire cards that are phased out."
         },
         {
           "date": "2009-10-01",
-          "text": "You can’t acquire exiled cards because those cards are still in one of the game’s zones."
+          "text": "You can't acquire exiled cards because those cards are still in one of the game's zones."
         },
         {
           "date": "2009-10-01",
-          "text": "In a sanctioned event, a card that’s “outside the game” is one that’s in your sideboard. In an unsanctioned event, you may choose any card from your collection."
+          "text": "In a sanctioned event, a card that's \"outside the game\" is one that's in your sideboard. In an unsanctioned event, you may choose any card from your collection."
         }
       ],
       "source": "Judge reward",
@@ -3787,10 +3805,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -3804,22 +3818,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -3898,10 +3896,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -3915,22 +3909,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -4009,10 +3987,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -4026,22 +4000,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -4120,10 +4078,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -4137,22 +4091,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -4231,10 +4169,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Khans of Tarkir Block",
           "legality": "Legal"
         },
@@ -4248,22 +4182,6 @@
         },
         {
           "format": "Onslaught Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Standard",
           "legality": "Legal"
         },
         {
@@ -4292,6 +4210,9 @@
     {
       "artist": "Dave Allsop",
       "cmc": 2,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -4338,6 +4259,9 @@
     {
       "artist": "Terese Nielsen",
       "cmc": 4,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -4400,7 +4324,7 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Sacrificing a green creature is part of Natural Order’s cost. You can’t sacrifice more creatures to search for more creature cards, and you can’t cast Natural Order at all if you control no green creatures."
+          "text": "Sacrificing a green creature is part of Natural Order's cost. You can't sacrifice more creatures to search for more creature cards, and you can't cast Natural Order at all if you control no green creatures."
         },
         {
           "date": "2016-06-08",
@@ -4586,7 +4510,7 @@
         },
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
       "source": "Judge reward",
@@ -4599,6 +4523,9 @@
     {
       "artist": "Chuck Lukacs",
       "cmc": 1,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -4657,15 +4584,15 @@
       "rulings": [
         {
           "date": "2006-10-15",
-          "text": "You can fetch any of the “Snow-Covered” lands, since they all also have the supertype basic."
+          "text": "You can fetch any of the \"Snow-Covered\" lands, since they all also have the supertype basic."
         },
         {
           "date": "2009-10-01",
-          "text": "This ability has an “intervening ‘if’ clause.” That means (1) the ability won’t trigger at all unless any one of your opponents controls more lands than you, and (2) the ability will do nothing if you control at least as many lands as each of your opponents by the time it resolves."
+          "text": "This ability has an \"intervening 'if' clause.\" That means (1) the ability won't trigger at all unless any one of your opponents controls more lands than you, and (2) the ability will do nothing if you control at least as many lands as each of your opponents by the time it resolves."
         },
         {
           "date": "2009-10-01",
-          "text": "You shuffle your library if you search, even if you don’t put any basic land cards into your hand."
+          "text": "You shuffle your library if you search, even if you don't put any basic land cards into your hand."
         }
       ],
       "source": "Judge reward",
@@ -4678,6 +4605,9 @@
     {
       "artist": "rk post",
       "cmc": 5,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -4751,6 +4681,9 @@
     {
       "artist": "John Matson",
       "cmc": 3,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -4879,6 +4812,9 @@
     {
       "artist": "Ron Spears",
       "cmc": 1,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -5018,7 +4954,7 @@
       "rulings": [
         {
           "date": "2013-06-07",
-          "text": "The triggered ability has one target: the creature or player to be dealt 2 damage. If that creature or player is an illegal target when the ability tries to resolve, it will be countered and none of its effects will happen. You won’t draw a card."
+          "text": "The triggered ability has one target: the creature or player to be dealt 2 damage. If that creature or player is an illegal target when the ability tries to resolve, it will be countered and none of its effects will happen. You won't draw a card."
         }
       ],
       "source": "Judge reward",
@@ -5034,6 +4970,9 @@
     {
       "artist": "Jesper Ejsing",
       "cmc": 3,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -5131,6 +5070,9 @@
     {
       "artist": "Nils Hamm",
       "cmc": 2,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -5212,18 +5154,18 @@
       "rulings": [
         {
           "date": "2008-04-01",
-          "text": "The effect is mandatory. You’ll lose 1 life even if you have only 1 life left."
+          "text": "The effect is mandatory. You'll lose 1 life even if you have only 1 life left."
         },
         {
           "date": "2008-04-01",
-          "text": "The life loss isn’t a payment. You’ll get a token even if you had 0 life (and other effect is stopping you from losing the game)."
+          "text": "The life loss isn't a payment. You'll get a token even if you had 0 life (and another effect is stopping you from losing the game)."
         }
       ],
       "source": "Judge reward",
       "subtypes": [
         "Faerie"
       ],
-      "text": "At the beginning of your upkeep, you lose 1 life and put a 1/1 black Faerie Rogue creature token with flying onto the battlefield.",
+      "text": "At the beginning of your upkeep, you lose 1 life and create a 1/1 black Faerie Rogue creature token with flying.",
       "type": "Tribal Enchantment — Faerie",
       "types": [
         "Tribal",
@@ -5294,6 +5236,9 @@
     {
       "artist": "Ron Spears",
       "cmc": 2,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -5385,6 +5330,9 @@
     {
       "artist": "Chuck Lukacs",
       "cmc": 5,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -5465,7 +5413,7 @@
         },
         {
           "date": "2005-10-01",
-          "text": "Doubling Season affects cards that “enter the battlefield with” a certain number of counters. Triskelion, for example, would enter the battlefield with six +1/+1 counters on it rather than three."
+          "text": "Doubling Season affects cards that \"enter the battlefield with\" a certain number of counters. Triskelion, for example, would enter the battlefield with six +1/+1 counters on it rather than three."
         },
         {
           "date": "2005-10-01",
@@ -5473,11 +5421,11 @@
         },
         {
           "date": "2005-10-01",
-          "text": "Planeswalkers will enter the battlefield with double the normal amount of loyalty counters. However, if you activate an ability whose cost has you put loyalty counters on a planeswalker, the number you put on isn’t doubled. This is because those counters are put on as a cost, not as an effect."
+          "text": "Planeswalkers will enter the battlefield with double the normal amount of loyalty counters. However, if you activate an ability whose cost has you put loyalty counters on a planeswalker, the number you put on isn't doubled. This is because those counters are put on as a cost, not as an effect."
         }
       ],
       "source": "Judge reward",
-      "text": "If an effect would put one or more tokens onto the battlefield under your control, it puts twice that many of those tokens onto the battlefield instead.\nIf an effect would place one or more counters on a permanent you control, it places twice that many of those counters on that permanent instead.",
+      "text": "If an effect would create one or more tokens under your control, it creates twice that many of those tokens instead.\nIf an effect would place one or more counters on a permanent you control, it places twice that many of those counters on that permanent instead.",
       "type": "Enchantment",
       "types": [
         "Enchantment"
@@ -5486,6 +5434,9 @@
     {
       "artist": "Scott M. Fischer",
       "cmc": 1,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -5574,6 +5525,9 @@
     {
       "artist": "Junko Taguchi",
       "cmc": 4,
+      "colorIdentity": [
+        "B"
+      ],
       "colors": [
         "Black"
       ],
@@ -5619,11 +5573,11 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "Despite the similarities between horsemanship and flying, horsemanship doesn’t interact with flying or reach."
+          "text": "Despite the similarities between horsemanship and flying, horsemanship doesn't interact with flying or reach."
         },
         {
           "date": "2009-10-01",
-          "text": "You can’t activate Xiahou Dun’s ability to return Xiahou Dun itself to your hand. You must choose a target before you sacrifice Xiahou Dun, so it’s not a black card in your graveyard yet."
+          "text": "You can't activate Xiahou Dun's ability to return Xiahou Dun itself to your hand. You must choose a target before you sacrifice Xiahou Dun, so it's not a black card in your graveyard yet."
         },
         {
           "date": "2013-09-20",
@@ -5648,6 +5602,9 @@
     {
       "artist": "Erica Yang",
       "cmc": 1,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -5704,15 +5661,15 @@
       "rulings": [
         {
           "date": "2013-06-07",
-          "text": "The copies are put directly onto the stack. They aren’t cast and won’t be counted by other spells with storm cast later in the turn."
+          "text": "The copies are put directly onto the stack. They aren't cast and won't be counted by other spells with storm cast later in the turn."
         },
         {
           "date": "2013-06-07",
-          "text": "Spells cast from zones other than a player’s hand and spells that were countered are counted by the storm ability."
+          "text": "Spells cast from zones other than a player's hand and spells that were countered are counted by the storm ability."
         },
         {
           "date": "2013-06-07",
-          "text": "A copy of a spell can be countered like any other spell, but it must be countered individually. Countering a spell with storm won’t affect the copies."
+          "text": "A copy of a spell can be countered like any other spell, but it must be countered individually. Countering a spell with storm won't affect the copies."
         },
         {
           "date": "2013-06-07",
@@ -5733,6 +5690,11 @@
     {
       "artist": "Mark Zug",
       "cmc": 1,
+      "colorIdentity": [
+        "G",
+        "W",
+        "U"
+      ],
       "colors": [
         "Green"
       ],
@@ -5823,6 +5785,9 @@
     {
       "artist": "Allen Williams",
       "cmc": 5,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -5887,12 +5852,6 @@
       ],
       "rarity": "Special",
       "releaseDate": "2012",
-      "rulings": [
-        {
-          "date": "2008-04-01",
-          "text": "A “creature card” is any card with the type Creature, even if it has other types such as Artifact, Enchantment, or Land. Older cards of type Summon are also Creature cards."
-        }
-      ],
       "source": "Judge reward",
       "subtypes": [
         "Angel",
@@ -5908,6 +5867,9 @@
     {
       "artist": "Tyler Jacobson",
       "cmc": 4,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -5972,7 +5934,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "You only sacrifice the creature if you still control it at end of turn. If that creature has left the battlefield, even if it came back, you don’t sacrifice it. Likewise, if an opponent has gained control of it, it won’t be sacrificed and will remain on the battlefield indefinitely."
+          "text": "You only sacrifice the creature if you still control it at end of turn. If that creature has left the battlefield, even if it came back, you don't sacrifice it. Likewise, if an opponent has gained control of it, it won't be sacrificed and will remain on the battlefield indefinitely."
         },
         {
           "date": "2016-06-08",
@@ -5988,6 +5950,9 @@
     },
     {
       "artist": "Drew Baker",
+      "colorIdentity": [
+        "W"
+      ],
       "foreignNames": [
         {
           "language": "Italian",
@@ -6105,7 +6070,7 @@
       "rulings": [
         {
           "date": "2013-06-07",
-          "text": "You may put the triggered ability with no targets. However, If you choose a target creature in your graveyard, and that card is an illegal target when the ability tries to resolve, it will be countered and none of its effects will happen. You won’t gain 3 life."
+          "text": "You may put the triggered ability with no targets. However, If you choose a target creature in your graveyard, and that card is an illegal target when the ability tries to resolve, it will be countered and none of its effects will happen. You won't gain 3 life."
         }
       ],
       "source": "Judge reward",
@@ -6172,22 +6137,23 @@
         "CMD",
         "CM1",
         "C13",
-        "C15"
+        "C15",
+        "C16"
       ],
       "rarity": "Special",
       "releaseDate": "2012",
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "The color identity of your commander is set before the game begins and doesn’t change during the game, even your commander is in a hidden zone (like the hand or library) or an effect changes your commander’s color."
+          "text": "The color identity of your commander is set before the game begins and doesn't change during the game, even your commander is in a hidden zone (like the hand or library) or an effect changes your commander's color."
         },
         {
           "date": "2011-09-22",
-          "text": "If your commander is a card like Kozilek, Butcher of Truth that has no colors in its color identity, Command Tower’s ability produces no mana."
+          "text": "If your commander is a card like Kozilek, Butcher of Truth that has no colors in its color identity, Command Tower's ability produces no mana."
         },
         {
           "date": "2011-09-22",
-          "text": "In formats other than Commander, Command Tower’s ability produces no mana."
+          "text": "In formats other than Commander, Command Tower's ability produces no mana."
         }
       ],
       "source": "Judge reward",
@@ -6200,6 +6166,9 @@
     {
       "artist": "Sam Wolfe Connelly",
       "cmc": 1,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -6279,7 +6248,8 @@
         "V13",
         "CNS",
         "VMA",
-        "EMA"
+        "EMA",
+        "C16"
       ],
       "rarity": "Special",
       "releaseDate": "2013",
@@ -6290,7 +6260,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If the creature’s power is negative, its controller doesn’t lose or gain life."
+          "text": "If the creature's power is negative, its controller doesn't lose or gain life."
         }
       ],
       "source": "Judge reward",
@@ -6367,11 +6337,11 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "You put the creature onto the battlefield, so you control it and any “enters the battlefield” abilities it has."
+          "text": "You put the creature onto the battlefield, so you control it and any \"enters the battlefield\" abilities it has."
         },
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         }
       ],
       "source": "Judge reward",
@@ -6384,6 +6354,9 @@
     {
       "artist": "Mitsuaki Sagiri",
       "cmc": 3,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -6429,11 +6402,11 @@
       "rulings": [
         {
           "date": "2004-10-04",
-          "text": "Because the “search” requires you to find a card with certain characteristics, you don’t have to find the card if you don’t want to."
+          "text": "Because the \"search\" requires you to find a card with certain characteristics, you don't have to find the card if you don't want to."
         },
         {
           "date": "2008-10-01",
-          "text": "If a creature card has “*” in its power, the ability that defines its power works in all zones."
+          "text": "If a creature card has \"*\" in its power, the ability that defines its power works in all zones."
         }
       ],
       "source": "Judge reward",
@@ -6534,11 +6507,11 @@
         },
         {
           "date": "2004-12-01",
-          "text": "Crucible of Worlds doesn’t change the times when you can play those land cards. You can still play only one land per turn, and only during your main phase when you have priority and the stack is empty."
+          "text": "Crucible of Worlds doesn't change the times when you can play those land cards. You can still play only one land per turn, and only during your main phase when you have priority and the stack is empty."
         },
         {
           "date": "2004-12-01",
-          "text": "Crucible of Worlds doesn’t allow you to activate activated abilities (such as cycling) of land cards in your graveyard."
+          "text": "Crucible of Worlds doesn't allow you to activate activated abilities (such as cycling) of land cards in your graveyard."
         }
       ],
       "source": "Judge reward",
@@ -6603,6 +6576,9 @@
     {
       "artist": "Zack Stella",
       "cmc": 3,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -6754,6 +6730,9 @@
     {
       "artist": "Mark Zug",
       "cmc": 5,
+      "colorIdentity": [
+        "G"
+      ],
       "colors": [
         "Green"
       ],
@@ -6827,6 +6806,11 @@
     {
       "artist": "Todd Lockwood",
       "cmc": 8,
+      "colorIdentity": [
+        "W",
+        "B",
+        "G"
+      ],
       "colors": [
         "White",
         "Black",
@@ -6886,27 +6870,27 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "If Karador is your commander, calculate any cost increases, including the one based on the number of times you’ve cast Karador from the command zone, before considering Karador’s cost-reduction ability."
+          "text": "If Karador is your commander, calculate any cost increases, including the one based on the number of times you've cast Karador from the command zone, before considering Karador's cost-reduction ability."
         },
         {
           "date": "2011-09-22",
-          "text": "If you somehow cast Karador from a graveyard, its cost-reduction ability won’t count itself."
+          "text": "If you somehow cast Karador from a graveyard, its cost-reduction ability won't count itself."
         },
         {
           "date": "2011-09-22",
-          "text": "Although Karador’s second ability allows you to cast one creature card from your graveyard on each of your turns, it doesn’t change when you can cast that card. Unless it has flash, the creature card must be cast during one of your main phases when the stack is empty."
+          "text": "Although Karador's second ability allows you to cast one creature card from your graveyard on each of your turns, it doesn't change when you can cast that card. Unless it has flash, the creature card must be cast during one of your main phases when the stack is empty."
         },
         {
           "date": "2011-09-22",
-          "text": "Karador’s second ability doesn’t affect the costs you need to pay to cast that creature spell."
+          "text": "Karador's second ability doesn't affect the costs you need to pay to cast that creature spell."
         },
         {
           "date": "2011-09-22",
-          "text": "Karador’s first ability functions on the stack. Karador’s second ability functions only on the battlefield."
+          "text": "Karador's first ability functions on the stack. Karador's second ability functions only on the battlefield."
         },
         {
           "date": "2011-09-22",
-          "text": "If you cast a creature card from your graveyard, then Karador leaves the battlefield, then returns to the battlefield, you may cast another creature card from your graveyard that turn. If you didn’t cast a creature card from your graveyard while Karador was on the battlefield the first time, you may still cast only one creature card from your graveyard when it returns to the battlefield."
+          "text": "If you cast a creature card from your graveyard, then Karador leaves the battlefield, then returns to the battlefield, you may cast another creature card from your graveyard that turn. If you didn't cast a creature card from your graveyard while Karador was on the battlefield the first time, you may still cast only one creature card from your graveyard when it returns to the battlefield."
         }
       ],
       "source": "Judge reward",
@@ -7016,7 +7000,7 @@
         },
         {
           "date": "2005-08-01",
-          "text": "You draw cards equal to the creature’s power when you sacrificed it. This includes any bonuses from effects like Giant Growth."
+          "text": "You draw cards equal to the creature's power when you sacrificed it. This includes any bonuses from effects like Giant Growth."
         }
       ],
       "source": "Judge reward",
@@ -7029,6 +7013,11 @@
     {
       "artist": "Izzy",
       "cmc": 5,
+      "colorIdentity": [
+        "U",
+        "R",
+        "G"
+      ],
       "colors": [
         "Blue",
         "Red",
@@ -7087,15 +7076,15 @@
       "rulings": [
         {
           "date": "2011-09-22",
-          "text": "Each time the first ability triggers, you can pay {U}{R} only one time to get one copy of the spell. Each time the second ability triggers, you can pay {G}{U} only one time to get one token."
+          "text": "Each time the first ability triggers, you can pay {U} only one time to get one token."
         },
         {
           "date": "2011-09-22",
-          "text": "If the spell that caused Riku’s first ability to trigger has left the stack by the time the ability resolves, you can still pay {U}{R}. If you do, you’ll copy the spell as it last existed on the stack."
+          "text": "If the spell that caused Riku's first ability to trigger has left the stack by the time the ability resolves, you can still pay {R}. If you do, you'll copy the spell as it last existed on the stack."
         },
         {
           "date": "2011-09-22",
-          "text": "Riku’s first ability triggers whenever you cast any instant or sorcery spell, regardless of whether that spell has targets."
+          "text": "Riku's first ability triggers whenever you cast any instant or sorcery spell, regardless of whether that spell has targets."
         },
         {
           "date": "2011-09-22",
@@ -7103,27 +7092,27 @@
         },
         {
           "date": "2011-09-22",
-          "text": "If the copied spell is modal (that is, it says “Choose one --” or the like), the copy has the same mode as the original spell. You can’t choose a different one."
+          "text": "If the copied spell is modal (that is, it says \"Choose one --\" or the like), the copy has the same mode as the original spell. You can't choose a different one."
         },
         {
           "date": "2011-09-22",
-          "text": "You can’t pay any additional costs for the copy. However, effects based on any additional costs paid for the original spell are copied as though those same costs were paid for the copy. Notably, if the original spell was kicked (or kicked a certain number of times), the copy will also be kicked (or kicked that many times)."
+          "text": "You can't pay any additional costs for the copy. However, effects based on any additional costs paid for the original spell are copied as though those same costs were paid for the copy. Notably, if the original spell was kicked (or kicked a certain number of times), the copy will also be kicked (or kicked that many times)."
         },
         {
           "date": "2011-09-22",
-          "text": "If the creature that caused Riku’s second ability to trigger has already left the battlefield by the time the ability resolves, you can still pay {G}{U}. If you do, you’ll still put a token onto the battlefield. That token has the copiable values of the characteristics of that creature as it last existed on the battlefield."
+          "text": "If the creature that caused Riku's second ability to trigger has already left the battlefield by the time the ability resolves, you can still pay {U}. If you do, you'll still put a token onto the battlefield. That token has the copiable values of the characteristics of that creature as it last existed on the battlefield."
         },
         {
           "date": "2011-09-22",
-          "text": "As the token is created, it checks the printed values of the creature it’s copying, as well as any copy effects that have been applied to it."
+          "text": "As the token is created, it checks the printed values of the creature it's copying, as well as any copy effects that have been applied to it."
         },
         {
           "date": "2011-09-22",
-          "text": "The copiable values of the token’s characteristics are the same as the copiable values of the characteristics of the creature it’s copying."
+          "text": "The copiable values of the token's characteristics are the same as the copiable values of the characteristics of the creature it's copying."
         },
         {
           "date": "2011-09-22",
-          "text": "If the creature had {X} in its mana cost, X must be 0. Note this is different from an {X} found in the mana cost of a copied spell."
+          "text": "If the creature had {X} found in the mana cost of a copied spell."
         }
       ],
       "source": "Judge reward",
@@ -7134,7 +7123,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "Whenever you cast an instant or sorcery spell, you may pay {U}{R}. If you do, copy that spell. You may choose new targets for the copy.\nWhenever another nontoken creature enters the battlefield under your control, you may pay {G}{U}. If you do, put a token that's a copy of that creature onto the battlefield.",
+      "text": "Whenever you cast an instant or sorcery spell, you may pay {U}{R}. If you do, copy that spell. You may choose new targets for the copy.\nWhenever another nontoken creature enters the battlefield under your control, you may pay {G}{U}. If you do, create a token that's a copy of that creature.",
       "toughness": "2",
       "type": "Legendary Creature — Human Wizard",
       "types": [
@@ -7144,6 +7133,9 @@
     {
       "artist": "Matt Stewart",
       "cmc": 5,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -7219,6 +7211,10 @@
     {
       "artist": "Terese Nielsen",
       "cmc": 3,
+      "colorIdentity": [
+        "W",
+        "U"
+      ],
       "colors": [
         "White",
         "Blue"
@@ -7255,27 +7251,11 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Invasion Block",
           "legality": "Legal"
         },
         {
           "format": "Legacy",
-          "legality": "Legal"
-        },
-        {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -7290,7 +7270,8 @@
       "power": "1",
       "printings": [
         "pJGP",
-        "INV"
+        "INV",
+        "C16"
       ],
       "rarity": "Special",
       "releaseDate": "2014",
@@ -7359,10 +7340,6 @@
           "legality": "Legal"
         },
         {
-          "format": "Freeform",
-          "legality": "Legal"
-        },
-        {
           "format": "Legacy",
           "legality": "Legal"
         },
@@ -7371,19 +7348,7 @@
           "legality": "Legal"
         },
         {
-          "format": "Prismatic",
-          "legality": "Legal"
-        },
-        {
           "format": "Scars of Mirrodin Block",
-          "legality": "Legal"
-        },
-        {
-          "format": "Singleton 100",
-          "legality": "Legal"
-        },
-        {
-          "format": "Tribal Wars Legacy",
           "legality": "Legal"
         },
         {
@@ -7422,6 +7387,11 @@
     {
       "artist": "Mark Winters",
       "cmc": 5,
+      "colorIdentity": [
+        "U",
+        "B",
+        "R"
+      ],
       "colors": [
         "Blue",
         "Black",
@@ -7496,6 +7466,9 @@
     {
       "artist": "Igor Kieryluk",
       "cmc": 7,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -7578,7 +7551,7 @@
       "rulings": [
         {
           "date": "2013-07-01",
-          "text": "If more than one Elesh Norn, Grand Cenobite is under your control, all of their static abilities will briefly apply. Any creatures that have 0 or less toughness and any creatures that now have lethal damage marked on them will be put into graveyards at the same time that the “legend rule” causes all but one of the Elesh Norns to be put into their owners’ graveyards."
+          "text": "If more than one Elesh Norn, Grand Cenobite is under your control, all of their static abilities will briefly apply. Any creatures that have 0 or less toughness and any creatures that now have lethal damage marked on them will be put into graveyards at the same time that the \"legend rule\" causes all but one of the Elesh Norns to be put into their owners' graveyards."
         }
       ],
       "source": "Judge reward",
@@ -7598,6 +7571,11 @@
     {
       "artist": "Eric Deschamps",
       "cmc": 6,
+      "colorIdentity": [
+        "W",
+        "U",
+        "B"
+      ],
       "colors": [
         "White",
         "Blue",
@@ -7656,7 +7634,7 @@
       "rulings": [
         {
           "date": "2013-10-17",
-          "text": "Oloro’s first ability works only if Oloro is on the battlefield."
+          "text": "Oloro's first ability works only if Oloro is on the battlefield."
         },
         {
           "date": "2013-10-17",
@@ -7664,23 +7642,23 @@
         },
         {
           "date": "2013-10-17",
-          "text": "Oloro’s second ability triggers just once for each life-gaining event, no matter how much life is gained."
+          "text": "Oloro's second ability triggers just once for each life-gaining event, no matter how much life is gained."
         },
         {
           "date": "2013-10-17",
-          "text": "You decide whether to pay {1} as the second ability resolves. If you do, you’ll draw a card and each opponent will lose 1 life."
+          "text": "You decide whether to pay {1} as the second ability resolves. If you do, you'll draw a card and each opponent will lose 1 life."
         },
         {
           "date": "2013-10-17",
-          "text": "If two creatures you control with lifelink deal combat damage at the same time, Oloro’s ability will trigger twice. However, if a single creature with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
+          "text": "If two creatures you control with lifelink deal combat damage at the same time, Oloro's ability will trigger twice. However, if a single creature with lifelink deals combat damage to multiple creatures, players, and/or planeswalkers at the same time (perhaps because it has trample or was blocked by more than one creature), the ability will trigger only once."
         },
         {
           "date": "2013-10-17",
-          "text": "In some unusual cases, you can gain life even though your life total actually decreases. For example, if you are being attacked by two 3/3 creatures and you block one with a 2/2 creature with lifelink, your life total will decrease by 1 even though you’ve gained 2 life. Oloro’s second ability would trigger."
+          "text": "In some unusual cases, you can gain life even though your life total actually decreases. For example, if you are being attacked by two 3/3 creatures and you block one with a 2/2 creature with lifelink, your life total will decrease by 1 even though you've gained 2 life. Oloro's second ability would trigger."
         },
         {
           "date": "2013-10-17",
-          "text": "In a Two-Headed Giant game, life gained by your teammate won’t cause the ability to trigger, even though it causes your team’s life total to increase."
+          "text": "In a Two-Headed Giant game, life gained by your teammate won't cause the ability to trigger, even though it causes your team's life total to increase."
         }
       ],
       "source": "Judge reward",
@@ -7700,6 +7678,9 @@
     },
     {
       "artist": "Terese Nielsen",
+      "colorIdentity": [
+        "W"
+      ],
       "foreignNames": [
         {
           "language": "Chinese Simplified",
@@ -7959,7 +7940,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "releaseDate": "2014",
@@ -7977,6 +7959,9 @@
     },
     {
       "artist": "Terese Nielsen",
+      "colorIdentity": [
+        "U"
+      ],
       "foreignNames": [
         {
           "language": "Chinese Simplified",
@@ -8233,7 +8218,8 @@
         "C15",
         "DDQ",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "releaseDate": "2014",
@@ -8251,6 +8237,9 @@
     },
     {
       "artist": "Terese Nielsen",
+      "colorIdentity": [
+        "B"
+      ],
       "foreignNames": [
         {
           "language": "Chinese Simplified",
@@ -8513,7 +8502,8 @@
         "DDQ",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "releaseDate": "2014",
@@ -8531,6 +8521,9 @@
     },
     {
       "artist": "Terese Nielsen",
+      "colorIdentity": [
+        "R"
+      ],
       "foreignNames": [
         {
           "language": "Chinese Simplified",
@@ -8793,7 +8786,8 @@
         "BFZ",
         "C15",
         "SOI",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "releaseDate": "2014",
@@ -8811,6 +8805,9 @@
     },
     {
       "artist": "Terese Nielsen",
+      "colorIdentity": [
+        "G"
+      ],
       "foreignNames": [
         {
           "language": "Chinese Simplified",
@@ -9071,7 +9068,8 @@
         "C15",
         "SOI",
         "DDR",
-        "KLD"
+        "KLD",
+        "C16"
       ],
       "rarity": "Basic Land",
       "releaseDate": "2014",
@@ -9090,6 +9088,9 @@
     {
       "artist": "Fang Yue",
       "cmc": 4,
+      "colorIdentity": [
+        "W"
+      ],
       "colors": [
         "White"
       ],
@@ -9126,6 +9127,7 @@
       "name": "Ravages of War",
       "number": "97",
       "printings": [
+        "pJGP",
         "PTK",
         "ME2"
       ],
@@ -9208,6 +9210,7 @@
       "name": "Damnation",
       "number": "98",
       "printings": [
+        "pJGP",
         "pMPR",
         "PLC"
       ],
@@ -9229,6 +9232,9 @@
     {
       "artist": "Matt Stewart",
       "cmc": 3,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -9282,6 +9288,7 @@
       "number": "99",
       "power": "2",
       "printings": [
+        "pJGP",
         "C14",
         "EMA"
       ],
@@ -9290,23 +9297,23 @@
       "rulings": [
         {
           "date": "2016-06-08",
-          "text": "Dualcaster Mage’s triggered ability can target (and copy) any instant or sorcery spell, not just one with targets. It doesn’t matter who controls it."
+          "text": "Dualcaster Mage's triggered ability can target (and copy) any instant or sorcery spell, not just one with targets. It doesn't matter who controls it."
         },
         {
           "date": "2016-06-08",
-          "text": "As Dualcaster Mage’s triggered ability resolves, it creates a copy of a spell on the stack. The copy isn’t cast, so abilities that trigger when a player casts a spell won’t trigger."
+          "text": "As Dualcaster Mage's triggered ability resolves, it creates a copy of a spell on the stack. The copy isn't cast, so abilities that trigger when a player casts a spell won't trigger."
         },
         {
           "date": "2016-06-08",
-          "text": "The copy will have the same targets as the spell it’s copying unless you choose new ones. You may change any number of the targets, including all of them or none of them. If, for one of the targets, you can’t choose a new legal target, then it remains unchanged (even if the current target is illegal)."
+          "text": "The copy will have the same targets as the spell it's copying unless you choose new ones. You may change any number of the targets, including all of them or none of them. If, for one of the targets, you can't choose a new legal target, then it remains unchanged (even if the current target is illegal)."
         },
         {
           "date": "2016-06-08",
-          "text": "You can’t choose to pay any additional costs for the copy. However, effects based on any additional or alternative costs paid for the targeted spell are copied as though those same costs were paid for the copy."
+          "text": "You can't choose to pay any additional costs for the copy. However, effects based on any additional or alternative costs paid for the targeted spell are copied as though those same costs were paid for the copy."
         },
         {
           "date": "2016-06-08",
-          "text": "If the spell is modal (that is, it says “Choose one —” or the like), the copy will have the same mode. You can’t choose a different one."
+          "text": "If the spell is modal (that is, it says \"Choose one —\" or the like), the copy will have the same mode. You can't choose a different one."
         },
         {
           "date": "2016-06-08",
@@ -9314,7 +9321,7 @@
         },
         {
           "date": "2016-06-08",
-          "text": "If the copy says that it affects “you,” it affects the controller of the copy, not the controller of the original spell. Similarly, if the copy says that it affects an “opponent,” it affects an opponent of the copy’s controller, not an opponent of the original spell’s controller."
+          "text": "If the copy says that it affects \"you,\" it affects the controller of the copy, not the controller of the original spell. Similarly, if the copy says that it affects an \"opponent,\" it affects an opponent of the copy's controller, not an opponent of the original spell's controller."
         }
       ],
       "source": "Judge reward",
@@ -9332,6 +9339,9 @@
     {
       "artist": "Chase Stone",
       "cmc": 3,
+      "colorIdentity": [
+        "R"
+      ],
       "colors": [
         "Red"
       ],
@@ -9385,6 +9395,7 @@
       "number": "100",
       "power": "2",
       "printings": [
+        "pJGP",
         "C14"
       ],
       "rarity": "Special",
@@ -9396,19 +9407,19 @@
         },
         {
           "date": "2014-11-07",
-          "text": "If the copied creature card has {X} in its mana cost, X is 0."
+          "text": "If the copied creature card has in its mana cost, X is 0."
         },
         {
           "date": "2014-11-07",
-          "text": "Any enters-the-battlefield abilities of the copied creature card will trigger when the token enters the battlefield. Any “as [this permanent] enters the battlefield” or “[this permanent] enters the battlefield with” abilities of the copied creature card will also work."
+          "text": "Any enters-the-battlefield abilities of the copied creature card will trigger when the token enters the battlefield. Any \"as [this permanent] enters the battlefield\" or \"[this permanent] enters the battlefield with\" abilities of the copied creature card will also work."
         },
         {
           "date": "2014-11-07",
-          "text": "If another creature becomes a copy of, or enters the battlefield as a copy of, the token, that creature will copy the creature card the token is copying, except it will also be an artifact. This is true even if the creature card that was copied by Feldon of the Third Path is no longer in the graveyard at that time. However, the new copy won’t gain haste and you won’t sacrifice it at the beginning of the next end step."
+          "text": "If another creature becomes a copy of, or enters the battlefield as a copy of, the token, that creature will copy the creature card the token is copying, except it will also be an artifact. This is true even if the creature card that was copied by Feldon of the Third Path is no longer in the graveyard at that time. However, the new copy won't gain haste and you won't sacrifice it at the beginning of the next end step."
         },
         {
           "date": "2014-11-07",
-          "text": "If Feldon’s ability creates multiple tokens due to a replacement effect (such as the one Doubling Season creates), each of those tokens will gain haste and you’ll sacrifice each of them."
+          "text": "If Feldon's ability creates multiple tokens due to a replacement effect (such as the one Doubling Season creates), each of those tokens will gain haste and you'll sacrifice each of them."
         }
       ],
       "source": "Judge reward",
@@ -9419,7 +9430,7 @@
       "supertypes": [
         "Legendary"
       ],
-      "text": "{2}{R}, {T}: Put a token onto the battlefield that's a copy of target creature card in your graveyard, except it's an artifact in addition to its other types. It gains haste. Sacrifice it at the beginning of the next end step.",
+      "text": "{2}{R}, {T}: Create a token that's a copy of target creature card in your graveyard, except it's an artifact in addition to its other types. It gains haste. Sacrifice it at the beginning of the next end step.",
       "toughness": "3",
       "type": "Legendary Creature — Human Artificer",
       "types": [
@@ -9495,6 +9506,9 @@
     {
       "artist": "Mike Bierek",
       "cmc": 2,
+      "colorIdentity": [
+        "U"
+      ],
       "colors": [
         "Blue"
       ],
@@ -9528,6 +9542,7 @@
       "number": "103",
       "printings": [
         "LEG",
+        "pJGP",
         "ME3",
         "VMA"
       ],
@@ -9536,15 +9551,15 @@
       "rulings": [
         {
           "date": "2009-10-01",
-          "text": "If the targeted spell “can’t be countered,” it remains on the stack. Mana Drain continues to resolve. At the beginning of your next main phase, the delayed triggered ability will still add the mana to your mana pool."
+          "text": "If the targeted spell \"can't be countered,\" it remains on the stack. Mana Drain continues to resolve. At the beginning of your next main phase, the delayed triggered ability will still add the mana to your mana pool."
         },
         {
           "date": "2009-10-01",
-          "text": "If the targeted spell is an illegal target by the time Mana Drain resolves, Mana Drain is countered. You won’t get any mana later."
+          "text": "If the targeted spell is an illegal target by the time Mana Drain resolves, Mana Drain is countered. You won't get any mana later."
         },
         {
           "date": "2009-10-01",
-          "text": "Mana Drain’s delayed triggered ability will usually trigger at the beginning of your precombat main phase. However, if you cast Mana Drain during your precombat main phase or during your combat phase, its delayed triggered ability will trigger at the beginning of that turn’s postcombat main phase."
+          "text": "Mana Drain's delayed triggered ability will usually trigger at the beginning of your precombat main phase. However, if you cast Mana Drain during your precombat main phase or during your combat phase, its delayed triggered ability will trigger at the beginning of that turn's postcombat main phase."
         }
       ],
       "source": "Judge reward",
@@ -9604,6 +9619,7 @@
       "name": "Command Beacon",
       "number": "105",
       "printings": [
+        "pJGP",
         "C15"
       ],
       "rarity": "Special",
@@ -9611,11 +9627,11 @@
       "rulings": [
         {
           "date": "2015-11-04",
-          "text": "If you cast a commander from your hand, the additional cost based on the number of times you’ve cast it from your command zone (sometimes referred to as the “commander tax”) doesn’t apply. Additionally, that casting won’t add to the tax if you later cast the commander from the command zone."
+          "text": "If you cast a commander from your hand, the additional cost based on the number of times you've cast it from your command zone (sometimes referred to as the \"commander tax\") doesn't apply. Additionally, that casting won't add to the tax if you later cast the commander from the command zone."
         },
         {
           "date": "2015-11-04",
-          "text": "If your commander isn’t in the command zone (or you’re not playing Commander) as the last ability resolves, nothing happens."
+          "text": "If your commander isn't in the command zone (or you're not playing Commander) as the last ability resolves, nothing happens."
         }
       ],
       "source": "Judge reward",

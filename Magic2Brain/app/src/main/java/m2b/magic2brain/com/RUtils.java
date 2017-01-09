@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.SortedMap;
 
 /**
  * Created by socketdown on 08.12.16.
@@ -61,5 +62,14 @@ public class RUtils {
         ArrayList obj = (ArrayList) si.readObject();
 
         return obj;
+    }
+
+    public static <V> SortedMap<String, V> filterPrefix(SortedMap<String,V> baseMap, String prefix) {
+        if(prefix.length() > 0) {
+            char nextLetter = (char) (prefix.charAt(prefix.length() -1) + 1);
+            String end = prefix.substring(0, prefix.length()-1) + nextLetter;
+            return baseMap.subMap(prefix, end);
+        }
+        return baseMap;
     }
 }
