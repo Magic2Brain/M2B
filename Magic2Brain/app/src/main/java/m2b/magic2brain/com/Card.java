@@ -15,6 +15,14 @@ public class Card implements Serializable{
         setName(name);
     }
 
+    public Card(String name, String flavor, String text, String type, String manacost){
+        this.type = type;
+        this.name = name;
+        this.flavor = flavor;
+        this.text = text;
+        this.manacost = manacost;
+    }
+
     public Card(){
 
     }
