@@ -65,6 +65,7 @@ public class QueryActivity extends AppCompatActivity {
         Deck qur = (Deck) i.getSerializableExtra("Set");
         deckName = qur.getName();
         if(deckName == null){deckName="DEFAULT";}
+        setTitle(deckName);
         set = qur.getSet();
         if(!loadProgress()) { //First we try to load the progress. If this fails, we simply start over
             wrongGuessed = (ArrayList) set.clone(); //Lets assume he guessed everything wrong and remove the card of this Array when he guesses it right

@@ -35,7 +35,7 @@ public class DeckDisplayActivity extends AppCompatActivity {
         String name = intent.getStringExtra("name");
         //----------------------------------------------
 
-
+        setTitle(name);
         Card c[] = new Card[1];
         c[0] = new Card("notaname", "notaflavor", "notatext", "notatype", "0");
 
