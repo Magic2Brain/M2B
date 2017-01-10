@@ -3,6 +3,8 @@ package m2b.magic2brain.com;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -35,6 +37,40 @@ public class SearchHandlerActivity extends AppCompatActivity {
         final EditText search_field = (EditText) findViewById(R.id.search_text);
         final ListView searchresultsview = (ListView) findViewById(R.id.search_lv);
 
+        Deck[] darray = new Deck[1];
+        try {
+            darray = dc.getDeckList(this);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        String[] names = new String[darray.length];
+
+        for(int i = 0; i < darray.length; i++){
+            names[i] = darray[i].getName();
+        }
+
+        final ArrayAdapter adapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, names);
+        search_field.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                adapter.getFilter().filter(editable.toString().toLowerCase());
+            }
+        });
+        searchresultsview.setAdapter(adapter);
+
+        /*
         final SortedMap<String, Deck> nameNum = new TreeMap<String, Deck>();
 
         //fill map
@@ -68,6 +104,6 @@ public class SearchHandlerActivity extends AppCompatActivity {
                 final ArrayAdapter adapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, sresults);
                 searchresultsview.setAdapter(adapter);
             }
-        });
+        });*/
     }
 }

@@ -10,30 +10,22 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="m2b.magic2brain.com.SearchHandlerActivity">
 
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/search_button" />
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/search_lv"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/search_text" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
-        android:layout_alignBottom="@+id/search_button"
-        android:layout_alignParentStart="true"
         android:id="@+id/search_text"
-        android:layout_toStartOf="@+id/search_button" />
-
-    <ListView
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/search_lv"
-        android:layout_below="@+id/search_button"
+        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="26dp" />
+        android:layout_alignParentEnd="true"
+        android:hint="Deckname"
+        android:contentDescription="Name" />
 </RelativeLayout>
