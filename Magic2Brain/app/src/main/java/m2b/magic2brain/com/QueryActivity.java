@@ -74,6 +74,7 @@ public class QueryActivity extends AppCompatActivity {
             indexCard = 0;
         }
         showFirstPic(); //Start the query
+        if(deckName.contains("DEFAULT")){restartAll();}
     }
 
     protected void onPause(){
@@ -423,7 +424,7 @@ public class QueryActivity extends AppCompatActivity {
             wrongGuessed = (ArrayList)set.clone();
         } else {
             for(Card c : set){
-                if(c.getType() != "Land"){
+                if(!c.getType().contains("Land")){
                     wrongGuessed.add(c);
                 }
             }

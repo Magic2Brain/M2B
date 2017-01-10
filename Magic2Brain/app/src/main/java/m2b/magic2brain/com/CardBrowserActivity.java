@@ -23,6 +23,7 @@ import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import m2b.magic2brain.com.magic2brain.R;
@@ -107,10 +108,14 @@ public class CardBrowserActivity extends AppCompatActivity {
     }
 
     private void removeCard(String name){
+        ArrayList<Card> cards = new ArrayList<>();
         for(Card c : Favorites.favorites_mvid){
             if(c.getName().contains(name)){
-                Favorites.favorites_mvid.remove(c);
+               cards.add(c);
             }
+        }
+        for(Card c : cards){
+            Favorites.favorites_mvid.remove(c);
         }
     }
 
