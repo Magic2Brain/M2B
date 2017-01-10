@@ -26,8 +26,8 @@ public class SearchHandlerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_handler);
         final Context context = this;
 
@@ -105,5 +105,10 @@ public class SearchHandlerActivity extends AppCompatActivity {
                 searchresultsview.setAdapter(adapter);
             }
         });*/
+    }
+
+    public void onBackPressed(){
+        finish();
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
 }
