@@ -19,7 +19,7 @@
         android:layout_alignParentEnd="true"
         android:layout_weight="0.51"
         android:contentDescription="Button"
-        android:text="Search Decks"
+        android:text="Search Sets"
         android:drawableLeft="@drawable/sheets_filled_50"
         style="?android:attr/borderlessButtonStyle" />
 

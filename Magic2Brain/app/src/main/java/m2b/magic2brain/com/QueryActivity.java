@@ -49,6 +49,7 @@ public class QueryActivity extends AppCompatActivity {
     private String deckName; //Name of the deck. Only for saving/loading purpose
     private TextView score; //this will show the user the current progress
     private boolean queryLand = true; // should we really query lands?
+    private boolean skipped = false; // this is to store if the user has skipped or not
 
     protected void onCreate(Bundle savedInstanceState) {
         // Build UI
@@ -174,7 +175,7 @@ public class QueryActivity extends AppCompatActivity {
            wrongAnswer();
         }
     }
-    private boolean skipped = false;
+
     public void skip(){
         skipped = true;
         wrongAnswer();

@@ -1,10 +1,12 @@
 package m2b.magic2brain.com;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -29,12 +31,17 @@ public class SearchHandlerActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_handler);
-        final Context context = this;
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        final Context context = this;
+        Intent inte = getIntent();
+        Boolean cardsearch = inte.getBooleanExtra("cardsearch",true);
         DeckAssetLoader dc = new DeckAssetLoader();
 
         Button submit = (Button) findViewById(R.id.search_button);
         final EditText search_field = (EditText) findViewById(R.id.search_text);
+        search_field.setHint("Setname");
+        if(cardsearch){search_field.setHint("Cardname");}
         final ListView searchresultsview = (ListView) findViewById(R.id.search_lv);
 
         Deck[] darray = new Deck[1];
@@ -105,6 +112,16 @@ public class SearchHandlerActivity extends AppCompatActivity {
                 searchresultsview.setAdapter(adapter);
             }
         });*/
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch(id){
+            case android.R.id.home:
+                onBackPressed();
+                break;
+        }
+        return true;
     }
 
     public void onBackPressed(){

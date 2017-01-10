@@ -27,7 +27,7 @@ public class LastSeenActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_last_seen);
-        setTitle("Last Seen");
+        setTitle("Recently Learned");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final Context currentContext = this;
 
