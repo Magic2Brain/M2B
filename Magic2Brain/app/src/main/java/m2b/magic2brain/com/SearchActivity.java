@@ -19,7 +19,7 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final Context context = this;
-
+        setTitle("Search");
         Button cards = (Button) findViewById(R.id.c_search_cards);
         Button decks = (Button) findViewById(R.id.c_search_decks);
 

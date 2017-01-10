@@ -13,7 +13,7 @@
         <item
             android:id="@+id/nav_browser"
             android:icon="@drawable/ic_view_carousel"
-            android:title="Deck Browser" />
+            android:title="Set Browser" />
     </group>
 
     <item android:title="Learn">

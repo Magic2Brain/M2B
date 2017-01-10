@@ -121,18 +121,19 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setupActionBar();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        setTitle("Settings");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    /**
-     * Set up the {@link android.app.ActionBar}, if the API is available.
-     */
-    private void setupActionBar() {
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            // Show the Up button in the action bar.
-            actionBar.setDisplayHomeAsUpEnabled(true);
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            finish();
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+            return true;
         }
+        return false;
     }
 
     /**
