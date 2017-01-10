@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -24,9 +25,10 @@ public class DeckDisplayActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deck_display);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final Context currentContext = this;
         DeckAssetLoader dc = new DeckAssetLoader();
@@ -81,5 +83,21 @@ public class DeckDisplayActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch(id){
+            case android.R.id.home:
+                finish();
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
+                break;
+        }
+        return true;
+    }
+
+    public void onBackPressed(){
+        finish();
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
 }

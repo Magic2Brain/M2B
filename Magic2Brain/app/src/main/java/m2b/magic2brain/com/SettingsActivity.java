@@ -120,8 +120,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        super.onCreate(savedInstanceState);
         setTitle("Settings");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -134,6 +134,11 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             return true;
         }
         return false;
+    }
+
+    public void onBackPressed(){
+        finish();
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
 
     /**
@@ -193,6 +198,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             }
             return super.onOptionsItemSelected(item);
         }
+
     }
 
     /**

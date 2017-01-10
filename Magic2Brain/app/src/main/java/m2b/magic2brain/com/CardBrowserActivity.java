@@ -36,8 +36,8 @@ public class CardBrowserActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
 
         //TODO implement new view & optimize for card display
-        super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        super.onCreate(savedInstanceState);
 
         Intent mIntent = getIntent();
         final Card card = (Card) mIntent.getSerializableExtra("currentCard");
@@ -167,5 +167,10 @@ public class CardBrowserActivity extends AppCompatActivity {
                 .placeholder(R.drawable.ic_hourglass_empty)
                 .error(R.drawable.ic_error)
                 .into(cImage);
+    }
+
+    public void onBackPressed(){
+        finish();
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
 }
