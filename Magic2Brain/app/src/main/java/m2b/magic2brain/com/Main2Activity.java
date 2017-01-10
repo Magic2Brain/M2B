@@ -19,12 +19,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.animation.Animation;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 
@@ -43,7 +45,6 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //TODO: Add image to NavigationView
         setTheme(R.style.AppTheme_NoActionBar);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
@@ -79,9 +80,6 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         Favorites.init();
         if(favs != null){
             Favorites.favorites_mvid = favs;
-        }
-        for(Card c : Favorites.favorites_mvid){
-            Log.i("Main",c.getName());
         }
         buildNewsFeed();
     }
@@ -135,7 +133,6 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        //TODO: Add some fancy transition animations
         if (id == R.id.nav_search) {
             // Handle the camera action
             Intent intent = new Intent(this, SearchActivity.class);
@@ -154,7 +151,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             DeckAssetLoader dc = new DeckAssetLoader();
             Card[] c = new Card[1];
             try {
-                c = dc.getDeck("C16.json", this);
+                c = dc.getDeck("C16.json", this); //TODO: Show current set
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -189,6 +186,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
     }
 
     public void buildNewsFeed(){
+        int MultiID = (int)(Math.random()*421717);
         int scrWidth  = getWindowManager().getDefaultDisplay().getWidth();
         int scrHeight = getWindowManager().getDefaultDisplay().getHeight();
         RelativeLayout lyt = (RelativeLayout) findViewById(R.id.main_absolute); // Get the View of the XML
@@ -196,12 +194,25 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
 
         TextView score = new TextView(this); // Create new Textview
         score.setTextColor(Color.BLACK);
-        score.setText("Changelog 2.6 \n \n - Better learning algorithm \n - New fancy menu \n - Changed Splash-art \n \n - Fixed Save-bug \n - Fixed Browser-bug \n - Fixed Search-bug");
+        score.setGravity(Gravity.CENTER);
+        score.setText("Random Card");
         score.setTextSize(26);
-        params = new RelativeLayout.LayoutParams(scrWidth, (int)(0.8*scrHeight));
-        params.leftMargin = (int)(0.03*scrWidth); // X-Position
+        params = new RelativeLayout.LayoutParams(scrWidth, (int)(0.1*scrHeight));
+        params.leftMargin = 0; // X-Position
         params.topMargin = (int)(0.1*scrHeight); // Y-Position
         lyt.addView(score, params); // add it to the View
+
+        ImageView imgv  = new ImageView(this); // Create new Imageview
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.6*scrHeight))/*Height*/;
+        params.leftMargin = 0; // X-Position
+        params.topMargin = (int)(0.2*scrHeight); // Y-Position
+        lyt.addView(imgv, params); // add it to the View
+
+        Picasso.with(this)
+                .load("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + MultiID + "&type=card")
+                .placeholder(R.drawable.loading_image)
+                .error(R.drawable.image_not_found)
+                .into(imgv);
 
     }
 
