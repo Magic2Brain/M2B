@@ -38,7 +38,6 @@ public class SearchHandlerActivity extends AppCompatActivity {
         Boolean cardsearch = inte.getBooleanExtra("cardsearch",true);
         DeckAssetLoader dc = new DeckAssetLoader();
 
-        Button submit = (Button) findViewById(R.id.search_button);
         final EditText search_field = (EditText) findViewById(R.id.search_text);
         search_field.setHint("Setname");
         if(cardsearch){search_field.setHint("Cardname");}
