@@ -57,8 +57,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Get toasted", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                setRandomCard();
             }
         });
 
@@ -187,8 +186,9 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
 
     }
 
+    ImageView imgv;
     public void buildNewsFeed(){
-        int MultiID;
+
         int scrWidth  = getWindowManager().getDefaultDisplay().getWidth();
         int scrHeight = getWindowManager().getDefaultDisplay().getHeight();
         RelativeLayout lyt = (RelativeLayout) findViewById(R.id.main_absolute); // Get the View of the XML
@@ -204,12 +204,16 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         params.topMargin = (int)(0.1*scrHeight); // Y-Position
         lyt.addView(score, params); // add it to the View
 
-        ImageView imgv  = new ImageView(this); // Create new Imageview
+        imgv  = new ImageView(this); // Create new Imageview
         params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.6*scrHeight))/*Height*/;
         params.leftMargin = 0; // X-Position
         params.topMargin = (int)(0.2*scrHeight); // Y-Position
         lyt.addView(imgv, params); // add it to the View
+        setRandomCard();
+    }
 
+    public void setRandomCard(){
+        int MultiID = 1;
         String [] list;
         ArrayList<String> names = new ArrayList<>();
         try {
@@ -227,14 +231,17 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             c = dc.getDeck(randSet, this);
         } catch (Exception e) {}
         d.setSet(new ArrayList<Card>(Arrays.asList(c)));
-        Card ca = d.getRandomCard();
-        MultiID = ca.getMultiverseid();
+        if(d.getSize() > 0) {
+            Card ca = d.getRandomCard();
+            if(ca != null) {
+                MultiID = ca.getMultiverseid();
+            }
+        }
         Picasso.with(this)
                 .load("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + MultiID + "&type=card")
                 .placeholder(R.drawable.loading_image)
                 .error(R.drawable.image_not_found)
                 .into(imgv);
-
     }
 
 }
