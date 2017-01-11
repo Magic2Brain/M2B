@@ -88,4 +88,8 @@ public class Deck implements Serializable /* We need to do this, so we can pass 
     public void setSet(ArrayList<Card> al){
         set = al;
     }
+
+    public Card getRandomCard(){
+        return set.get((int)(Math.random()*set.size()));
+    }
 }

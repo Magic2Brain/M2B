@@ -3,6 +3,7 @@ package m2b.magic2brain.com;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
@@ -30,6 +31,7 @@ import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 
+import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Array;
 import java.lang.reflect.Type;
@@ -186,7 +188,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
     }
 
     public void buildNewsFeed(){
-        int MultiID = (int)(Math.random()*421717);
+        int MultiID;
         int scrWidth  = getWindowManager().getDefaultDisplay().getWidth();
         int scrHeight = getWindowManager().getDefaultDisplay().getHeight();
         RelativeLayout lyt = (RelativeLayout) findViewById(R.id.main_absolute); // Get the View of the XML
@@ -208,6 +210,25 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         params.topMargin = (int)(0.2*scrHeight); // Y-Position
         lyt.addView(imgv, params); // add it to the View
 
+        String [] list;
+        ArrayList<String> names = new ArrayList<>();
+        try {
+            list = getAssets().list("");
+            for(String f1 : list){
+                names.add(f1);
+            }
+        } catch (Exception e){}
+
+        String randSet = names.get((int)(Math.random()*(names.size()-2)));
+        Deck d = new Deck();
+        DeckAssetLoader dc = new DeckAssetLoader();
+        Card[] c = new Card[1];
+        try {
+            c = dc.getDeck(randSet, this);
+        } catch (Exception e) {}
+        d.setSet(new ArrayList<Card>(Arrays.asList(c)));
+        Card ca = d.getRandomCard();
+        MultiID = ca.getMultiverseid();
         Picasso.with(this)
                 .load("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + MultiID + "&type=card")
                 .placeholder(R.drawable.loading_image)
