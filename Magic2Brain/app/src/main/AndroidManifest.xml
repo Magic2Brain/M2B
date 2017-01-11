@@ -39,7 +39,12 @@
         <activity
             android:name="m2b.magic2brain.com.SettingsActivity"
             android:label="@string/title_activity_settings" />
-        <activity android:name="m2b.magic2brain.com.SearchHandlerActivity"></activity>
+        <activity android:name="m2b.magic2brain.com.SearchHandlerActivity" />
+        <activity
+            android:name="m2b.magic2brain.com.CardImageDisplayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_card_image_display"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>

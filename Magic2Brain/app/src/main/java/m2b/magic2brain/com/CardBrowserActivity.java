@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
@@ -15,6 +16,9 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -26,10 +30,11 @@ import java.io.IOException;
 import java.util.Arrays;
 
 import m2b.magic2brain.com.magic2brain.R;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 import static m2b.magic2brain.com.Main2Activity.FAVS_SAVEFILE;
 
-public class CardBrowserActivity extends AppCompatActivity {
+public class CardBrowserActivity extends AppCompatActivity{
 
     ImageView cImage;
     @Override
@@ -38,6 +43,7 @@ public class CardBrowserActivity extends AppCompatActivity {
         //TODO implement new view & optimize for card display
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        final Context context = this;
 
         Intent mIntent = getIntent();
         final Card card = (Card) mIntent.getSerializableExtra("currentCard");
@@ -69,6 +75,15 @@ public class CardBrowserActivity extends AppCompatActivity {
         setManaCost(card.getManaCost(), this, ll);
 
         showPic(card.getMultiverseid());
+
+        cImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, CardImageDisplayActivity.class);
+                Drawable drawable = cImage.getDrawable();
+                //intent.putExtra("image", drawable);
+            }
+        });
 
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         if(!checkCard(card.getName())){
