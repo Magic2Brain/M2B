@@ -21,11 +21,12 @@ import java.util.Arrays;
 import m2b.magic2brain.com.magic2brain.R;
 
 public class LastSeenActivity extends AppCompatActivity {
-    //TODO: Remove Padding of the list
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_last_seen);
+        setTitle("Recently Learned");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final Context currentContext = this;
 
@@ -64,7 +65,7 @@ public class LastSeenActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             // Respond to the action bar's Up/Home button
             case android.R.id.home:
-                finish();
+                onBackPressed();
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -77,5 +78,10 @@ public class LastSeenActivity extends AppCompatActivity {
         }
 
         return list;
+    }
+
+    public void onBackPressed(){
+        finish();
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
 }

@@ -49,6 +49,7 @@ public class QueryActivity extends AppCompatActivity {
     private String deckName; //Name of the deck. Only for saving/loading purpose
     private TextView score; //this will show the user the current progress
     private boolean queryLand = true; // should we really query lands?
+    private boolean skipped = false; // this is to store if the user has skipped or not
 
     protected void onCreate(Bundle savedInstanceState) {
         // Build UI
@@ -65,6 +66,7 @@ public class QueryActivity extends AppCompatActivity {
         Deck qur = (Deck) i.getSerializableExtra("Set");
         deckName = qur.getName();
         if(deckName == null){deckName="DEFAULT";}
+        setTitle(deckName);
         set = qur.getSet();
         if(!loadProgress()) { //First we try to load the progress. If this fails, we simply start over
             wrongGuessed = (ArrayList) set.clone(); //Lets assume he guessed everything wrong and remove the card of this Array when he guesses it right
@@ -72,6 +74,7 @@ public class QueryActivity extends AppCompatActivity {
             indexCard = 0;
         }
         showFirstPic(); //Start the query
+        if(deckName.contains("DEFAULT")){restartAll();}
     }
 
     protected void onPause(){
@@ -173,7 +176,7 @@ public class QueryActivity extends AppCompatActivity {
            wrongAnswer();
         }
     }
-    private boolean skipped = false;
+
     public void skip(){
         skipped = true;
         wrongAnswer();
@@ -421,7 +424,7 @@ public class QueryActivity extends AppCompatActivity {
             wrongGuessed = (ArrayList)set.clone();
         } else {
             for(Card c : set){
-                if(c.getType() != "Land"){
+                if(!c.getType().contains("Land")){
                     wrongGuessed.add(c);
                 }
             }
