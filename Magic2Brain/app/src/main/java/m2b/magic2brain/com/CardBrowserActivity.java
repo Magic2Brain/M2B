@@ -75,14 +75,15 @@ public class CardBrowserActivity extends AppCompatActivity{
         LinearLayout ll = (LinearLayout) findViewById(R.id.cba_mcost_layout);
         setManaCost(card.getManaCost(), this, ll);
 
-        showPic(card.getMultiverseid());
+        final int mvid = card.getMultiverseid();
+        showPic(mvid);
 
         cImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, CardImageDisplayActivity.class);
-                Drawable drawable = cImage.getDrawable();
-                //intent.putExtra("image", drawable);
+                intent.putExtra("pic", mvid);
+                startActivity(intent);
             }
         });
 

@@ -11,6 +11,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
+
 import m2b.magic2brain.com.magic2brain.R;
 
 /**
@@ -97,24 +99,32 @@ public class CardImageDisplayActivity extends AppCompatActivity {
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
-        Intent intent = getIntent();
+        Intent mIntent = getIntent();
 
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                toggle();
+                //toggle();
+                finish();
             }
         });
 
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+        int mvid = mIntent.getIntExtra("pic", 0);
+        showPic(mvid);
+    }
+
+    private void showPic(int MultiID){
         ImageView cImage = (ImageView) findViewById(R.id.cida_imgview);
-        Drawable imageDrawable = (Drawable) intent.getSerializableExtra("image");
-        cImage.setImageDrawable(imageDrawable);
+        Picasso.with(this)
+                .load("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + MultiID + "&type=card")
+                .placeholder(R.drawable.ic_hourglass_empty)
+                .error(R.drawable.ic_error)
+                .into(cImage);
     }
 
     @Override
