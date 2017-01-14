@@ -46,11 +46,16 @@ public class SearchHandlerActivity extends AppCompatActivity {
         String[] names = new String[1];
         names[0] = "error";
 
+        Deck[] deckarray = new Deck[1];
+        Deck[] cardarray = new Deck[1];
+
         if(cardsearch){
             //searchCards();
             Card[] darray = new Card[1];
+            darray[0] = new Card();
+            darray[0].setName("error");
             try {
-                darray = dc.getDeck("AllCards.json", this);
+                darray = dc.getAllCards(this);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (JSONException e) {
