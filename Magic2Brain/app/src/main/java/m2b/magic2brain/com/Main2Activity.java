@@ -178,7 +178,11 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             startActivity(intent);
 
         } else if (id == R.id.nav_share) {
-            Toast.makeText(this, "Not implemented", Toast.LENGTH_SHORT).show();
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "http://play.google.com/store/apps/details?id=m2b.magic2brain.com");
+            sendIntent.setType("text/plain");
+            startActivity(Intent.createChooser(sendIntent, getResources().getText(R.string.send_to)));
 
         } else if (id == R.id.nav_settings) {
             Intent intent = new Intent(this, SettingsActivity.class);
