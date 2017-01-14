@@ -38,7 +38,7 @@ public class DeckDisplayActivity extends AppCompatActivity {
         final Context currentContext = this;
         DeckAssetLoader dc = new DeckAssetLoader();
         Intent intent = getIntent();
-        String deckcode = intent.getStringExtra("code");
+        final String deckcode = intent.getStringExtra("code");
         final String name = intent.getStringExtra("name");
         //----------------------------------------------
 
@@ -64,6 +64,7 @@ public class DeckDisplayActivity extends AppCompatActivity {
                 Deck d = new Deck();
                 d.setName(name);
                 List<Card> clist = Arrays.asList(cCopy);
+                d.setName(deckcode);
                 d.setSet(new ArrayList<Card>(clist));
                 intent.putExtra("Set", d);
                 startActivity(intent);
