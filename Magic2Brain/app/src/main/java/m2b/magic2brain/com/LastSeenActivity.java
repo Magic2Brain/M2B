@@ -2,8 +2,11 @@ package m2b.magic2brain.com;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,16 +14,24 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import org.json.JSONException;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import m2b.magic2brain.com.magic2brain.R;
 
 public class LastSeenActivity extends AppCompatActivity {
+    private ArrayList<String> recentlyLearned;
+    private String[] names;
+    private String[] reclearn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
@@ -29,38 +40,46 @@ public class LastSeenActivity extends AppCompatActivity {
         setTitle("Recently Learned");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final Context currentContext = this;
-
+        if(!loadRecent()){recentlyLearned = new ArrayList<>();}
         DeckAssetLoader dc = new DeckAssetLoader();
-
-        Card c[] = new Card[2064];
-        try {
-            c = dc.getDeck("LEA.json", this);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        names = new String[recentlyLearned.size()];
+        reclearn = new String[recentlyLearned.size()];
+        for(int i = 0; i < recentlyLearned.size(); i++){
+            reclearn[i] = recentlyLearned.get(i);
+            names[i] = dc.getName(recentlyLearned.get(i));
         }
 
-        final String[] listItems = getListified(c);
 
         ListView lv = (ListView) findViewById(R.id.mListView);
-        final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems);
+        final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, names);
         lv.setAdapter(adapter);
 
-        final Card[] finalC = c;
+
         lv.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String yourData = listItems[position];
-                Intent intent = new Intent(currentContext, CardBrowserActivity.class);
-                intent.putExtra("currentCard", finalC[position]);
+                String code = reclearn[position];
+                String name = names[position];
+                Intent intent = new Intent(currentContext, DeckDisplayActivity.class);
+                intent.putExtra("code", code);
+                intent.putExtra("name", name);
                 startActivity(intent);
             }
         });
 
     }
 
-    @Override
+    private boolean loadRecent(){
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        Gson gson = new Gson();
+        String json = sharedPrefs.getString("query_recent",null);
+        Type type = new TypeToken<ArrayList<String>>(){}.getType();
+        ArrayList<String> aL = gson.fromJson(json, type);
+        if(aL == null){return false;}
+        recentlyLearned = aL;
+        return true;
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             // Respond to the action bar's Up/Home button
@@ -69,15 +88,6 @@ public class LastSeenActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    private String[] getListified(Card[] cards){
-        String[] list = new String[cards.length];
-        for(int i = 0; i < cards.length; i++){
-            list[i] = cards[i].getName();
-        }
-
-        return list;
     }
 
     public void onBackPressed(){

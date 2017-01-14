@@ -26,6 +26,10 @@ public class DeckAssetLoader {
 
     private Context context;
 
+    public String getName(String code){
+        return code; //TODO: Get Name from code
+    }
+
     public Card[] getDeck(String deckname, Context context) throws JSONException, IOException {
 
         this.context = context;
