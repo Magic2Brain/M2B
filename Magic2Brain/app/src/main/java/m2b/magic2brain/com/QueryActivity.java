@@ -50,6 +50,7 @@ public class QueryActivity extends AppCompatActivity {
     private TextView score; //this will show the user the current progress
     private boolean queryLand = true; // should we really query lands?
     private boolean skipped = false; // this is to store if the user has skipped or not
+    private ArrayList<String> recentlyLearned; // this is to save the deckname if a new set is learned
 
     protected void onCreate(Bundle savedInstanceState) {
         // Build UI
@@ -65,8 +66,13 @@ public class QueryActivity extends AppCompatActivity {
         Intent i = getIntent();
         Deck qur = (Deck) i.getSerializableExtra("Set");
         deckName = qur.getName();
+        String code = qur.getCode();
         if(deckName == null){deckName="DEFAULT";}
         setTitle(deckName);
+        if(!loadRecent()){recentlyLearned = new ArrayList<>();}
+        if(!recentlyLearned.contains(code)){recentlyLearned.add(code);} //TODO: CODE DOESNT WORK. DECKNAME DOES. WHY THE FUCK?
+        if(recentlyLearned.size() == 2){recentlyLearned.remove(0);}
+        saveRecent();
         set = qur.getSet();
         if(!loadProgress()) { //First we try to load the progress. If this fails, we simply start over
             wrongGuessed = (ArrayList) set.clone(); //Lets assume he guessed everything wrong and remove the card of this Array when he guesses it right
@@ -80,6 +86,26 @@ public class QueryActivity extends AppCompatActivity {
     protected void onPause(){
         super.onPause();
         saveProgress();
+    }
+
+    public boolean loadRecent(){
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        Gson gson = new Gson();
+        String json = sharedPrefs.getString("query_recent",null);
+        Type type = new TypeToken<ArrayList<String>>(){}.getType();
+        ArrayList<String> aL = gson.fromJson(json, type);
+        if(aL == null){return false;}
+        recentlyLearned = aL;
+        return true;
+    }
+
+    public void saveRecent(){
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(recentlyLearned);
+        editor.putString("query_recent", json);
+        editor.commit();
     }
 
     public boolean loadProgress(){
