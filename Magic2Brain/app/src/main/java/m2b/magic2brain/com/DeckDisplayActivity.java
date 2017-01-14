@@ -64,7 +64,8 @@ public class DeckDisplayActivity extends AppCompatActivity {
                 Deck d = new Deck();
                 d.setName(name);
                 List<Card> clist = Arrays.asList(cCopy);
-                d.setName(deckcode);
+                d.setCode(deckcode);
+                d.setName(name);
                 d.setSet(new ArrayList<Card>(clist));
                 intent.putExtra("Set", d);
                 startActivity(intent);
