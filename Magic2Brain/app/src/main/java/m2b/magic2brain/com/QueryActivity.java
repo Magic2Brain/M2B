@@ -70,8 +70,7 @@ public class QueryActivity extends AppCompatActivity {
         if(deckName == null){deckName="DEFAULT";}
         setTitle(deckName);
         if(!loadRecent()){recentlyLearned = new ArrayList<>();}
-        if(!recentlyLearned.contains(code)){recentlyLearned.add(code);}
-        if(recentlyLearned.size() == 10){recentlyLearned.remove(0);}
+        if(recentlyLearned.size() == 2){recentlyLearned.remove(0);}
         saveRecent();
         set = qur.getSet();
         if(!loadProgress()) { //First we try to load the progress. If this fails, we simply start over
