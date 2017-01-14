@@ -57,7 +57,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setRandomCard();
+                setListener(setRandomCard());
             }
         });
 
@@ -209,10 +209,22 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
         params.leftMargin = 0; // X-Position
         params.topMargin = (int)(0.2*scrHeight); // Y-Position
         lyt.addView(imgv, params); // add it to the View
-        setRandomCard();
+        setListener(setRandomCard());
     }
 
-    public void setRandomCard(){
+    public void setListener(int MultiID2){
+        final int MultiID = MultiID2;
+        imgv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Main2Activity.this, CardImageDisplayActivity.class);
+                intent.putExtra("pic", MultiID);
+                startActivity(intent);
+            }
+        });
+    }
+
+    public int setRandomCard(){
         int MultiID = 1;
         String [] list;
         ArrayList<String> names = new ArrayList<>();
@@ -242,6 +254,6 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
                 .placeholder(R.drawable.loading_image)
                 .error(R.drawable.image_not_found)
                 .into(imgv);
+        return MultiID;
     }
-
 }
