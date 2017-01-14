@@ -67,6 +67,7 @@ public class FavoritesActivity extends AppCompatActivity {
                 if(alist_favs.size() > 0) {
                     Intent intent = new Intent(currentContext, QueryActivity.class);
                     Deck d = new Deck();
+                    d.setName("FAVS");
                     d.setSet(alist_favs);
                     intent.putExtra("Set", d);
                     startActivity(intent);
