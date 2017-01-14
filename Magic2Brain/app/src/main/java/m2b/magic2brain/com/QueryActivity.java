@@ -62,17 +62,19 @@ public class QueryActivity extends AppCompatActivity {
         buildMenu();
         // Hide the status bar.
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Prepare Query
+        // Get some informations
         Intent i = getIntent();
         Deck qur = (Deck) i.getSerializableExtra("Set");
         deckName = qur.getName();
         String code = qur.getCode();
         if(deckName == null){deckName="DEFAULT";}
         setTitle(deckName);
+        //Add set to recent learned
         if(!loadRecent()){recentlyLearned = new ArrayList<>();}
         if(!recentlyLearned.contains(code)){recentlyLearned.add(code);}
-        if(recentlyLearned.size() == 2){recentlyLearned.remove(0);}
+        if(recentlyLearned.size() == 10){recentlyLearned.remove(0);}
         saveRecent();
+        //load set
         set = qur.getSet();
         if(!loadProgress()) { //First we try to load the progress. If this fails, we simply start over
             wrongGuessed = (ArrayList) set.clone(); //Lets assume he guessed everything wrong and remove the card of this Array when he guesses it right
@@ -80,7 +82,7 @@ public class QueryActivity extends AppCompatActivity {
             indexCard = 0;
         }
         showFirstPic(); //Start the query
-        if(deckName.contains("DEFAULT")){restartAll();}
+        if(deckName.contains("DEFAULT")||deckName.contains("Favorites")){restartAll();}
     }
 
     protected void onPause(){
@@ -159,7 +161,6 @@ public class QueryActivity extends AppCompatActivity {
 
     public void showNextPic(){
         updateScore();
-        skipped = false;
         showHider();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -168,6 +169,7 @@ public class QueryActivity extends AppCompatActivity {
                 firstGuess = true;
                 showPic(wrongGuessed.get(indexCard).getMultiverseid());
                 hiding.bringToFront();
+                skipped = false;
             }
         }, 800);
     }
@@ -204,15 +206,17 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void skip(){
-        skipped = true;
-        wrongAnswer();
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                checkAnswer(wrongGuessed.get(indexCard).getName());
-            }
-        }, 1000);
+        if(!skipped) {
+            skipped = true;
+            wrongAnswer();
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    checkAnswer(wrongGuessed.get(indexCard).getName());
+                }
+            }, 1000);
+        }
     }
 
     public void wrongAnswer(){
@@ -445,20 +449,27 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void restartAll(){
-        wrongGuessed.clear();
-        if(queryLand){
-            wrongGuessed = (ArrayList)set.clone();
-        } else {
-            for(Card c : set){
-                if(!c.getType().contains("Land")){
-                    wrongGuessed.add(c);
-                }
-            }
+        wrongGuessed = (ArrayList)set.clone();
+        if(!queryLand){
+           removeLands();
         }
         shuffleWrongs();
         buildMenu();
         indexCard = 0;
         showFirstPic();
+    }
+
+    public void removeLands(){
+        ArrayList<Card> remove = new ArrayList<>();
+        for(Card c : wrongGuessed){
+            if(c.getType().contains("Land")){
+                remove.add(c);
+            }
+        }
+        for(Card c : remove){
+            wrongGuessed.remove(c);
+        }
+
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -473,7 +484,7 @@ public class QueryActivity extends AppCompatActivity {
             case R.id.query_lands:
                 queryLand = !queryLand;
                 item.setChecked(queryLand);
-                restartAll();
+                if(queryLand){restartAll();} else {removeLands(); updateScore();}
                 break;
         }
         return true;
