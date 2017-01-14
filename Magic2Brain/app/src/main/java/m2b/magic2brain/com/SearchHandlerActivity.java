@@ -39,24 +39,53 @@ public class SearchHandlerActivity extends AppCompatActivity {
         DeckAssetLoader dc = new DeckAssetLoader();
 
         final EditText search_field = (EditText) findViewById(R.id.search_text);
-        search_field.setHint("Setname");
         if(cardsearch){search_field.setHint("Cardname");}
+        else {search_field.setHint("Setname");}
         final ListView searchresultsview = (ListView) findViewById(R.id.search_lv);
 
-        Deck[] darray = new Deck[1];
-        try {
-            darray = dc.getDeckList(this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
+        String[] names = new String[1];
+        names[0] = "error";
+
+        Deck[] deckarray = new Deck[1];
+        Deck[] cardarray = new Deck[1];
+
+        if(cardsearch){
+            //searchCards();
+            Card[] darray = new Card[1];
+            darray[0] = new Card();
+            darray[0].setName("error");
+            try {
+                darray = dc.getAllCards(this);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            names = new String[darray.length];
+
+            for(int i = 0; i < darray.length; i++){
+                names[i] = darray[i].getName();
+            }
+        }
+        else{
+            Deck[] darray = new Deck[1];
+            try {
+                darray = dc.getDeckList(this);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            names = new String[darray.length];
+
+            for(int i = 0; i < darray.length; i++){
+                names[i] = darray[i].getName();
+            }
         }
 
-        String[] names = new String[darray.length];
 
-        for(int i = 0; i < darray.length; i++){
-            names[i] = darray[i].getName();
-        }
 
         final ArrayAdapter adapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, names);
         search_field.addTextChangedListener(new TextWatcher() {
@@ -76,41 +105,6 @@ public class SearchHandlerActivity extends AppCompatActivity {
         });
         searchresultsview.setAdapter(adapter);
 
-        /*
-        final SortedMap<String, Deck> nameNum = new TreeMap<String, Deck>();
-
-        //fill map
-        Deck[] decks = new Deck[1];
-        try {
-            decks = dc.getDeckList(this);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        for (Deck deck : decks){
-            nameNum.put(deck.getName(), deck);
-        }
-
-        //copy deck to final var
-        final SortedMap<String, Deck> cNameNum = nameNum;
-
-        submit.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String prefix = search_field.getText().toString();
-                String[] sresults = new String[2048];
-                int iterator = 0;
-                for(Map.Entry<String,Deck> entry : RUtils.filterPrefix(cNameNum, prefix).entrySet()) {
-                    System.out.println(entry);
-                    sresults[iterator] = entry.toString();
-                    iterator++;
-                }
-
-                final ArrayAdapter adapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, sresults);
-                searchresultsview.setAdapter(adapter);
-            }
-        });*/
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
