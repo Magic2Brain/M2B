@@ -2,6 +2,7 @@ package m2b.magic2brain.com;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -9,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,7 +37,7 @@ public class SearchHandlerActivity extends AppCompatActivity {
 
         final Context context = this;
         Intent inte = getIntent();
-        Boolean cardsearch = inte.getBooleanExtra("cardsearch",true);
+        final Boolean cardsearch = inte.getBooleanExtra("cardsearch",true);
         DeckAssetLoader dc = new DeckAssetLoader();
 
         final EditText search_field = (EditText) findViewById(R.id.search_text);
@@ -47,43 +49,44 @@ public class SearchHandlerActivity extends AppCompatActivity {
         names[0] = "error";
 
         Deck[] deckarray = new Deck[1];
-        Deck[] cardarray = new Deck[1];
+        Card[] cardarray = new Card[1];
 
         if(cardsearch){
-            //searchCards();
-            Card[] darray = new Card[1];
-            darray[0] = new Card();
-            darray[0].setName("error");
+            cardarray[0] = new Card();
+            cardarray[0].setName("error");
             try {
-                darray = dc.getAllCards(this);
+                cardarray = dc.getAllCards(this);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
-            names = new String[darray.length];
+            names = new String[cardarray.length];
 
-            for(int i = 0; i < darray.length; i++){
-                names[i] = darray[i].getName();
+            for(int i = 0; i < cardarray.length; i++){
+                names[i] = cardarray[i].getName();
             }
         }
         else{
-            Deck[] darray = new Deck[1];
             try {
-                darray = dc.getDeckList(this);
+                deckarray = dc.getDeckList(this);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
 
-            names = new String[darray.length];
+            names = new String[deckarray.length];
 
-            for(int i = 0; i < darray.length; i++){
-                names[i] = darray[i].getName();
+            for(int i = 0; i < deckarray.length; i++){
+                names[i] = deckarray[i].getName();
             }
         }
+
+        //finalizing variables for further use
+        final String[] cnames = names;
+        final Deck[] cdeckarray = deckarray;
 
 
 
@@ -103,8 +106,43 @@ public class SearchHandlerActivity extends AppCompatActivity {
                 adapter.getFilter().filter(editable.toString().toLowerCase());
             }
         });
-        searchresultsview.setAdapter(adapter);
 
+        searchresultsview.setAdapter(adapter);
+        searchresultsview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(cardsearch){
+                    Intent intent = new Intent(context, CardBrowserActivity.class);
+                    intent.putExtra("currentCard", cnames[position]);
+                    startActivity(intent);
+                }
+                else{
+                    String deckname = adapter.getItem(position).toString();
+
+                    Intent intent = new Intent(context, DeckDisplayActivity.class);
+                    intent.putExtra("code", searchfordeck(deckname, cdeckarray));
+                    intent.putExtra("name", deckname);
+                    startActivity(intent);
+                }
+            }
+        });
+
+    }
+
+    private String searchfordeck(String name, Deck[] darray){
+
+        String code = "ERR";
+
+        for(int i = 0; i < darray.length; i++){
+            String dname = darray[i].getName();
+
+            if(dname.equals(name)){
+                code = darray[i].getCode();
+                break;
+            }
+        }
+
+        return code;
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

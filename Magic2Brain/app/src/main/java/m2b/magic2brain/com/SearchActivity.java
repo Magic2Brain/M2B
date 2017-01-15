@@ -3,6 +3,7 @@ package m2b.magic2brain.com;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,9 +37,11 @@ public class SearchActivity extends AppCompatActivity {
         decks.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+                Snackbar.make(view, "Under Construction!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+                /*
                 Intent intent = new Intent(context, SearchHandlerActivity.class);
                 intent.putExtra("cardsearch", false);
-                startActivity(intent);
+                startActivity(intent);*/
             }
         });
     }

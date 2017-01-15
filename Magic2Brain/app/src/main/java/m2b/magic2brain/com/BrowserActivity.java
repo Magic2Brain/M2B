@@ -72,7 +72,7 @@ public class BrowserActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(currentContext, DeckDisplayActivity.class);
-                intent.putExtra("code", finalD[position].getCode()+".json");
+                intent.putExtra("code", finalD[position].getCode());
                 intent.putExtra("name", finalD[position].getName());
                 startActivity(intent);
             }
