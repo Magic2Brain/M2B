@@ -198,7 +198,7 @@ public class QueryActivity extends AppCompatActivity {
                         if(!skipped){hideImgCorr();}
                         showNextPic();
                     }
-                }, 1000);
+                }, 800);
             }
         } else {
            wrongAnswer();
@@ -215,7 +215,7 @@ public class QueryActivity extends AppCompatActivity {
                 public void run() {
                     checkAnswer(wrongGuessed.get(indexCard).getName());
                 }
-            }, 1000);
+            }, 600);
         }
     }
 
@@ -239,12 +239,12 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void hideHider(){ // Shows the name of the card fadingly
-        hiding.animate().alpha(0).setDuration(1000).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
+        hiding.animate().alpha(0).setDuration(600).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
             public void run() {hiding.animate().alpha(0).setDuration(1000).setInterpolator(new AccelerateInterpolator()).start();}}).start();
     }
 
     public void showHider(){ // Hides the name of the card fadingly
-        hiding.animate().alpha(1).setDuration(1000).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
+        hiding.animate().alpha(1).setDuration(600).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
             public void run() {hiding.animate().alpha(1).setDuration(100).setInterpolator(new AccelerateInterpolator()).start();}}).start();
     }
 
