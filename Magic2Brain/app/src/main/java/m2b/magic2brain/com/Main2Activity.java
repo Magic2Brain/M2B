@@ -185,12 +185,12 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             sendIntent.setType("text/plain");
             startActivity(Intent.createChooser(sendIntent, getResources().getText(R.string.send_to)));
 
-        } else if (id == R.id.nav_settings) {
+        } /*else if (id == R.id.nav_settings) {
             Intent intent = new Intent(this, SettingsActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.fadeout, R.anim.fadein);
 
-        }
+        }*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

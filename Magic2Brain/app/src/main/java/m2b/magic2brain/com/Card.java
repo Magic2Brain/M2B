@@ -13,6 +13,10 @@ public class Card implements Serializable{
     public Card(int multiverseid, String name){
         setMultiverseid(multiverseid);
         setName(name);
+        type = "UNKOWN";
+        flavor = "UNKOWN";
+        text = "UNKOWN";
+        manacost = "NA";
     }
 
     public Card(String name, String flavor, String text, String type, String manacost){

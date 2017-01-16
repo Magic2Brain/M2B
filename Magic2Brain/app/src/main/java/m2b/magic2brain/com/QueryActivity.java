@@ -51,8 +51,11 @@ public class QueryActivity extends AppCompatActivity {
     private boolean queryLand = true; // should we really query lands?
     private boolean skipped = false; // this is to store if the user has skipped or not
     private ArrayList<String> recentlyLearned; // this is to save the deckname if a new set is learned
+    private int Mode; // the query mode
+    private ArrayList<Button> choices;
 
     protected void onCreate(Bundle savedInstanceState) {
+        Mode = 1;
         // Build UI
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         super.onCreate(savedInstanceState);
@@ -62,17 +65,19 @@ public class QueryActivity extends AppCompatActivity {
         buildMenu();
         // Hide the status bar.
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Prepare Query
+        // Get some informations
         Intent i = getIntent();
         Deck qur = (Deck) i.getSerializableExtra("Set");
         deckName = qur.getName();
         String code = qur.getCode();
         if(deckName == null){deckName="DEFAULT";}
         setTitle(deckName);
+        //Add set to recent learned
         if(!loadRecent()){recentlyLearned = new ArrayList<>();}
-        if(!recentlyLearned.contains(code)){recentlyLearned.add(code);} //TODO: CODE DOESNT WORK. DECKNAME DOES. WHY THE FUCK?
-        if(recentlyLearned.size() == 2){recentlyLearned.remove(0);}
+        if(!recentlyLearned.contains(code)){recentlyLearned.add(code);}
+        if(recentlyLearned.size() == 10){recentlyLearned.remove(0);}
         saveRecent();
+        //load set
         set = qur.getSet();
         if(!loadProgress()) { //First we try to load the progress. If this fails, we simply start over
             wrongGuessed = (ArrayList) set.clone(); //Lets assume he guessed everything wrong and remove the card of this Array when he guesses it right
@@ -80,7 +85,8 @@ public class QueryActivity extends AppCompatActivity {
             indexCard = 0;
         }
         showFirstPic(); //Start the query
-        if(deckName.contains("DEFAULT")){restartAll();}
+        if(deckName.contains("DEFAULT")||deckName.contains("Favorites")){restartAll();}
+        if(Mode == 1){updateChoices();}
     }
 
     protected void onPause(){
@@ -159,7 +165,6 @@ public class QueryActivity extends AppCompatActivity {
 
     public void showNextPic(){
         updateScore();
-        skipped = false;
         showHider();
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -168,6 +173,7 @@ public class QueryActivity extends AppCompatActivity {
                 firstGuess = true;
                 showPic(wrongGuessed.get(indexCard).getMultiverseid());
                 hiding.bringToFront();
+                skipped = false;
             }
         }, 800);
     }
@@ -196,7 +202,7 @@ public class QueryActivity extends AppCompatActivity {
                         if(!skipped){hideImgCorr();}
                         showNextPic();
                     }
-                }, 1000);
+                }, 800);
             }
         } else {
            wrongAnswer();
@@ -204,15 +210,17 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void skip(){
-        skipped = true;
-        wrongAnswer();
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                checkAnswer(wrongGuessed.get(indexCard).getName());
-            }
-        }, 1000);
+        if(!skipped) {
+            skipped = true;
+            wrongAnswer();
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    checkAnswer(wrongGuessed.get(indexCard).getName());
+                }
+            }, 600);
+        }
     }
 
     public void wrongAnswer(){
@@ -235,12 +243,12 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void hideHider(){ // Shows the name of the card fadingly
-        hiding.animate().alpha(0).setDuration(1000).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
+        hiding.animate().alpha(0).setDuration(600).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
             public void run() {hiding.animate().alpha(0).setDuration(1000).setInterpolator(new AccelerateInterpolator()).start();}}).start();
     }
 
     public void showHider(){ // Hides the name of the card fadingly
-        hiding.animate().alpha(1).setDuration(1000).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
+        hiding.animate().alpha(1).setDuration(600).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
             public void run() {hiding.animate().alpha(1).setDuration(100).setInterpolator(new AccelerateInterpolator()).start();}}).start();
     }
 
@@ -263,26 +271,39 @@ public class QueryActivity extends AppCompatActivity {
         int scrWidth  = getWindowManager().getDefaultDisplay().getWidth();
         int scrHeight = getWindowManager().getDefaultDisplay().getHeight();
         RelativeLayout lyt = (RelativeLayout) findViewById(R.id.query_absolute); // Get the View of the XML
-        lyt.removeAllViews(); //Clear the Board
         RelativeLayout.LayoutParams params;
-
-        params = new RelativeLayout.LayoutParams((int)(0.55*scrWidth),(int)(0.03*scrHeight));
-        params.leftMargin = (scrWidth/2 - (int)(0.55*scrWidth)/2); // X-Position
-        params.topMargin = (int)(0.07*scrHeight); // Y-Position
-        lyt.addView(hiding,params);
+        lyt.removeAllViews(); //Clear the Board
 
         imgv  = new ImageView(this); // Create new Imageview
         params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.5*scrHeight))/*Height*/;
         params.leftMargin = 0; // X-Position
-        params.topMargin = (int)(0.05*scrHeight); // Y-Position
+        params.topMargin = (int)(0.02*scrHeight); // Y-Position
         lyt.addView(imgv, params); // add it to the View
 
         imgCorr = new ImageView(this); // Create new Imageview
         hideImgCorr();
         params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.5*scrHeight))/*Height*/;
         params.leftMargin = 0; // X-Position
-        params.topMargin = (int)(0.05*scrHeight); // Y-Position
+        params.topMargin = (int)(0.02*scrHeight); // Y-Position
         lyt.addView(imgCorr, params); // add it to the View
+
+        switch(Mode){
+            case 0: buildMode0();
+                break;
+            case 1: buildMode1();
+        }
+      }
+
+    public void buildMode0(){
+        int scrWidth  = getWindowManager().getDefaultDisplay().getWidth();
+        int scrHeight = getWindowManager().getDefaultDisplay().getHeight();
+        RelativeLayout lyt = (RelativeLayout) findViewById(R.id.query_absolute); // Get the View of the XML
+        RelativeLayout.LayoutParams params;
+
+        params = new RelativeLayout.LayoutParams((int)(0.55*scrWidth),(int)(0.03*scrHeight));
+        params.leftMargin = (scrWidth/2 - (int)(0.55*scrWidth)/2); // X-Position
+        params.topMargin = (int)(0.07*scrHeight); // Y-Position
+        lyt.addView(hiding,params);
 
         // Add EditText like Imageview
         final EditText inputtxt = new EditText(this);
@@ -344,7 +365,105 @@ public class QueryActivity extends AppCompatActivity {
         params.leftMargin = 0; // X-Position
         params.topMargin = (int)(0.78*scrHeight); // Y-Position
         lyt.addView(score, params); // add it to the View
-      }
+    }
+
+    public void buildMode1(){
+        int scrWidth  = getWindowManager().getDefaultDisplay().getWidth();
+        int scrHeight = getWindowManager().getDefaultDisplay().getHeight();
+        RelativeLayout lyt = (RelativeLayout) findViewById(R.id.query_absolute); // Get the View of the XML
+        RelativeLayout.LayoutParams params;
+
+        /*params = new RelativeLayout.LayoutParams((int)(0.55*scrWidth),(int)(0.15*scrHeight));
+        params.leftMargin = (scrWidth/2 - (int)(0.55*scrWidth)/2); // X-Position
+        params.topMargin = (int)(0.36*scrHeight); // Y-Position
+        lyt.addView(hiding,params);*/
+
+        Button choice0 = new Button(this);
+        choice0.setText("choice0");
+        choice0.setTextColor(Color.WHITE);
+        choice0.getBackground().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.MULTIPLY);
+        params = new RelativeLayout.LayoutParams((int)(0.45*scrWidth), (int)(0.16*scrHeight));
+        params.leftMargin = (int)(0.05*scrWidth);
+        params.topMargin = (int)(0.55*scrHeight);
+        lyt.addView(choice0, params);
+        choice0.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                onClickChoice(0);
+            }
+        });
+
+        Button choice1 = new Button(this);
+        choice1.setText("choice1");
+        choice1.setTextColor(Color.WHITE);
+        choice1.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
+        params = new RelativeLayout.LayoutParams((int)(0.45*scrWidth), (int)(0.16*scrHeight));
+        params.leftMargin = (int)(0.50*scrWidth);
+        params.topMargin = (int)(0.55*scrHeight);
+        lyt.addView(choice1, params);
+        choice1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                onClickChoice(1);
+            }
+        });
+
+        Button choice2 = new Button(this);
+        choice2.setText("choice2");
+        choice2.setTextColor(Color.WHITE);
+        choice2.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
+        params = new RelativeLayout.LayoutParams((int)(0.45*scrWidth), (int)(0.16*scrHeight));
+        params.leftMargin = (int)(0.05*scrWidth);
+        params.topMargin = (int)(0.71*scrHeight);
+        lyt.addView(choice2, params);
+        choice2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                onClickChoice(2);
+            }
+        });
+
+        Button choice3 = new Button(this);
+        choice3.setText("choice3");
+        choice3.setTextColor(Color.WHITE);
+        choice3.getBackground().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.MULTIPLY);
+        params = new RelativeLayout.LayoutParams((int)(0.45*scrWidth), (int)(0.16*scrHeight));
+        params.leftMargin = (int)(0.50*scrWidth);
+        params.topMargin = (int)(0.71*scrHeight);
+        lyt.addView(choice3, params);
+        choice1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                onClickChoice(3);
+            }
+        });
+
+        score = new TextView(this); // Create new Textview
+        score.setGravity(Gravity.CENTER);
+        score.setTextSize(0);
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.1*scrHeight))/*Height*/;
+        params.leftMargin = 0; // X-Position
+        params.topMargin = (int)(0.78*scrHeight); // Y-Position
+        lyt.addView(score, params); // add it to the View
+
+        choices = new ArrayList<>();
+        choices.add(choice0);
+        choices.add(choice1);
+        choices.add(choice2);
+        choices.add(choice3);
+    }
+
+    public void onClickChoice(int nr){
+
+    }
+
+    public void updateChoices(){
+        int rightOne = (int)(Math.random()*4);
+        for(int i = 0; i < choices.size(); i++){
+            if(i == rightOne){
+                choices.get(i).setText(wrongGuessed.get(indexCard).getText());
+            } else {
+                choices.get(i).setText(set.get((int)(Math.random()*set.size())).getText());
+            }
+        }
+
+    }
 
     public void updateScore(){
         score.setText( (set.size()-wrongGuessed.size()) + " / " + indexCard +" / " + (wrongGuessed.size()-indexCard));
@@ -445,20 +564,27 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void restartAll(){
-        wrongGuessed.clear();
-        if(queryLand){
-            wrongGuessed = (ArrayList)set.clone();
-        } else {
-            for(Card c : set){
-                if(!c.getType().contains("Land")){
-                    wrongGuessed.add(c);
-                }
-            }
+        wrongGuessed = (ArrayList)set.clone();
+        if(!queryLand){
+           removeLands();
         }
         shuffleWrongs();
         buildMenu();
         indexCard = 0;
         showFirstPic();
+    }
+
+    public void removeLands(){
+        ArrayList<Card> remove = new ArrayList<>();
+        for(Card c : wrongGuessed){
+            if(c.getType().contains("Land")){
+                remove.add(c);
+            }
+        }
+        for(Card c : remove){
+            wrongGuessed.remove(c);
+        }
+
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -473,7 +599,7 @@ public class QueryActivity extends AppCompatActivity {
             case R.id.query_lands:
                 queryLand = !queryLand;
                 item.setChecked(queryLand);
-                restartAll();
+                if(queryLand){restartAll();} else {removeLands(); updateScore();}
                 break;
         }
         return true;
