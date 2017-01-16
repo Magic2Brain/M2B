@@ -169,6 +169,7 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
             }
             d.setSet(new ArrayList<Card>(Arrays.asList(c)));
             d.setName("Commander 2016");
+            d.setCode("C16");
             Intent i = new Intent(this, QueryActivity.class);
             i.putExtra("Set",d); // Just for testing
             startActivity(i);

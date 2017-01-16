@@ -47,7 +47,7 @@ public class DeckDisplayActivity extends AppCompatActivity {
         c[0] = new Card("notaname", "notaflavor", "notatext", "notatype", "0");
 
         try {
-            c = dc.getDeck(deckcode, this);
+            c = dc.getDeck(deckcode+".json", this);
         } catch (JSONException e) {
             e.printStackTrace();
         } catch (IOException e) {

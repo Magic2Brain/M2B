@@ -9,6 +9,9 @@ import org.json.JSONObject;
 
 import java.io.*;
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 import m2b.magic2brain.com.magic2brain.R;
 
@@ -73,7 +76,6 @@ public class DeckAssetLoader {
 
         Deck[] darray = parseDeckJSON(jsonString);
 
-        //TODO implement decklist loader
         return darray;
     }
 
@@ -191,14 +193,18 @@ public class DeckAssetLoader {
     }
 
     private Card[] parseAllCardJSON(String json) throws JSONException {
-        JSONArray cards = new JSONArray(json);
-        Card carray[] = new Card[cards.length()];
+        JSONObject cards = new JSONObject(json);
+        ArrayList<Card> clist = new ArrayList<Card>();
 
-        for(int i = 0; i < cards.length(); i++){
-            JSONObject card = cards.getJSONObject(i);
+        Iterator keys = cards.keys();
+        while (keys.hasNext()) {
+            Object key = keys.next();
+            JSONObject card = cards.getJSONObject((String) key);
+
+            String card_name = (String) key;
             Card c = new Card();
-            String mvid_as_string = card.getString("multiverseid");
-            String card_name = card.getString("name");
+            //String mvid_as_string = card.getString("multiverseid");
+            String mvid_as_string = "1";
 
             String card_flavor = "";
             String card_text = "";
@@ -227,7 +233,12 @@ public class DeckAssetLoader {
             c.setType(card_type);
             c.setManaCost(card_cost);
 
-            carray[i] = c;
+            clist.add(c);
+        }
+
+        Card[] carray = new Card[clist.size()];
+        for (int i = 0; i < clist.size(); i++) {
+            carray[i] = clist.get(i);
         }
 
         return carray;
