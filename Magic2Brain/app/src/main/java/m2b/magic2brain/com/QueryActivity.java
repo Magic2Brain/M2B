@@ -160,6 +160,7 @@ public class QueryActivity extends AppCompatActivity {
         firstGuess = true;
         showPic(wrongGuessed.get(indexCard).getMultiverseid());
         hiding.bringToFront();
+        imgCorr.bringToFront();
         if(Mode == 1){updateChoices();}
     }
 
@@ -173,6 +174,7 @@ public class QueryActivity extends AppCompatActivity {
                 firstGuess = true;
                 showPic(wrongGuessed.get(indexCard).getMultiverseid());
                 hiding.bringToFront();
+                imgCorr.bringToFront();
                 skipped = false;
             }
         }, 800);
@@ -303,7 +305,7 @@ public class QueryActivity extends AppCompatActivity {
 
         params = new RelativeLayout.LayoutParams((int)(0.55*scrWidth),(int)(0.03*scrHeight));
         params.leftMargin = (scrWidth/2 - (int)(0.55*scrWidth)/2); // X-Position
-        params.topMargin = (int)(0.07*scrHeight); // Y-Position
+        params.topMargin = (int)(0.045*scrHeight); // Y-Position
         lyt.addView(hiding,params);
 
         // Add EditText like Imageview
@@ -632,6 +634,10 @@ public class QueryActivity extends AppCompatActivity {
                 queryLand = !queryLand;
                 item.setChecked(queryLand);
                 if(queryLand){restartAll();} else {removeLands(); updateScore();}
+                break;
+            case R.id.query_revers:
+                if(Mode == 1){Mode = 0;} else {Mode = 1;}
+                restartAll();
                 break;
         }
         return true;

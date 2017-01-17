@@ -8,9 +8,14 @@
         app:showAsAction="never" />
 
     <item android:id="@+id/query_lands"
-        android:orderInCategory="99"
+        android:orderInCategory="98"
         android:title="Query Lands"
         android:checkable="true"
         android:checked="true"/>
+
+    <item android:id="@+id/query_revers"
+        android:orderInCategory="99"
+        android:title="Reverse query"
+        app:showAsAction="never"/>
 
 </menu>
