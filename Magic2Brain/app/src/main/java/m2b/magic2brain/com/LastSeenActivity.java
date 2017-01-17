@@ -6,25 +6,16 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
-import org.json.JSONException;
-
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Arrays;
-
 import m2b.magic2brain.com.magic2brain.R;
 
 public class LastSeenActivity extends AppCompatActivity {
@@ -72,7 +63,7 @@ public class LastSeenActivity extends AppCompatActivity {
     private boolean loadRecent(){
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         Gson gson = new Gson();
-        String json = sharedPrefs.getString("query_recent",null);
+        String json = sharedPrefs.getString("query_recent3",null);
         Type type = new TypeToken<ArrayList<String>>(){}.getType();
         ArrayList<String> aL = gson.fromJson(json, type);
         if(aL == null){return false;}

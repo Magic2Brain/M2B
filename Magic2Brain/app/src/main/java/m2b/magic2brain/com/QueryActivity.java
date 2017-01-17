@@ -96,7 +96,7 @@ public class QueryActivity extends AppCompatActivity {
     public boolean loadRecent(){
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         Gson gson = new Gson();
-        String json = sharedPrefs.getString("query_recent",null);
+        String json = sharedPrefs.getString("query_recent3",null);
         Type type = new TypeToken<ArrayList<String>>(){}.getType();
         ArrayList<String> aL = gson.fromJson(json, type);
         if(aL == null){return false;}
@@ -109,7 +109,7 @@ public class QueryActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPrefs.edit();
         Gson gson = new Gson();
         String json = gson.toJson(recentlyLearned);
-        editor.putString("query_recent", json);
+        editor.putString("query_recent3", json);
         editor.commit();
     }
 
