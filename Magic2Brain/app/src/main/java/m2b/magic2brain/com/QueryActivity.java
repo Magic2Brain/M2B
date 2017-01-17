@@ -86,7 +86,6 @@ public class QueryActivity extends AppCompatActivity {
         }
         showFirstPic(); //Start the query
         if(deckName.contains("DEFAULT")||deckName.contains("Favorites")){restartAll();}
-        if(Mode == 1){updateChoices();}
     }
 
     protected void onPause(){
@@ -97,7 +96,7 @@ public class QueryActivity extends AppCompatActivity {
     public boolean loadRecent(){
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         Gson gson = new Gson();
-        String json = sharedPrefs.getString("query_recent",null);
+        String json = sharedPrefs.getString("query_recent3",null);
         Type type = new TypeToken<ArrayList<String>>(){}.getType();
         ArrayList<String> aL = gson.fromJson(json, type);
         if(aL == null){return false;}
@@ -110,7 +109,7 @@ public class QueryActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPrefs.edit();
         Gson gson = new Gson();
         String json = gson.toJson(recentlyLearned);
-        editor.putString("query_recent", json);
+        editor.putString("query_recent3", json);
         editor.commit();
     }
 
@@ -161,6 +160,8 @@ public class QueryActivity extends AppCompatActivity {
         firstGuess = true;
         showPic(wrongGuessed.get(indexCard).getMultiverseid());
         hiding.bringToFront();
+        imgCorr.bringToFront();
+        if(Mode == 1){updateChoices();}
     }
 
     public void showNextPic(){
@@ -173,9 +174,11 @@ public class QueryActivity extends AppCompatActivity {
                 firstGuess = true;
                 showPic(wrongGuessed.get(indexCard).getMultiverseid());
                 hiding.bringToFront();
+                imgCorr.bringToFront();
                 skipped = false;
             }
         }, 800);
+        if(Mode == 1){updateChoices();}
     }
 
     public void checkAnswer(String txt){ //TODO: Optional: Ask other things (like Mana-Cost etc.)
@@ -302,7 +305,7 @@ public class QueryActivity extends AppCompatActivity {
 
         params = new RelativeLayout.LayoutParams((int)(0.55*scrWidth),(int)(0.03*scrHeight));
         params.leftMargin = (scrWidth/2 - (int)(0.55*scrWidth)/2); // X-Position
-        params.topMargin = (int)(0.07*scrHeight); // Y-Position
+        params.topMargin = (int)(0.045*scrHeight); // Y-Position
         lyt.addView(hiding,params);
 
         // Add EditText like Imageview
@@ -373,18 +376,19 @@ public class QueryActivity extends AppCompatActivity {
         RelativeLayout lyt = (RelativeLayout) findViewById(R.id.query_absolute); // Get the View of the XML
         RelativeLayout.LayoutParams params;
 
-        /*params = new RelativeLayout.LayoutParams((int)(0.55*scrWidth),(int)(0.15*scrHeight));
+        params = new RelativeLayout.LayoutParams((int)(0.55*scrWidth),(int)(0.16*scrHeight));
         params.leftMargin = (scrWidth/2 - (int)(0.55*scrWidth)/2); // X-Position
-        params.topMargin = (int)(0.36*scrHeight); // Y-Position
-        lyt.addView(hiding,params);*/
+        params.topMargin = (int)(0.335*scrHeight); // Y-Position
+        lyt.addView(hiding,params);
 
         Button choice0 = new Button(this);
         choice0.setText("choice0");
+        choice0.setTextSize(8);
         choice0.setTextColor(Color.WHITE);
         choice0.getBackground().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.MULTIPLY);
-        params = new RelativeLayout.LayoutParams((int)(0.45*scrWidth), (int)(0.16*scrHeight));
-        params.leftMargin = (int)(0.05*scrWidth);
-        params.topMargin = (int)(0.55*scrHeight);
+        params = new RelativeLayout.LayoutParams((int)(0.48*scrWidth), (int)(0.19*scrHeight));
+        params.leftMargin = (int)(0.02*scrWidth);
+        params.topMargin = (int)(0.53*scrHeight);
         lyt.addView(choice0, params);
         choice0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -394,11 +398,12 @@ public class QueryActivity extends AppCompatActivity {
 
         Button choice1 = new Button(this);
         choice1.setText("choice1");
+        choice1.setTextSize(8);
         choice1.setTextColor(Color.WHITE);
         choice1.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
-        params = new RelativeLayout.LayoutParams((int)(0.45*scrWidth), (int)(0.16*scrHeight));
+        params = new RelativeLayout.LayoutParams((int)(0.48*scrWidth), (int)(0.19*scrHeight));
         params.leftMargin = (int)(0.50*scrWidth);
-        params.topMargin = (int)(0.55*scrHeight);
+        params.topMargin = (int)(0.53*scrHeight);
         lyt.addView(choice1, params);
         choice1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -408,10 +413,11 @@ public class QueryActivity extends AppCompatActivity {
 
         Button choice2 = new Button(this);
         choice2.setText("choice2");
+        choice2.setTextSize(8);
         choice2.setTextColor(Color.WHITE);
         choice2.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
-        params = new RelativeLayout.LayoutParams((int)(0.45*scrWidth), (int)(0.16*scrHeight));
-        params.leftMargin = (int)(0.05*scrWidth);
+        params = new RelativeLayout.LayoutParams((int)(0.48*scrWidth), (int)(0.19*scrHeight));
+        params.leftMargin = (int)(0.02*scrWidth);
         params.topMargin = (int)(0.71*scrHeight);
         lyt.addView(choice2, params);
         choice2.setOnClickListener(new View.OnClickListener() {
@@ -422,13 +428,14 @@ public class QueryActivity extends AppCompatActivity {
 
         Button choice3 = new Button(this);
         choice3.setText("choice3");
+        choice3.setTextSize(8);
         choice3.setTextColor(Color.WHITE);
         choice3.getBackground().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.MULTIPLY);
-        params = new RelativeLayout.LayoutParams((int)(0.45*scrWidth), (int)(0.16*scrHeight));
+        params = new RelativeLayout.LayoutParams((int)(0.48*scrWidth), (int)(0.19*scrHeight));
         params.leftMargin = (int)(0.50*scrWidth);
         params.topMargin = (int)(0.71*scrHeight);
         lyt.addView(choice3, params);
-        choice1.setOnClickListener(new View.OnClickListener() {
+        choice3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 onClickChoice(3);
             }
@@ -450,7 +457,34 @@ public class QueryActivity extends AppCompatActivity {
     }
 
     public void onClickChoice(int nr){
-
+        if(choices.get(nr).getText() == wrongGuessed.get(indexCard).getText()) {
+            if(firstGuess){wrongGuessed.remove(indexCard);} //if he guessed it, we remove it.
+            else {indexCard++;} // else we continue with the next card
+            if(indexCard == wrongGuessed.size()){ //If this true he's through the set
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        setDone();
+                    }
+                }, 1000);
+            } else {
+                if(!skipped){
+                    imgCorr.setImageResource(R.drawable.correct_answer);
+                    showImgCorr();
+                }
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if(!skipped){hideImgCorr();}
+                        showNextPic();
+                    }
+                }, 800);
+            }
+        } else {
+            wrongAnswer();
+        }
     }
 
     public void updateChoices(){
@@ -600,6 +634,10 @@ public class QueryActivity extends AppCompatActivity {
                 queryLand = !queryLand;
                 item.setChecked(queryLand);
                 if(queryLand){restartAll();} else {removeLands(); updateScore();}
+                break;
+            case R.id.query_revers:
+                if(Mode == 1){Mode = 0;} else {Mode = 1;}
+                restartAll();
                 break;
         }
         return true;
