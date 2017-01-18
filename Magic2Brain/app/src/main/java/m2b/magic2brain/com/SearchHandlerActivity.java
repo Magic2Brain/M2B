@@ -19,6 +19,9 @@ import android.widget.ListView;
 import org.json.JSONException;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.SortedMap;
@@ -54,13 +57,16 @@ public class SearchHandlerActivity extends AppCompatActivity {
         if(cardsearch){
             cardarray[0] = new Card();
             cardarray[0].setName("error");
+
             try {
-                cardarray = dc.getAllCards(this);
+                deckarray = dc.getDeckList(this);
             } catch (IOException e) {
                 e.printStackTrace();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+
+            cardarray = buildCardArray(deckarray);
 
             names = new String[cardarray.length];
 
@@ -87,6 +93,7 @@ public class SearchHandlerActivity extends AppCompatActivity {
         //finalizing variables for further use
         final String[] cnames = names;
         final Deck[] cdeckarray = deckarray;
+        final Card[] ccardarray = cardarray;
 
 
 
@@ -112,8 +119,10 @@ public class SearchHandlerActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(cardsearch){
+                    String cardname = adapter.getItem(position).toString();
+
                     Intent intent = new Intent(context, CardBrowserActivity.class);
-                    intent.putExtra("currentCard", cnames[position]);
+                    intent.putExtra("currentCard", searchforcard(cardname, ccardarray));
                     startActivity(intent);
                 }
                 else{
@@ -127,6 +136,48 @@ public class SearchHandlerActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private Card[] buildCardArray(Deck[] deckarray){
+
+        ArrayList<Card> list = new ArrayList<>();
+        DeckAssetLoader dc = new DeckAssetLoader();
+
+        for(int i = 0; i < deckarray.length; i++){
+            //load current deck and append it to list
+            Card[] c = new Card[1];
+            c[0] = new Card();
+            c[0].setName("error");
+            try {
+                c = dc.getDeck(deckarray[i].getCode()+".json", this);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            if(c[0].getName().equals("error")){
+                System.err.println("error ocurred at "+deckarray[i].getCode()+", please update your database");
+            }
+            else{
+                list.addAll(Arrays.asList(c));
+            }
+        }
+
+        return list.toArray(new Card[list.size()]);
+    }
+
+    private Card searchforcard(String name, Card[] cardarray){
+
+        Card rc = new Card();
+
+        for(int i = 0; i < cardarray.length; i++){
+            if(cardarray[i].getName().equals(name)){
+                rc = cardarray[i];
+                break;
+            }
+        }
+        return rc;
     }
 
     private String searchfordeck(String name, Deck[] darray){

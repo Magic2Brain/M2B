@@ -28,6 +28,7 @@ public class SearchActivity extends AppCompatActivity {
         cards.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+                Snackbar.make(view, "Compiling Deck! this may take some time.", Snackbar.LENGTH_LONG).setAction("Action", null).show();
                 Intent intent = new Intent(context, SearchHandlerActivity.class);
                 intent.putExtra("cardsearch", true);
                 startActivity(intent);
@@ -37,11 +38,9 @@ public class SearchActivity extends AppCompatActivity {
         decks.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Under Construction!", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-                /*
                 Intent intent = new Intent(context, SearchHandlerActivity.class);
                 intent.putExtra("cardsearch", false);
-                startActivity(intent);*/
+                startActivity(intent);
             }
         });
     }
