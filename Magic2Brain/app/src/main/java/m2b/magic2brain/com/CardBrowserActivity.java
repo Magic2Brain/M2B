@@ -185,8 +185,8 @@ public class CardBrowserActivity extends AppCompatActivity{
     private void showPic(int MultiID){
         Picasso.with(this)
                 .load("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + MultiID + "&type=card")
-                .placeholder(R.drawable.ic_hourglass_empty)
-                .error(R.drawable.ic_error)
+                .placeholder(R.drawable.loading_image)
+                .error(R.drawable.image_not_found)
                 .into(cImage);
     }
 
