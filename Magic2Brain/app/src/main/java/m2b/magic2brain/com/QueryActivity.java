@@ -51,18 +51,15 @@ public class QueryActivity extends AppCompatActivity {
     private boolean queryLand = true; // should we really query lands?
     private boolean skipped = false; // this is to store if the user has skipped or not
     private ArrayList<String> recentlyLearned; // this is to save the deckname if a new set is learned
+    private ArrayList<String> recentlyLearnedNames; // the name of the sets
     private int Mode; // the query mode
     private ArrayList<Button> choices;
 
     protected void onCreate(Bundle savedInstanceState) {
-        Mode = 1;
-        // Build UI
+        // Standard stuff
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_query);
-        hiding = (Toolbar) findViewById(R.id.toolbar_query);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        buildMenu();
         // Hide the status bar.
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // Get some informations
@@ -73,9 +70,9 @@ public class QueryActivity extends AppCompatActivity {
         if(deckName == null){deckName="DEFAULT";}
         setTitle(deckName);
         //Add set to recent learned
-        if(!loadRecent()){recentlyLearned = new ArrayList<>();}
-        if(!recentlyLearned.contains(code)){recentlyLearned.add(code);}
-        if(recentlyLearned.size() == 10){recentlyLearned.remove(0);}
+        if(!loadRecent()){recentlyLearned = new ArrayList<>();recentlyLearnedNames = new ArrayList<>();}
+        if(!recentlyLearned.contains(code)){recentlyLearned.add(code);recentlyLearnedNames.add(deckName);}
+        if(recentlyLearned.size() == 10){recentlyLearned.remove(0);recentlyLearnedNames.remove(0);}
         saveRecent();
         //load set
         set = qur.getSet();
@@ -84,7 +81,15 @@ public class QueryActivity extends AppCompatActivity {
             shuffleWrongs(); //Shuffle it a bit (better learn-effect)
             indexCard = 0;
         }
-        showFirstPic(); //Start the query
+        //Set Mode
+        Mode = 1;
+        if(set.size() < 4){Mode = 0;}
+        // Build UI
+        hiding = (Toolbar) findViewById(R.id.toolbar_query);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        buildMenu();
+        //Start the query
+        showFirstPic();
         if(deckName.contains("DEFAULT")||deckName.contains("Favorites")){restartAll();}
     }
 
@@ -96,11 +101,14 @@ public class QueryActivity extends AppCompatActivity {
     public boolean loadRecent(){
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         Gson gson = new Gson();
-        String json = sharedPrefs.getString("query_recent3",null);
+        String json = sharedPrefs.getString("query_recent4",null);
+        String json2 = sharedPrefs.getString("query_recent_names",null);
         Type type = new TypeToken<ArrayList<String>>(){}.getType();
         ArrayList<String> aL = gson.fromJson(json, type);
+        ArrayList<String> aL2 = gson.fromJson(json2, type);
         if(aL == null){return false;}
         recentlyLearned = aL;
+        recentlyLearnedNames = aL2;
         return true;
     }
 
@@ -109,7 +117,9 @@ public class QueryActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPrefs.edit();
         Gson gson = new Gson();
         String json = gson.toJson(recentlyLearned);
-        editor.putString("query_recent3", json);
+        String json2 = gson.toJson(recentlyLearnedNames);
+        editor.putString("query_recent4", json);
+        editor.putString("query_recent_names", json2);
         editor.commit();
     }
 
@@ -378,7 +388,7 @@ public class QueryActivity extends AppCompatActivity {
 
         params = new RelativeLayout.LayoutParams((int)(0.55*scrWidth),(int)(0.16*scrHeight));
         params.leftMargin = (scrWidth/2 - (int)(0.55*scrWidth)/2); // X-Position
-        params.topMargin = (int)(0.335*scrHeight); // Y-Position
+        params.topMargin = (int)(0.32*scrHeight); // Y-Position
         lyt.addView(hiding,params);
 
         Button choice0 = new Button(this);
@@ -497,6 +507,11 @@ public class QueryActivity extends AppCompatActivity {
             }
         }
 
+        for(int i = 0; i < choices.size()-1; i++){
+            if(choices.get(i).getText() == choices.get(i+1).getText()){
+                choices.get(i+1).setText(set.get((int)(Math.random()*set.size())).getText());
+            }
+        }
     }
 
     public void updateScore(){
@@ -636,6 +651,7 @@ public class QueryActivity extends AppCompatActivity {
                 if(queryLand){restartAll();} else {removeLands(); updateScore();}
                 break;
             case R.id.query_revers:
+                if(set.size() < 4){break;}
                 if(Mode == 1){Mode = 0;} else {Mode = 1;}
                 restartAll();
                 break;
