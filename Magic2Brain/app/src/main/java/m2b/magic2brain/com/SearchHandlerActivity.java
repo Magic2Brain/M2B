@@ -26,7 +26,6 @@ public class SearchHandlerActivity extends AppCompatActivity {
         final Context context = this;
         Intent inte = getIntent();
         final Boolean cardsearch = inte.getBooleanExtra("cardsearch", true);
-        DeckAssetLoader dc = new DeckAssetLoader();
 
         final EditText search_field = (EditText) findViewById(R.id.search_text);
         if (cardsearch) {
@@ -38,30 +37,17 @@ public class SearchHandlerActivity extends AppCompatActivity {
 
         String[] names = new String[1];
         names[0] = getString(R.string.error);
-        Deck[] deckarray = new Deck[1];
+        Deck[] deckarray = DeckAssetLoader.getDeckList(this);
 
 
         if (cardsearch) {
             cardarray = MainActivity.cardarray;
-
-            try {
-                deckarray = dc.getDeckList(this);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
             names = new String[cardarray.length];
 
             for (int i = 0; i < cardarray.length; i++) {
                 names[i] = cardarray[i].getName();
             }
         } else {
-            try {
-                deckarray = dc.getDeckList(this);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
             names = new String[deckarray.length];
 
             for (int i = 0; i < deckarray.length; i++) {

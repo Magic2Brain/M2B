@@ -99,7 +99,6 @@ public class CardBrowserActivity extends AppCompatActivity {
                     Snackbar.make(view, R.string.add_fav, Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
-                //onCreate(savedInstanceState);
             }
         });
     }

@@ -2,6 +2,7 @@ package m2b.magic2brain.com;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by roman on 10.12.2016.
@@ -71,4 +72,5 @@ public class Deck implements Serializable /* We need to do this, so we can pass 
         set = al;
     }
 
+    public void setSet(Card[] c){set = new ArrayList<>(Arrays.asList(c));}
 }
