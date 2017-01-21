@@ -18,4 +18,5 @@
     <string name="SearchHandler_hint_1">Cardname</string>
     <string name="SearchHandler_hint_2">Setname</string>
     <string name="error">error</string>
+    <string name="play_store_link">http://play.google.com/store/apps/details?id=m2b.magic2brain.com</string>
 </resources>

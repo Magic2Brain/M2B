@@ -118,19 +118,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
 
         } else if (id == R.id.nav_quick_learn) {
-            Deck d = new Deck(); // Just for testing
-            DeckAssetLoader dc = new DeckAssetLoader();
-            Card[] c = new Card[1];
-            try {
-                c = dc.getDeck("KLD.json", this);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            d.setSet(new ArrayList<Card>(Arrays.asList(c)));
+            Deck d = new Deck();
+            Card[] c = DeckAssetLoader.getDeck("KLD.json",this);
+            d.setSet(c);
             d.setName("Kaladesh");
             d.setCode("KLD");
             Intent i = new Intent(this, QueryActivity.class);
-            i.putExtra("Set", d); // Just for testing
+            i.putExtra("Set", d);
             startActivity(i);
 
         } else if (id == R.id.nav_history) {
@@ -140,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "http://play.google.com/store/apps/details?id=m2b.magic2brain.com");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.play_store_link));
             sendIntent.setType("text/plain");
             startActivity(Intent.createChooser(sendIntent, getResources().getText(R.string.send_to)));
         }
@@ -206,9 +200,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Type type = new TypeToken<Card[]>() {
         }.getType();
         Card[] aL = gson.fromJson(json, type);
-        if (aL == null) {
-            return false;
-        }
+        if (aL == null) {return false;}
         cardarray = aL;
         return true;
     }
@@ -226,25 +218,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private Card[] buildCardArray() {
         ArrayList<Card> list = new ArrayList<>();
-        DeckAssetLoader dc = new DeckAssetLoader();
-        Deck[] deckarray = new Deck[1];
-
-        try {
-            deckarray = dc.getDeckList(this);
-        } catch (Exception e) {
-        }
-
+        Deck[] deckarray = DeckAssetLoader.getDeckList(this);
         for (int i = 0; i < deckarray.length; i++) {
             //load current deck and append it to list
-            Card[] c = new Card[1];
-            c[0] = new Card();
-            c[0].setName("error");
-            try {
-                c = dc.getDeck(deckarray[i].getCode() + ".json", this);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
+            Card[] c = DeckAssetLoader.getDeck(deckarray[i].getCode() + ".json", this);
             if (c[0].getName().equals("error")) {
                 System.err.println("error ocurred at " + deckarray[i].getCode() + ", please update your database");
             } else {
@@ -253,7 +230,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         return list.toArray(new Card[list.size()]);
     }
-
 }
 
 

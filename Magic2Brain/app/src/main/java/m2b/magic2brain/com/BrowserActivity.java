@@ -26,16 +26,7 @@ public class BrowserActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final Context currentContext = this;
-        DeckAssetLoader dc = new DeckAssetLoader();
-
-        Deck d[] = new Deck[1];
-        try {
-            d = dc.getDeckList(this);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Deck d[] = DeckAssetLoader.getDeckList(this);
 
         String[] it = new String[d.length];
         for (int i = 0; i < d.length; i++) {

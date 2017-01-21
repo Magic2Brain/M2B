@@ -29,23 +29,12 @@ public class DeckDisplayActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final Context currentContext = this;
-        DeckAssetLoader dc = new DeckAssetLoader();
         Intent intent = getIntent();
         final String deckcode = intent.getStringExtra("code");
         final String name = intent.getStringExtra("name");
 
         setTitle(name);
-        Card c[] = new Card[1];
-        c[0] = new Card("notaname", "notaflavor", "notatext", "notatype", "0");
-
-        try {
-            c = dc.getDeck(deckcode + ".json", this);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        Card c[] = DeckAssetLoader.getDeck(deckcode + ".json", this);
         final Card[] cCopy = c;
 
         FloatingActionButton fam = (FloatingActionButton) findViewById(R.id.fab_setlearn);
@@ -66,11 +55,11 @@ public class DeckDisplayActivity extends AppCompatActivity {
 
         ListView lv = (ListView) findViewById(R.id.deckdisplay);
 
-        if (c[0].getName().equals("notaname")) {
+        if (c[0] == null) {
             AlertDialog.Builder dlgAlert = new AlertDialog.Builder(this);
             dlgAlert.setMessage("Sadly, this Deck was not Found");
             dlgAlert.setTitle("Error");
-            dlgAlert.setPositiveButton("I unserstand, bill me your server costs",
+            dlgAlert.setPositiveButton("I understand, bill me your server costs",
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             //dismiss the dialog
@@ -82,23 +71,22 @@ public class DeckDisplayActivity extends AppCompatActivity {
 
             lv.setVisibility(View.GONE);
             fam.setVisibility(View.GONE);
+        } else {
+            final String[] listItems = RUtils.getListified(c);
+            final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems);
+            lv.setAdapter(adapter);
+
+            final Card[] finalC = c;
+
+            lv.setOnItemClickListener(new OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent intent = new Intent(currentContext, CardBrowserActivity.class);
+                    intent.putExtra("currentCard", finalC[position]);
+                    startActivity(intent);
+                }
+            });
         }
-
-        final String[] listItems = RUtils.getListified(c);
-        final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems);
-        lv.setAdapter(adapter);
-
-        final Card[] finalC = c;
-
-        lv.setOnItemClickListener(new OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(currentContext, CardBrowserActivity.class);
-                intent.putExtra("currentCard", finalC[position]);
-                startActivity(intent);
-            }
-        });
-
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

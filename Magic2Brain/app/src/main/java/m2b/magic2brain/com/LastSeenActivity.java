@@ -34,7 +34,6 @@ public class LastSeenActivity extends AppCompatActivity {
         if (!loadRecent()) {
             recentlyLearned = new ArrayList<>();
         }
-        DeckAssetLoader dc = new DeckAssetLoader();
         names = new String[recentlyLearned.size()];
         reclearn = new String[recentlyLearned.size()];
         for (int i = 0; i < recentlyLearned.size(); i++) {
@@ -46,7 +45,6 @@ public class LastSeenActivity extends AppCompatActivity {
         ListView lv = (ListView) findViewById(R.id.mListView);
         final ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, names);
         lv.setAdapter(adapter);
-
 
         lv.setOnItemClickListener(new OnItemClickListener() {
             @Override
