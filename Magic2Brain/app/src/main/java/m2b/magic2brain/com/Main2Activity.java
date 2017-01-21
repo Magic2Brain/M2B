@@ -243,29 +243,8 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
 
     public int setRandomCard(){
         int MultiID = 1;
-        String [] list;
-        ArrayList<String> names = new ArrayList<>();
-        try {
-            list = getAssets().list("");
-            for(String f1 : list){
-                names.add(f1);
-            }
-        } catch (Exception e){}
-
-        String randSet = names.get((int)(Math.random()*(names.size()-2)));
-        Deck d = new Deck();
-        DeckAssetLoader dc = new DeckAssetLoader();
-        Card[] c = new Card[1];
-        try {
-            c = dc.getDeck(randSet, this);
-        } catch (Exception e) {}
-        d.setSet(new ArrayList<Card>(Arrays.asList(c)));
-        if(d.getSize() > 0) {
-            Card ca = d.getRandomCard();
-            if(ca != null) {
-                MultiID = ca.getMultiverseid();
-            }
-        }
+        Card c = cardarray[(int)(Math.random()*cardarray.length)];
+        if(c != null){MultiID = c.getMultiverseid();}
         Picasso.with(this)
                 .load("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + MultiID + "&type=card")
                 .placeholder(R.drawable.loading_image)
