@@ -2,7 +2,7 @@ package m2b.magic2brain.com;
 
 import java.io.Serializable;
 
-public class Card implements Serializable{
+public class Card implements Serializable {
     private int multiverseid;
     private String name;
     private String flavor;
@@ -10,7 +10,7 @@ public class Card implements Serializable{
     private String type;
     private String manacost;
 
-    public Card(int multiverseid, String name){
+    public Card(int multiverseid, String name) {
         setMultiverseid(multiverseid);
         setName(name);
         type = "UNKOWN";
@@ -19,7 +19,7 @@ public class Card implements Serializable{
         manacost = "NA";
     }
 
-    public Card(String name, String flavor, String text, String type, String manacost){
+    public Card(String name, String flavor, String text, String type, String manacost) {
         this.type = type;
         this.name = name;
         this.flavor = flavor;
@@ -27,10 +27,7 @@ public class Card implements Serializable{
         this.manacost = manacost;
     }
 
-    public Card(){
-
-    }
-
+    public Card() {}
 
     public int getMultiverseid() {
         return multiverseid;
@@ -48,19 +45,35 @@ public class Card implements Serializable{
         this.name = name;
     }
 
-    public String getFlavor(){ return this.flavor; }
+    public String getFlavor() {
+        return this.flavor;
+    }
 
-    public void setFlavor(String flavor){ this.flavor = flavor; }
+    public void setFlavor(String flavor) {
+        this.flavor = flavor;
+    }
 
-    public String getText(){ return this.text; }
+    public String getText() {
+        return this.text;
+    }
 
-    public void setText(String text){ this.text = text; }
+    public void setText(String text) {
+        this.text = text;
+    }
 
-    public String getType(){ return type; }
+    public String getType() {
+        return type;
+    }
 
-    public void setType(String type){ this.type = type; }
+    public void setType(String type) {
+        this.type = type;
+    }
 
-    public String getManaCost(){ return manacost; }
+    public String getManaCost() {
+        return manacost;
+    }
 
-    public void setManaCost(String type){ this.manacost = type; }
+    public void setManaCost(String type) {
+        this.manacost = type;
+    }
 }

@@ -8,16 +8,7 @@ import java.util.ArrayList;
 
 public final class Favorites {
     public static ArrayList<Card> favorites_mvid;
-
-    public static void init(){
-        favorites_mvid = new ArrayList<Card>();
+    public static void init() {
+        favorites_mvid = new ArrayList<>();
     }
-
-    public static void recast(){
-        ArrayList<Card> temp = favorites_mvid;
-        favorites_mvid = null;
-        favorites_mvid = new ArrayList<Card>();
-        favorites_mvid.addAll(temp);
-    }
-
 }

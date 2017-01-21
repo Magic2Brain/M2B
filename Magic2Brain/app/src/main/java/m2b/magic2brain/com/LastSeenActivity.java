@@ -24,19 +24,20 @@ public class LastSeenActivity extends AppCompatActivity {
     private String[] names;
     private String[] reclearn;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_last_seen);
-        setTitle("Recently Learned");
+        setTitle(getString(R.string.LastSeenActivity_title));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         final Context currentContext = this;
-        if(!loadRecent()){recentlyLearned = new ArrayList<>();}
+        if (!loadRecent()) {
+            recentlyLearned = new ArrayList<>();
+        }
         DeckAssetLoader dc = new DeckAssetLoader();
         names = new String[recentlyLearned.size()];
         reclearn = new String[recentlyLearned.size()];
-        for(int i = 0; i < recentlyLearned.size(); i++){
+        for (int i = 0; i < recentlyLearned.size(); i++) {
             reclearn[i] = recentlyLearned.get(i);
             names[i] = recentlyLearnedNames.get(i);
         }
@@ -61,15 +62,18 @@ public class LastSeenActivity extends AppCompatActivity {
 
     }
 
-    private boolean loadRecent(){
+    private boolean loadRecent() {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         Gson gson = new Gson();
-        String json = sharedPrefs.getString("query_recent4",null);
-        String json2 = sharedPrefs.getString("query_recent_names",null);
-        Type type = new TypeToken<ArrayList<String>>(){}.getType();
+        String json = sharedPrefs.getString("query_recent4", null);
+        String json2 = sharedPrefs.getString("query_recent_names", null);
+        Type type = new TypeToken<ArrayList<String>>() {
+        }.getType();
         ArrayList<String> aL = gson.fromJson(json, type);
         ArrayList<String> aL2 = gson.fromJson(json2, type);
-        if(aL == null){return false;}
+        if (aL == null) {
+            return false;
+        }
         recentlyLearned = aL;
         recentlyLearnedNames = aL2;
         return true;
@@ -85,7 +89,7 @@ public class LastSeenActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onBackPressed(){
+    public void onBackPressed() {
         finish();
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
