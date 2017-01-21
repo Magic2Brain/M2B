@@ -181,13 +181,13 @@ public class CardBrowserActivity extends AppCompatActivity{
                     resid = R.drawable.w;
                 }
                 else{
-                    resid = R.drawable.ic_error;
+                    resid = R.drawable.ic_action_cancel;
                 }
                 imgv.setBackgroundResource(resid);
                 layout.addView(imgv);
                 android.view.ViewGroup.LayoutParams layoutParams = imgv.getLayoutParams();
-                layoutParams.width = 50;
-                layoutParams.height = 50;
+                layoutParams.width = 60;
+                layoutParams.height = 60;
                 imgv.setLayoutParams(layoutParams);
             }
         }

@@ -45,10 +45,11 @@ import m2b.magic2brain.com.magic2brain.R;
 public class Main2Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     public static final String FAVS_SAVEFILE = "FavoritesSavefile";
-
+    public static Card[] cardarray;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if(!checkCardArray()){saveCardArray();}
         hideStatusBar();
         setTheme(R.style.AppTheme_NoActionBar);
         super.onCreate(savedInstanceState);
@@ -272,4 +273,59 @@ public class Main2Activity extends AppCompatActivity implements NavigationView.O
                 .into(imgv);
         return MultiID;
     }
+
+    public boolean checkCardArray(){
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        Gson gson = new Gson();
+        String json = sharedPrefs.getString("cardArray",null);
+        Type type = new TypeToken<Card[]>(){}.getType();
+        Card[] aL = gson.fromJson(json, type);
+        if(aL == null){return false;}
+        cardarray = aL;
+        return true;
+    }
+
+    public void saveCardArray(){
+        Card[] c = buildCardArray();
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(c);
+        editor.putString("cardArray", json);
+        editor.commit();
+        cardarray = c;
+    }
+
+    private Card[] buildCardArray(){
+        ArrayList<Card> list = new ArrayList<>();
+        DeckAssetLoader dc = new DeckAssetLoader();
+        Deck[] deckarray = new Deck[1];
+        try {
+            deckarray = dc.getDeckList(this);
+        } catch (Exception e){}
+
+        for(int i = 0; i < deckarray.length; i++){
+            //load current deck and append it to list
+            Card[] c = new Card[1];
+            c[0] = new Card();
+            c[0].setName("error");
+            try {
+                c = dc.getDeck(deckarray[i].getCode()+".json", this);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            if(c[0].getName().equals("error")){
+                System.err.println("error ocurred at "+deckarray[i].getCode()+", please update your database");
+            }
+            else{
+                list.addAll(Arrays.asList(c));
+            }
+        }
+
+        return list.toArray(new Card[list.size()]);
+    }
+
 }
+
+
