@@ -82,7 +82,7 @@ public class DeckDisplayActivity extends AppCompatActivity {
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             //dismiss the dialog
-                            finish();
+                            onBackPressed();
                         }
                     });
             dlgAlert.setCancelable(true);

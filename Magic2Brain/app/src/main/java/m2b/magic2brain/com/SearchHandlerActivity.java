@@ -2,6 +2,8 @@ package m2b.magic2brain.com;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,10 +18,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import org.json.JSONException;
 
 import java.io.IOException;
 import java.lang.reflect.Array;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -30,7 +36,7 @@ import java.util.TreeMap;
 import m2b.magic2brain.com.magic2brain.R;
 
 public class SearchHandlerActivity extends AppCompatActivity {
-
+    Card[] cardarray;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
@@ -50,23 +56,17 @@ public class SearchHandlerActivity extends AppCompatActivity {
 
         String[] names = new String[1];
         names[0] = "error";
-
         Deck[] deckarray = new Deck[1];
-        Card[] cardarray = new Card[1];
+
 
         if(cardsearch){
-            cardarray[0] = new Card();
-            cardarray[0].setName("error");
+                cardarray = Main2Activity.cardarray;
 
             try {
                 deckarray = dc.getDeckList(this);
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (JSONException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
-
-            cardarray = buildCardArray(deckarray);
 
             names = new String[cardarray.length];
 
@@ -77,9 +77,7 @@ public class SearchHandlerActivity extends AppCompatActivity {
         else{
             try {
                 deckarray = dc.getDeckList(this);
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (JSONException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
 
@@ -136,35 +134,6 @@ public class SearchHandlerActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-    private Card[] buildCardArray(Deck[] deckarray){
-
-        ArrayList<Card> list = new ArrayList<>();
-        DeckAssetLoader dc = new DeckAssetLoader();
-
-        for(int i = 0; i < deckarray.length; i++){
-            //load current deck and append it to list
-            Card[] c = new Card[1];
-            c[0] = new Card();
-            c[0].setName("error");
-            try {
-                c = dc.getDeck(deckarray[i].getCode()+".json", this);
-            } catch (JSONException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            if(c[0].getName().equals("error")){
-                System.err.println("error ocurred at "+deckarray[i].getCode()+", please update your database");
-            }
-            else{
-                list.addAll(Arrays.asList(c));
-            }
-        }
-
-        return list.toArray(new Card[list.size()]);
     }
 
     private Card searchforcard(String name, Card[] cardarray){
