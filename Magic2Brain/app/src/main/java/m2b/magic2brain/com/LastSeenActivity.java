@@ -20,6 +20,7 @@ import m2b.magic2brain.com.magic2brain.R;
 
 public class LastSeenActivity extends AppCompatActivity {
     private ArrayList<String> recentlyLearned;
+    private ArrayList<String> recentlyLearnedNames;
     private String[] names;
     private String[] reclearn;
 
@@ -37,7 +38,7 @@ public class LastSeenActivity extends AppCompatActivity {
         reclearn = new String[recentlyLearned.size()];
         for(int i = 0; i < recentlyLearned.size(); i++){
             reclearn[i] = recentlyLearned.get(i);
-            names[i] = dc.getName(recentlyLearned.get(i));
+            names[i] = recentlyLearnedNames.get(i);
         }
 
 
@@ -63,11 +64,14 @@ public class LastSeenActivity extends AppCompatActivity {
     private boolean loadRecent(){
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         Gson gson = new Gson();
-        String json = sharedPrefs.getString("query_recent3",null);
+        String json = sharedPrefs.getString("query_recent4",null);
+        String json2 = sharedPrefs.getString("query_recent_names",null);
         Type type = new TypeToken<ArrayList<String>>(){}.getType();
         ArrayList<String> aL = gson.fromJson(json, type);
+        ArrayList<String> aL2 = gson.fromJson(json2, type);
         if(aL == null){return false;}
         recentlyLearned = aL;
+        recentlyLearnedNames = aL2;
         return true;
     }
 

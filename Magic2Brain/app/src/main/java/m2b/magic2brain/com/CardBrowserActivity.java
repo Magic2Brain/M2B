@@ -55,25 +55,35 @@ public class CardBrowserActivity extends AppCompatActivity{
         setSupportActionBar(toolbar);
 
         cImage = (ImageView) findViewById(R.id.cbaImage);
+        cImage.setPadding(0,10,0,10);
 
         TextView tv = (TextView) findViewById(R.id.cbaInfo);
-        String info = null;
+        String info = "";
         info += " Name: "+card.getName();
         info += "\n MVID: "+card.getMultiverseid();
         tv.setText(info);
+        tv.setTextColor(Color.BLACK);
+        tv.setPadding(0,10,0,10);
 
         TextView text = (TextView) findViewById(R.id.cbaText);
         text.setText(card.getText());
-        text.setTextColor(Color.CYAN);
+        text.setTextColor(Color.BLACK);
+        text.setPadding(20,10,10,20);
 
         TextView flavor = (TextView) findViewById(R.id.cbaFlavor);
         flavor.setText(card.getFlavor());
+        flavor.setTextColor(Color.BLACK);
+        flavor.setPadding(20,10,10,20);
 
         TextView type = (TextView) findViewById(R.id.cbaType);
         type.setText(card.getType());
+        type.setTextColor(Color.BLACK);
+        type.setPadding(0,10,0,10);
 
         LinearLayout ll = (LinearLayout) findViewById(R.id.cba_mcost_layout);
         setManaCost(card.getManaCost(), this, ll);
+        ll.setGravity(Gravity.CENTER);
+        ll.setPadding(0,10,0,10);
 
         final int mvid = card.getMultiverseid();
         showPic(mvid);
@@ -146,6 +156,7 @@ public class CardBrowserActivity extends AppCompatActivity{
                 TextView tv = new TextView(this);
                 tv.setText(items[i]);
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, 80);
+                tv.setTextColor(Color.BLACK);
                 layout.addView(tv);
             }
             else{
@@ -175,8 +186,8 @@ public class CardBrowserActivity extends AppCompatActivity{
                 imgv.setBackgroundResource(resid);
                 layout.addView(imgv);
                 android.view.ViewGroup.LayoutParams layoutParams = imgv.getLayoutParams();
-                layoutParams.width = 80;
-                layoutParams.height = 80;
+                layoutParams.width = 50;
+                layoutParams.height = 50;
                 imgv.setLayoutParams(layoutParams);
             }
         }
@@ -185,8 +196,8 @@ public class CardBrowserActivity extends AppCompatActivity{
     private void showPic(int MultiID){
         Picasso.with(this)
                 .load("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + MultiID + "&type=card")
-                .placeholder(R.drawable.ic_hourglass_empty)
-                .error(R.drawable.ic_error)
+                .placeholder(R.drawable.loading_image)
+                .error(R.drawable.image_not_found)
                 .into(cImage);
     }
 
