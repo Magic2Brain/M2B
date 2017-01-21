@@ -2,42 +2,21 @@ package m2b.magic2brain.com;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import org.json.JSONException;
-
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.SortedMap;
-import java.util.TreeMap;
-
 import m2b.magic2brain.com.magic2brain.R;
 
 public class SearchHandlerActivity extends AppCompatActivity {
     Card[] cardarray;
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         super.onCreate(savedInstanceState);
@@ -46,21 +25,24 @@ public class SearchHandlerActivity extends AppCompatActivity {
 
         final Context context = this;
         Intent inte = getIntent();
-        final Boolean cardsearch = inte.getBooleanExtra("cardsearch",true);
+        final Boolean cardsearch = inte.getBooleanExtra("cardsearch", true);
         DeckAssetLoader dc = new DeckAssetLoader();
 
         final EditText search_field = (EditText) findViewById(R.id.search_text);
-        if(cardsearch){search_field.setHint("Cardname");}
-        else {search_field.setHint("Setname");}
+        if (cardsearch) {
+            search_field.setHint(R.string.SearchHandler_hint_1);
+        } else {
+            search_field.setHint(R.string.SearchHandler_hint_2);
+        }
         final ListView searchresultsview = (ListView) findViewById(R.id.search_lv);
 
         String[] names = new String[1];
-        names[0] = "error";
+        names[0] = getString(R.string.error);
         Deck[] deckarray = new Deck[1];
 
 
-        if(cardsearch){
-                cardarray = Main2Activity.cardarray;
+        if (cardsearch) {
+            cardarray = MainActivity.cardarray;
 
             try {
                 deckarray = dc.getDeckList(this);
@@ -70,11 +52,10 @@ public class SearchHandlerActivity extends AppCompatActivity {
 
             names = new String[cardarray.length];
 
-            for(int i = 0; i < cardarray.length; i++){
+            for (int i = 0; i < cardarray.length; i++) {
                 names[i] = cardarray[i].getName();
             }
-        }
-        else{
+        } else {
             try {
                 deckarray = dc.getDeckList(this);
             } catch (Exception e) {
@@ -83,30 +64,20 @@ public class SearchHandlerActivity extends AppCompatActivity {
 
             names = new String[deckarray.length];
 
-            for(int i = 0; i < deckarray.length; i++){
+            for (int i = 0; i < deckarray.length; i++) {
                 names[i] = deckarray[i].getName();
             }
         }
 
         //finalizing variables for further use
-        final String[] cnames = names;
         final Deck[] cdeckarray = deckarray;
         final Card[] ccardarray = cardarray;
 
 
-
         final ArrayAdapter adapter = new ArrayAdapter(context, android.R.layout.simple_list_item_1, names);
         search_field.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
             public void afterTextChanged(Editable editable) {
                 adapter.getFilter().filter(editable.toString().toLowerCase());
             }
@@ -116,14 +87,13 @@ public class SearchHandlerActivity extends AppCompatActivity {
         searchresultsview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(cardsearch){
+                if (cardsearch) {
                     String cardname = adapter.getItem(position).toString();
 
                     Intent intent = new Intent(context, CardBrowserActivity.class);
                     intent.putExtra("currentCard", searchforcard(cardname, ccardarray));
                     startActivity(intent);
-                }
-                else{
+                } else {
                     String deckname = adapter.getItem(position).toString();
 
                     Intent intent = new Intent(context, DeckDisplayActivity.class);
@@ -136,12 +106,11 @@ public class SearchHandlerActivity extends AppCompatActivity {
 
     }
 
-    private Card searchforcard(String name, Card[] cardarray){
-
+    private Card searchforcard(String name, Card[] cardarray) {
         Card rc = new Card();
 
-        for(int i = 0; i < cardarray.length; i++){
-            if(cardarray[i].getName().equals(name)){
+        for (int i = 0; i < cardarray.length; i++) {
+            if (cardarray[i].getName().equals(name)) {
                 rc = cardarray[i];
                 break;
             }
@@ -149,14 +118,13 @@ public class SearchHandlerActivity extends AppCompatActivity {
         return rc;
     }
 
-    private String searchfordeck(String name, Deck[] darray){
+    private String searchfordeck(String name, Deck[] darray) {
+        String code = getString(R.string.error);
 
-        String code = "ERR";
-
-        for(int i = 0; i < darray.length; i++){
+        for (int i = 0; i < darray.length; i++) {
             String dname = darray[i].getName();
 
-            if(dname.equals(name)){
+            if (dname.equals(name)) {
                 code = darray[i].getCode();
                 break;
             }
@@ -167,7 +135,7 @@ public class SearchHandlerActivity extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        switch(id){
+        switch (id) {
             case android.R.id.home:
                 onBackPressed();
                 break;
@@ -175,7 +143,7 @@ public class SearchHandlerActivity extends AppCompatActivity {
         return true;
     }
 
-    public void onBackPressed(){
+    public void onBackPressed() {
         finish();
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }

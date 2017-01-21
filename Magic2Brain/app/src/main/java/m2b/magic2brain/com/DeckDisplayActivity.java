@@ -3,32 +3,25 @@ package m2b.magic2brain.com;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import org.json.JSONException;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import m2b.magic2brain.com.magic2brain.R;
-import android.widget.AdapterView.OnItemClickListener;
 
 public class DeckDisplayActivity extends AppCompatActivity {
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         super.onCreate(savedInstanceState);
@@ -40,14 +33,13 @@ public class DeckDisplayActivity extends AppCompatActivity {
         Intent intent = getIntent();
         final String deckcode = intent.getStringExtra("code");
         final String name = intent.getStringExtra("name");
-        //----------------------------------------------
 
         setTitle(name);
         Card c[] = new Card[1];
         c[0] = new Card("notaname", "notaflavor", "notatext", "notatype", "0");
 
         try {
-            c = dc.getDeck(deckcode+".json", this);
+            c = dc.getDeck(deckcode + ".json", this);
         } catch (JSONException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -74,8 +66,8 @@ public class DeckDisplayActivity extends AppCompatActivity {
 
         ListView lv = (ListView) findViewById(R.id.deckdisplay);
 
-        if(c[0].getName().equals("notaname")){
-            AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
+        if (c[0].getName().equals("notaname")) {
+            AlertDialog.Builder dlgAlert = new AlertDialog.Builder(this);
             dlgAlert.setMessage("Sadly, this Deck was not Found");
             dlgAlert.setTitle("Error");
             dlgAlert.setPositiveButton("I unserstand, bill me your server costs",
@@ -111,7 +103,7 @@ public class DeckDisplayActivity extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        switch(id){
+        switch (id) {
             case android.R.id.home:
                 finish();
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
@@ -120,7 +112,7 @@ public class DeckDisplayActivity extends AppCompatActivity {
         return true;
     }
 
-    public void onBackPressed(){
+    public void onBackPressed() {
         finish();
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }

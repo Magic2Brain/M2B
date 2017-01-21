@@ -9,7 +9,6 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -25,19 +24,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
-
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 import m2b.magic2brain.com.magic2brain.R;
-//TODO: Add alternative query-mode (All vs. Sets of eg. 7)
+
 public class QueryActivity extends AppCompatActivity {
     private ImageView imgv; // The image of the card gets stored here
     private ImageView imgCorr; // Is over the image. It's to indicate if the answer was correct or not
@@ -67,52 +62,70 @@ public class QueryActivity extends AppCompatActivity {
         Deck qur = (Deck) i.getSerializableExtra("Set");
         deckName = qur.getName();
         String code = qur.getCode();
-        if(deckName == null){deckName="DEFAULT";}
+        if (deckName == null) {
+            deckName = "DEFAULT";
+        }
         setTitle(deckName);
         //Add set to recent learned
-        if(!loadRecent()){recentlyLearned = new ArrayList<>();recentlyLearnedNames = new ArrayList<>();}
-        if(!recentlyLearned.contains(code)){recentlyLearned.add(code);recentlyLearnedNames.add(deckName);}
-        if(recentlyLearned.size() == 10){recentlyLearned.remove(0);recentlyLearnedNames.remove(0);}
+        if (!loadRecent()) {
+            recentlyLearned = new ArrayList<>();
+            recentlyLearnedNames = new ArrayList<>();
+        }
+        if (!recentlyLearned.contains(code)) {
+            recentlyLearned.add(code);
+            recentlyLearnedNames.add(deckName);
+        }
+        if (recentlyLearned.size() == 10) {
+            recentlyLearned.remove(0);
+            recentlyLearnedNames.remove(0);
+        }
         saveRecent();
         //load set
         set = qur.getSet();
-        if(!loadProgress()) { //First we try to load the progress. If this fails, we simply start over
+        if (!loadProgress()) { //First we try to load the progress. If this fails, we simply start over
             wrongGuessed = (ArrayList) set.clone(); //Lets assume he guessed everything wrong and remove the card of this Array when he guesses it right
             shuffleWrongs(); //Shuffle it a bit (better learn-effect)
             indexCard = 0;
         }
         //Set Mode
         Mode = 1;
-        if(set.size() < 4){Mode = 0;}
+        if (set.size() < 4) {
+            Mode = 0;
+        }
         // Build UI
         hiding = (Toolbar) findViewById(R.id.toolbar_query);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         buildMenu();
         //Start the query
         showFirstPic();
-        if(deckName.contains("DEFAULT")||deckName.contains("Favorites")){restartAll();}
+        if (deckName.contains("DEFAULT") || deckName.contains("Favorites")) {
+            restartAll();
+        }
     }
 
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         saveProgress();
     }
 
-    public boolean loadRecent(){
+    public boolean loadRecent() {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         Gson gson = new Gson();
-        String json = sharedPrefs.getString("query_recent4",null);
-        String json2 = sharedPrefs.getString("query_recent_names",null);
-        Type type = new TypeToken<ArrayList<String>>(){}.getType();
+        String json = sharedPrefs.getString("query_recent4", null);
+        String json2 = sharedPrefs.getString("query_recent_names", null);
+        Type type = new TypeToken<ArrayList<String>>() {
+        }.getType();
         ArrayList<String> aL = gson.fromJson(json, type);
         ArrayList<String> aL2 = gson.fromJson(json2, type);
-        if(aL == null){return false;}
+        if (aL == null) {
+            return false;
+        }
         recentlyLearned = aL;
         recentlyLearnedNames = aL2;
         return true;
     }
 
-    public void saveRecent(){
+    public void saveRecent() {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPrefs.edit();
         Gson gson = new Gson();
@@ -123,26 +136,29 @@ public class QueryActivity extends AppCompatActivity {
         editor.commit();
     }
 
-    public boolean loadProgress(){
+    public boolean loadProgress() {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         Gson gson = new Gson();
-        String json = sharedPrefs.getString("query_list_"+deckName,null);
-        Type type = new TypeToken<ArrayList<Card>>(){}.getType();
+        String json = sharedPrefs.getString("query_list_" + deckName, null);
+        Type type = new TypeToken<ArrayList<Card>>() {
+        }.getType();
         ArrayList<Card> aL = gson.fromJson(json, type);
-        int loadedIndex = sharedPrefs.getInt("query_index_"+deckName,-1);
-        if(aL == null){return false;}
+        int loadedIndex = sharedPrefs.getInt("query_index_" + deckName, -1);
+        if (aL == null) {
+            return false;
+        }
         wrongGuessed = aL;
         indexCard = loadedIndex;
         return true;
     }
 
-    public void saveProgress(){
+    public void saveProgress() {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPrefs.edit();
         Gson gson = new Gson();
         String json = gson.toJson(wrongGuessed);
-        editor.putString("query_list_"+deckName, json);
-        editor.putInt("query_index_"+deckName,indexCard);
+        editor.putString("query_list_" + deckName, json);
+        editor.putInt("query_index_" + deckName, indexCard);
         editor.commit();
     }
 
@@ -152,11 +168,11 @@ public class QueryActivity extends AppCompatActivity {
         return true;
     }
 
-    public void shuffleWrongs(){
+    public void shuffleWrongs() {
         Collections.shuffle(wrongGuessed, new Random(System.nanoTime()));
     }
 
-    public void showPic(int MultiID){
+    public void showPic(int MultiID) {
         Picasso.with(this)
                 .load("http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + MultiID + "&type=card")
                 .placeholder(R.drawable.loading_image)
@@ -164,17 +180,19 @@ public class QueryActivity extends AppCompatActivity {
                 .into(imgv);
     }
 
-    public void showFirstPic(){
+    public void showFirstPic() {
         updateScore();
         showHiderInstant();
         firstGuess = true;
         showPic(wrongGuessed.get(indexCard).getMultiverseid());
         hiding.bringToFront();
         imgCorr.bringToFront();
-        if(Mode == 1){updateChoices();}
+        if (Mode == 1) {
+            updateChoices();
+        }
     }
 
-    public void showNextPic(){
+    public void showNextPic() {
         updateScore();
         showHider();
         final Handler handler = new Handler();
@@ -188,14 +206,20 @@ public class QueryActivity extends AppCompatActivity {
                 skipped = false;
             }
         }, 800);
-        if(Mode == 1){updateChoices();}
+        if (Mode == 1) {
+            updateChoices();
+        }
     }
 
-    public void checkAnswer(String txt){ //TODO: Optional: Ask other things (like Mana-Cost etc.)
-        if(txt.replaceAll("\\s+","").equalsIgnoreCase(wrongGuessed.get(indexCard).getName().replaceAll("\\s+",""))) {
-            if(firstGuess){wrongGuessed.remove(indexCard);} //if he guessed it, we remove it.
-            else {indexCard++;} // else we continue with the next card
-            if(indexCard == wrongGuessed.size()){ //If this true he's through the set
+    public void checkAnswer(String txt) {
+        if (txt.replaceAll("\\s+", "").equalsIgnoreCase(wrongGuessed.get(indexCard).getName().replaceAll("\\s+", ""))) {
+            if (firstGuess) {
+                wrongGuessed.remove(indexCard);
+            } //if he guessed it, we remove it.
+            else {
+                indexCard++;
+            } // else we continue with the next card
+            if (indexCard == wrongGuessed.size()) { //If this true he's through the set
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -204,7 +228,7 @@ public class QueryActivity extends AppCompatActivity {
                     }
                 }, 1000);
             } else {
-                if(!skipped){
+                if (!skipped) {
                     imgCorr.setImageResource(R.drawable.correct_answer);
                     showImgCorr();
                 }
@@ -212,18 +236,20 @@ public class QueryActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        if(!skipped){hideImgCorr();}
+                        if (!skipped) {
+                            hideImgCorr();
+                        }
                         showNextPic();
                     }
                 }, 800);
             }
         } else {
-           wrongAnswer();
+            wrongAnswer();
         }
     }
 
-    public void skip(){
-        if(!skipped) {
+    public void skip() {
+        if (!skipped) {
             skipped = true;
             wrongAnswer();
             final Handler handler = new Handler();
@@ -236,7 +262,7 @@ public class QueryActivity extends AppCompatActivity {
         }
     }
 
-    public void wrongAnswer(){
+    public void wrongAnswer() {
         firstGuess = false;
         imgCorr.setImageResource(R.drawable.wrong_answer);
         showImgCorr();
@@ -250,86 +276,97 @@ public class QueryActivity extends AppCompatActivity {
         }, 1000);
     }
 
-    public void setDone(){
+    public void setDone() {
         buildEndScreen();
         shuffleWrongs();
     }
 
-    public void hideHider(){ // Shows the name of the card fadingly
+    public void hideHider() { // Shows the name of the card fadingly
         hiding.animate().alpha(0).setDuration(600).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
-            public void run() {hiding.animate().alpha(0).setDuration(1000).setInterpolator(new AccelerateInterpolator()).start();}}).start();
+            public void run() {
+                hiding.animate().alpha(0).setDuration(1000).setInterpolator(new AccelerateInterpolator()).start();
+            }
+        }).start();
     }
 
-    public void showHider(){ // Hides the name of the card fadingly
+    public void showHider() { // Hides the name of the card fadingly
         hiding.animate().alpha(1).setDuration(600).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
-            public void run() {hiding.animate().alpha(1).setDuration(100).setInterpolator(new AccelerateInterpolator()).start();}}).start();
+            public void run() {
+                hiding.animate().alpha(1).setDuration(100).setInterpolator(new AccelerateInterpolator()).start();
+            }
+        }).start();
     }
 
-    public void showHiderInstant(){ // Hides the name of the card instantly
+    public void showHiderInstant() { // Hides the name of the card instantly
         hiding.animate().alpha(1).setDuration(10).setInterpolator(new DecelerateInterpolator()).withEndAction(new Runnable() {
-            public void run() {hiding.animate().alpha(1).setDuration(100).setInterpolator(new AccelerateInterpolator()).start();}}).start();
+            public void run() {
+                hiding.animate().alpha(1).setDuration(100).setInterpolator(new AccelerateInterpolator()).start();
+            }
+        }).start();
     }
 
-    public void hideImgCorr(){
+    public void hideImgCorr() {
         Animation myFadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fadeout);
         imgCorr.startAnimation(myFadeInAnimation); //Set animation to your ImageView
     }
 
-    public void showImgCorr(){
+    public void showImgCorr() {
         Animation myFadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fadein);
         imgCorr.startAnimation(myFadeInAnimation); //Set animation to your ImageView
     }
 
-    public void buildMenu(){
-        int scrWidth  = getWindowManager().getDefaultDisplay().getWidth();
+    public void buildMenu() {
+        int scrWidth = getWindowManager().getDefaultDisplay().getWidth();
         int scrHeight = getWindowManager().getDefaultDisplay().getHeight();
         RelativeLayout lyt = (RelativeLayout) findViewById(R.id.query_absolute); // Get the View of the XML
         RelativeLayout.LayoutParams params;
         lyt.removeAllViews(); //Clear the Board
 
-        imgv  = new ImageView(this); // Create new Imageview
-        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.5*scrHeight))/*Height*/;
+        imgv = new ImageView(this); // Create new Imageview
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int) (0.5 * scrHeight))/*Height*/;
         params.leftMargin = 0; // X-Position
-        params.topMargin = (int)(0.02*scrHeight); // Y-Position
+        params.topMargin = (int) (0.02 * scrHeight); // Y-Position
         lyt.addView(imgv, params); // add it to the View
 
         imgCorr = new ImageView(this); // Create new Imageview
         hideImgCorr();
-        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.5*scrHeight))/*Height*/;
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int) (0.5 * scrHeight))/*Height*/;
         params.leftMargin = 0; // X-Position
-        params.topMargin = (int)(0.02*scrHeight); // Y-Position
+        params.topMargin = (int) (0.02 * scrHeight); // Y-Position
         lyt.addView(imgCorr, params); // add it to the View
 
-        switch(Mode){
-            case 0: buildMode0();
+        switch (Mode) {
+            case 0:
+                buildMode0();
                 break;
-            case 1: buildMode1();
+            case 1:
+                buildMode1();
         }
-      }
+    }
 
-    public void buildMode0(){
-        int scrWidth  = getWindowManager().getDefaultDisplay().getWidth();
+    public void buildMode0() {
+        int scrWidth = getWindowManager().getDefaultDisplay().getWidth();
         int scrHeight = getWindowManager().getDefaultDisplay().getHeight();
         RelativeLayout lyt = (RelativeLayout) findViewById(R.id.query_absolute); // Get the View of the XML
         RelativeLayout.LayoutParams params;
 
-        params = new RelativeLayout.LayoutParams((int)(0.55*scrWidth),(int)(0.03*scrHeight));
-        params.leftMargin = (scrWidth/2 - (int)(0.55*scrWidth)/2); // X-Position
-        params.topMargin = (int)(0.045*scrHeight); // Y-Position
-        lyt.addView(hiding,params);
+        params = new RelativeLayout.LayoutParams((int) (0.55 * scrWidth), (int) (0.03 * scrHeight));
+        params.leftMargin = (scrWidth / 2 - (int) (0.55 * scrWidth) / 2); // X-Position
+        params.topMargin = (int) (0.045 * scrHeight); // Y-Position
+        lyt.addView(hiding, params);
 
         // Add EditText like Imageview
         final EditText inputtxt = new EditText(this);
         inputtxt.setGravity(Gravity.CENTER);
         inputtxt.setHint("What is the name of this card?");
-        params = new RelativeLayout.LayoutParams((int)(0.75*scrWidth), (int)(0.1*scrHeight));
-        params.leftMargin = (int)(0.125*scrWidth);
-        params.topMargin = (int)(0.55*scrHeight);
+        params = new RelativeLayout.LayoutParams((int) (0.75 * scrWidth), (int) (0.1 * scrHeight));
+        params.leftMargin = (int) (0.125 * scrWidth);
+        params.topMargin = (int) (0.55 * scrHeight);
         lyt.addView(inputtxt, params);
         // Add a Listener to it (so the User can simply press ENTER on the keyboard)
-        inputtxt.setOnKeyListener(new View.OnKeyListener(){
-            public boolean onKey(View v, int keyCode, KeyEvent event){
-                if (event.getAction() == KeyEvent.ACTION_DOWN){
+        inputtxt.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
                     switch (keyCode) {
                         case KeyEvent.KEYCODE_DPAD_CENTER:
                         case KeyEvent.KEYCODE_ENTER:
@@ -348,9 +385,9 @@ public class QueryActivity extends AppCompatActivity {
         answer.setText("Answer");
         answer.setTextColor(Color.WHITE);
         answer.getBackground().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.MULTIPLY);
-        params = new RelativeLayout.LayoutParams((int)(0.25*scrWidth), (int)(0.1*scrHeight));
-        params.leftMargin = (scrWidth/2)-(int)(0.25*scrWidth);
-        params.topMargin = (int)(0.50*scrHeight)+(int)(0.15*scrHeight);
+        params = new RelativeLayout.LayoutParams((int) (0.25 * scrWidth), (int) (0.1 * scrHeight));
+        params.leftMargin = (scrWidth / 2) - (int) (0.25 * scrWidth);
+        params.topMargin = (int) (0.50 * scrHeight) + (int) (0.15 * scrHeight);
         lyt.addView(answer, params);
         answer.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -363,42 +400,44 @@ public class QueryActivity extends AppCompatActivity {
         skip.setText("Skip");
         skip.setTextColor(Color.WHITE);
         skip.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
-        params = new RelativeLayout.LayoutParams((int)(0.25*scrWidth), (int)(0.1*scrHeight));
-        params.leftMargin = (scrWidth/2);
-        params.topMargin = (int)(0.50*scrHeight)+(int)(0.15*scrHeight);
+        params = new RelativeLayout.LayoutParams((int) (0.25 * scrWidth), (int) (0.1 * scrHeight));
+        params.leftMargin = (scrWidth / 2);
+        params.topMargin = (int) (0.50 * scrHeight) + (int) (0.15 * scrHeight);
         lyt.addView(skip, params);
         skip.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {skip();}
+            public void onClick(View view) {
+                skip();
+            }
         });
 
         score = new TextView(this); // Create new Textview
         score.setGravity(Gravity.CENTER);
         score.setTextSize(36);
-        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.1*scrHeight))/*Height*/;
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int) (0.1 * scrHeight))/*Height*/;
         params.leftMargin = 0; // X-Position
-        params.topMargin = (int)(0.78*scrHeight); // Y-Position
+        params.topMargin = (int) (0.78 * scrHeight); // Y-Position
         lyt.addView(score, params); // add it to the View
     }
 
-    public void buildMode1(){
-        int scrWidth  = getWindowManager().getDefaultDisplay().getWidth();
+    public void buildMode1() {
+        int scrWidth = getWindowManager().getDefaultDisplay().getWidth();
         int scrHeight = getWindowManager().getDefaultDisplay().getHeight();
         RelativeLayout lyt = (RelativeLayout) findViewById(R.id.query_absolute); // Get the View of the XML
         RelativeLayout.LayoutParams params;
 
-        params = new RelativeLayout.LayoutParams((int)(0.55*scrWidth),(int)(0.16*scrHeight));
-        params.leftMargin = (scrWidth/2 - (int)(0.55*scrWidth)/2); // X-Position
-        params.topMargin = (int)(0.32*scrHeight); // Y-Position
-        lyt.addView(hiding,params);
+        params = new RelativeLayout.LayoutParams((int) (0.55 * scrWidth), (int) (0.16 * scrHeight));
+        params.leftMargin = (scrWidth / 2 - (int) (0.55 * scrWidth) / 2); // X-Position
+        params.topMargin = (int) (0.32 * scrHeight); // Y-Position
+        lyt.addView(hiding, params);
 
         Button choice0 = new Button(this);
         choice0.setText("choice0");
         choice0.setTextSize(8);
         choice0.setTextColor(Color.WHITE);
         choice0.getBackground().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.MULTIPLY);
-        params = new RelativeLayout.LayoutParams((int)(0.48*scrWidth), (int)(0.19*scrHeight));
-        params.leftMargin = (int)(0.02*scrWidth);
-        params.topMargin = (int)(0.53*scrHeight);
+        params = new RelativeLayout.LayoutParams((int) (0.48 * scrWidth), (int) (0.19 * scrHeight));
+        params.leftMargin = (int) (0.02 * scrWidth);
+        params.topMargin = (int) (0.53 * scrHeight);
         lyt.addView(choice0, params);
         choice0.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -411,9 +450,9 @@ public class QueryActivity extends AppCompatActivity {
         choice1.setTextSize(8);
         choice1.setTextColor(Color.WHITE);
         choice1.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
-        params = new RelativeLayout.LayoutParams((int)(0.48*scrWidth), (int)(0.19*scrHeight));
-        params.leftMargin = (int)(0.50*scrWidth);
-        params.topMargin = (int)(0.53*scrHeight);
+        params = new RelativeLayout.LayoutParams((int) (0.48 * scrWidth), (int) (0.19 * scrHeight));
+        params.leftMargin = (int) (0.50 * scrWidth);
+        params.topMargin = (int) (0.53 * scrHeight);
         lyt.addView(choice1, params);
         choice1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -426,9 +465,9 @@ public class QueryActivity extends AppCompatActivity {
         choice2.setTextSize(8);
         choice2.setTextColor(Color.WHITE);
         choice2.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
-        params = new RelativeLayout.LayoutParams((int)(0.48*scrWidth), (int)(0.19*scrHeight));
-        params.leftMargin = (int)(0.02*scrWidth);
-        params.topMargin = (int)(0.71*scrHeight);
+        params = new RelativeLayout.LayoutParams((int) (0.48 * scrWidth), (int) (0.19 * scrHeight));
+        params.leftMargin = (int) (0.02 * scrWidth);
+        params.topMargin = (int) (0.71 * scrHeight);
         lyt.addView(choice2, params);
         choice2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -441,9 +480,9 @@ public class QueryActivity extends AppCompatActivity {
         choice3.setTextSize(8);
         choice3.setTextColor(Color.WHITE);
         choice3.getBackground().setColorFilter(getResources().getColor(R.color.colorAccent), PorterDuff.Mode.MULTIPLY);
-        params = new RelativeLayout.LayoutParams((int)(0.48*scrWidth), (int)(0.19*scrHeight));
-        params.leftMargin = (int)(0.50*scrWidth);
-        params.topMargin = (int)(0.71*scrHeight);
+        params = new RelativeLayout.LayoutParams((int) (0.48 * scrWidth), (int) (0.19 * scrHeight));
+        params.leftMargin = (int) (0.50 * scrWidth);
+        params.topMargin = (int) (0.71 * scrHeight);
         lyt.addView(choice3, params);
         choice3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -454,9 +493,9 @@ public class QueryActivity extends AppCompatActivity {
         score = new TextView(this); // Create new Textview
         score.setGravity(Gravity.CENTER);
         score.setTextSize(0);
-        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.1*scrHeight))/*Height*/;
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int) (0.1 * scrHeight))/*Height*/;
         params.leftMargin = 0; // X-Position
-        params.topMargin = (int)(0.78*scrHeight); // Y-Position
+        params.topMargin = (int) (0.78 * scrHeight); // Y-Position
         lyt.addView(score, params); // add it to the View
 
         choices = new ArrayList<>();
@@ -466,11 +505,15 @@ public class QueryActivity extends AppCompatActivity {
         choices.add(choice3);
     }
 
-    public void onClickChoice(int nr){
-        if(choices.get(nr).getText() == wrongGuessed.get(indexCard).getText()) {
-            if(firstGuess){wrongGuessed.remove(indexCard);} //if he guessed it, we remove it.
-            else {indexCard++;} // else we continue with the next card
-            if(indexCard == wrongGuessed.size()){ //If this true he's through the set
+    public void onClickChoice(int nr) {
+        if (choices.get(nr).getText() == wrongGuessed.get(indexCard).getText()) {
+            if (firstGuess) {
+                wrongGuessed.remove(indexCard);
+            } //if he guessed it, we remove it.
+            else {
+                indexCard++;
+            } // else we continue with the next card
+            if (indexCard == wrongGuessed.size()) { //If this true he's through the set
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -479,7 +522,7 @@ public class QueryActivity extends AppCompatActivity {
                     }
                 }, 1000);
             } else {
-                if(!skipped){
+                if (!skipped) {
                     imgCorr.setImageResource(R.drawable.correct_answer);
                     showImgCorr();
                 }
@@ -487,7 +530,9 @@ public class QueryActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        if(!skipped){hideImgCorr();}
+                        if (!skipped) {
+                            hideImgCorr();
+                        }
                         showNextPic();
                     }
                 }, 800);
@@ -497,29 +542,29 @@ public class QueryActivity extends AppCompatActivity {
         }
     }
 
-    public void updateChoices(){
-        int rightOne = (int)(Math.random()*4);
-        for(int i = 0; i < choices.size(); i++){
-            if(i == rightOne){
+    public void updateChoices() {
+        int rightOne = (int) (Math.random() * 4);
+        for (int i = 0; i < choices.size(); i++) {
+            if (i == rightOne) {
                 choices.get(i).setText(wrongGuessed.get(indexCard).getText());
             } else {
-                choices.get(i).setText(set.get((int)(Math.random()*set.size())).getText());
+                choices.get(i).setText(set.get((int) (Math.random() * set.size())).getText());
             }
         }
 
-        for(int i = 0; i < choices.size()-1; i++){
-            if(choices.get(i).getText() == choices.get(i+1).getText()){
-                choices.get(i+1).setText(set.get((int)(Math.random()*set.size())).getText());
+        for (int i = 0; i < choices.size() - 1; i++) {
+            if (choices.get(i).getText() == choices.get(i + 1).getText()) {
+                choices.get(i + 1).setText(set.get((int) (Math.random() * set.size())).getText());
             }
         }
     }
 
-    public void updateScore(){
-        score.setText( (set.size()-wrongGuessed.size()) + " / " + indexCard +" / " + (wrongGuessed.size()-indexCard));
+    public void updateScore() {
+        score.setText((set.size() - wrongGuessed.size()) + " / " + indexCard + " / " + (wrongGuessed.size() - indexCard));
     }
 
-    public void buildEndScreen(){
-        int scrWidth  = getWindowManager().getDefaultDisplay().getWidth();
+    public void buildEndScreen() {
+        int scrWidth = getWindowManager().getDefaultDisplay().getWidth();
         int scrHeight = getWindowManager().getDefaultDisplay().getHeight();
         RelativeLayout lyt = (RelativeLayout) findViewById(R.id.query_absolute); // Get the View of the XML
         lyt.removeAllViews(); //Clear the board
@@ -529,57 +574,57 @@ public class QueryActivity extends AppCompatActivity {
         rights.setText("Right: ");
         rights.setTextSize(36);
         rights.setTextColor(getResources().getColor(R.color.colorPrimary));
-        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.1*scrHeight))/*Height*/;
-        params.leftMargin = (int)(0.1*scrHeight); // X-Position
-        params.topMargin = (int)(0.05*scrHeight); // Y-Position
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int) (0.1 * scrHeight))/*Height*/;
+        params.leftMargin = (int) (0.1 * scrHeight); // X-Position
+        params.topMargin = (int) (0.05 * scrHeight); // Y-Position
         lyt.addView(rights, params); // add it to the View
 
         TextView rights2 = new TextView(this);
-        rights2.setText(""+(set.size() - wrongGuessed.size()));
+        rights2.setText("" + (set.size() - wrongGuessed.size()));
         rights2.setTextSize(36);
         rights2.setTextColor(getResources().getColor(R.color.colorPrimary));
-        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.1*scrHeight))/*Height*/;
-        params.leftMargin = (int)(0.4*scrHeight); // X-Position
-        params.topMargin = (int)(0.05*scrHeight); // Y-Position
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int) (0.1 * scrHeight))/*Height*/;
+        params.leftMargin = (int) (0.4 * scrHeight); // X-Position
+        params.topMargin = (int) (0.05 * scrHeight); // Y-Position
         lyt.addView(rights2, params); // add it to the View
 
         TextView wrongs = new TextView(this);
         wrongs.setText("Wrong: ");
         wrongs.setTextSize(36);
         wrongs.setTextColor(getResources().getColor(R.color.colorAccent));
-        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.1*scrHeight))/*Height*/;
-        params.leftMargin = (int)(0.1*scrHeight); // X-Position
-        params.topMargin = (int)(0.05*scrHeight) + (int)(0.1*scrHeight); // Y-Position
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int) (0.1 * scrHeight))/*Height*/;
+        params.leftMargin = (int) (0.1 * scrHeight); // X-Position
+        params.topMargin = (int) (0.05 * scrHeight) + (int) (0.1 * scrHeight); // Y-Position
         lyt.addView(wrongs, params); // add it to the View
 
         TextView wrongs2 = new TextView(this);
         wrongs2.setText("" + (wrongGuessed.size()));
         wrongs2.setTextSize(36);
         wrongs2.setTextColor(getResources().getColor(R.color.colorAccent));
-        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.1*scrHeight))/*Height*/;
-        params.leftMargin = (int)(0.4*scrHeight); // X-Position
-        params.topMargin = (int)(0.05*scrHeight) + (int)(0.1*scrHeight); // Y-Position
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int) (0.1 * scrHeight))/*Height*/;
+        params.leftMargin = (int) (0.4 * scrHeight); // X-Position
+        params.topMargin = (int) (0.05 * scrHeight) + (int) (0.1 * scrHeight); // Y-Position
         lyt.addView(wrongs2, params); // add it to the View
 
         TextView total = new TextView(this);
         total.setText("Total: ");
         total.setTextSize(36);
         total.setTextColor(Color.BLACK);
-        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.09*scrHeight))/*Height*/;
-        params.leftMargin = (int)(0.1*scrHeight); // X-Position
-        params.topMargin = (int)(0.05*scrHeight) + (int)(0.1*scrHeight) + (int)(0.1*scrHeight); // Y-Position
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int) (0.09 * scrHeight))/*Height*/;
+        params.leftMargin = (int) (0.1 * scrHeight); // X-Position
+        params.topMargin = (int) (0.05 * scrHeight) + (int) (0.1 * scrHeight) + (int) (0.1 * scrHeight); // Y-Position
         lyt.addView(total, params); // add it to the View
 
         TextView total2 = new TextView(this);
         total2.setText("" + (set.size()));
         total2.setTextSize(36);
         total2.setTextColor(Color.BLACK);
-        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int)(0.09*scrHeight))/*Height*/;
-        params.leftMargin = (int)(0.4*scrHeight); // X-Position
-        params.topMargin = (int)(0.05*scrHeight) + (int)(0.1*scrHeight) + (int)(0.1*scrHeight); // Y-Position
+        params = new RelativeLayout.LayoutParams(scrWidth /*Width*/, (int) (0.09 * scrHeight))/*Height*/;
+        params.leftMargin = (int) (0.4 * scrHeight); // X-Position
+        params.topMargin = (int) (0.05 * scrHeight) + (int) (0.1 * scrHeight) + (int) (0.1 * scrHeight); // Y-Position
         lyt.addView(total2, params); // add it to the View
 
-        if(wrongGuessed.size() > 0) {
+        if (wrongGuessed.size() > 0) {
             Button repWrong = new Button(this);
             repWrong.setText("Repeat wrong guessed");
             repWrong.setTextColor(Color.WHITE);
@@ -600,22 +645,22 @@ public class QueryActivity extends AppCompatActivity {
         repAll.setText("Repeat all");
         repAll.setTextColor(Color.WHITE);
         repAll.getBackground().setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.MULTIPLY);
-        params = new RelativeLayout.LayoutParams((int)(0.90*scrWidth), (int)(0.1*scrHeight));
-        params.leftMargin = (int)(0.05*scrWidth);
-        params.topMargin = (int)(0.5*scrHeight) + (int)(0.1*scrHeight) + (int)(0.1*scrHeight) + (int)(0.1*scrHeight);
+        params = new RelativeLayout.LayoutParams((int) (0.90 * scrWidth), (int) (0.1 * scrHeight));
+        params.leftMargin = (int) (0.05 * scrWidth);
+        params.topMargin = (int) (0.5 * scrHeight) + (int) (0.1 * scrHeight) + (int) (0.1 * scrHeight) + (int) (0.1 * scrHeight);
         lyt.addView(repAll, params);
         repAll.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-             restartAll();
+                restartAll();
             }
         });
 
     }
 
-    public void restartAll(){
-        wrongGuessed = (ArrayList)set.clone();
-        if(!queryLand){
-           removeLands();
+    public void restartAll() {
+        wrongGuessed = (ArrayList) set.clone();
+        if (!queryLand) {
+            removeLands();
         }
         shuffleWrongs();
         buildMenu();
@@ -623,14 +668,14 @@ public class QueryActivity extends AppCompatActivity {
         showFirstPic();
     }
 
-    public void removeLands(){
+    public void removeLands() {
         ArrayList<Card> remove = new ArrayList<>();
-        for(Card c : wrongGuessed){
-            if(c.getType().contains("Land")){
+        for (Card c : wrongGuessed) {
+            if (c.getType().contains("Land")) {
                 remove.add(c);
             }
         }
-        for(Card c : remove){
+        for (Card c : remove) {
             wrongGuessed.remove(c);
         }
 
@@ -638,7 +683,7 @@ public class QueryActivity extends AppCompatActivity {
 
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        switch(id){
+        switch (id) {
             case android.R.id.home:
                 onBackPressed();
                 break;
@@ -648,18 +693,29 @@ public class QueryActivity extends AppCompatActivity {
             case R.id.query_lands:
                 queryLand = !queryLand;
                 item.setChecked(queryLand);
-                if(queryLand){restartAll();} else {removeLands(); updateScore();}
+                if (queryLand) {
+                    restartAll();
+                } else {
+                    removeLands();
+                    updateScore();
+                }
                 break;
             case R.id.query_revers:
-                if(set.size() < 4){break;}
-                if(Mode == 1){Mode = 0;} else {Mode = 1;}
+                if (set.size() < 4) {
+                    break;
+                }
+                if (Mode == 1) {
+                    Mode = 0;
+                } else {
+                    Mode = 1;
+                }
                 restartAll();
                 break;
         }
         return true;
     }
 
-    public void onBackPressed(){
+    public void onBackPressed() {
         finish();
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
     }
