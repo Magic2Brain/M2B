@@ -2,6 +2,9 @@ package m2b.magic2brain.com;
 
 import java.io.Serializable;
 
+/*
+This is a class to store Cards. It stores all crucial informations of a card and has the Getters and Setters for it. There are also three Constructors.
+*/
 public class Card implements Serializable {
     private int multiverseid;
     private String name;
@@ -13,6 +16,7 @@ public class Card implements Serializable {
     public Card(int multiverseid, String name) {
         setMultiverseid(multiverseid);
         setName(name);
+        // We fill the undefined variables with something to avoid NullPointer-Errors.
         type = "UNKOWN";
         flavor = "UNKOWN";
         text = "UNKOWN";

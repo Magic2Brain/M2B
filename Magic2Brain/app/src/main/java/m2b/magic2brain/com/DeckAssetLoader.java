@@ -1,25 +1,19 @@
 package m2b.magic2brain.com;
 
 import android.content.Context;
-
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
-import java.util.ArrayList;
-import java.util.Iterator;
 
-/**
- * Created by roman on 10.12.2016.
- */
-
+/*
+This is an helper-class. All functions all static so we don't need to create an object. This class basicly loads all informations of an deck or card from an JSON-file from our assets-folder.
+There's alot of low-level actions going on there.
+*/
 public class DeckAssetLoader {
 
     public DeckAssetLoader() {}

@@ -4,10 +4,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/**
- * Created by roman on 10.12.2016.
+/*
+This class stores a deck with all its informations. It has the Getters and Setters for the informations. There are also two Constructors.
  */
-
 public class Deck implements Serializable /* We need to do this, so we can pass Decks with Intents */ {
 
     private ArrayList<Card> set;
