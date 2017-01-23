@@ -2,9 +2,9 @@ package m2b.magic2brain.com;
 
 import java.util.ArrayList;
 
-/**
- * Created by socketdown on 24.12.16.
- */
+/*
+This is very simple class. It's just here to temporary store all favorites and pass them to any other class.
+*/
 
 public final class Favorites {
     public static ArrayList<Card> favorites_mvid;

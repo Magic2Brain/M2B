@@ -1,6 +1,5 @@
 package m2b.magic2brain.com;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,12 +10,14 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 import m2b.magic2brain.com.magic2brain.R;
 
+/*
+This Activity should show a big image of a card
+ */
+
 public class CardImageDisplayActivity extends AppCompatActivity {
     private final Handler mHideHandler = new Handler();
     private View mContentView;
     private final Runnable mHidePart2Runnable = new Runnable() {
-        @SuppressLint("InlinedApi")
-        @Override
         public void run() {
             // Delayed removal of status and navigation bar
             // Note that some of these constants are new as of API 16 (Jelly Bean)
@@ -53,9 +54,7 @@ public class CardImageDisplayActivity extends AppCompatActivity {
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View view) {
-                //toggle();
                 finish();
             }
         });
@@ -76,10 +75,6 @@ public class CardImageDisplayActivity extends AppCompatActivity {
                 .placeholder(R.drawable.loading_image)
                 .error(R.drawable.image_not_found)
                 .into(cImage);
-    }
-
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
     }
 
     private void hide() {

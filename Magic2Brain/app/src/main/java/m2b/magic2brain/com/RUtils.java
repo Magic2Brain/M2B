@@ -1,12 +1,11 @@
 package m2b.magic2brain.com;
 
-/**
- * Created by socketdown on 08.12.16.
+/*
+This class is a helper-class. All functions are static so we don't need any objects.
  */
-
 public class RUtils {
 
-    public static String[] getListified(Card[] cards) {
+    public static String[] getListified(Card[] cards) { // This turns a Card-Array into a String-Array
         String[] list = new String[cards.length];
         for (int i = 0; i < cards.length; i++) {
             list[i] = cards[i].getName();
